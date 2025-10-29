@@ -13,6 +13,7 @@ import Orcamento from "./pages/Orcamento";
 import TestEmailJS from "./pages/TestEmailJS";
 import TesteAgente from "./pages/TesteAgente";
 import SaraAI from "./pages/SaraAI";
+import SEOAnalyzer from "./pages/SEOAnalyzer";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contato" element={<Contact />} />
             <Route path="/orcamento" element={<Orcamento />} />
+            <Route path="/analise-seo" element={<SEOAnalyzer />} />
             <Route path="/test-emailjs" element={<TestEmailJS />} />
             <Route path="/teste-agente" element={<TesteAgente />} />
             <Route path="/sara-ai" element={<SaraAI />} />
