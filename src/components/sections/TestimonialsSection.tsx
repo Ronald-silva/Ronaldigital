@@ -26,7 +26,7 @@ const testimonials = [
   }
 ];
 
-export function TestimonialsSection() {
+const TestimonialsSection: React.FC = () => {
   return (
     <section className="py-20 bg-muted/30">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -81,3 +81,5 @@ export function TestimonialsSection() {
     </section>
   );
 }
+
+export default TestimonialsSection;

@@ -34,7 +34,7 @@ export default async function handler(req, res) {
 
   try {
     // Valida dados do formulário
-    const { nome, email, mensagem, tipoServico } = req.body;
+    const { nome, email, mensagem, tipoServico, chatHistory } = req.body;
     
     if (!nome || !email || !mensagem) {
       return res.status(400).json({
@@ -63,7 +63,7 @@ export default async function handler(req, res) {
       nome,
       email,
       tipoServico
-    });
+    }, chatHistory || []);
 
     // Log do resultado (remover em produção)
     console.log("Resultado do agente:", resultado);
@@ -77,7 +77,8 @@ export default async function handler(req, res) {
         leadScore: resultado.leadScore,
         proximaAcao: resultado.nextAction,
         agenteAtivo: resultado.activeAgent,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        data: resultado.data // Dados estruturados extras
       });
     } else {
       return res.status(500).json({
@@ -91,13 +92,14 @@ export default async function handler(req, res) {
     console.error("Erro na API do agente:", error);
     
     // 🔄 FALLBACK INTELIGENTE QUANDO SARA AI FALHA
-    const fallbackResponse = getIntelligentFallback(mensagem, { nome, email, tipoServico });
+    const { nome, email, tipoServico, mensagem } = req.body;
+    const fallbackResponse = getIntelligentFallback(mensagem || "", { nome, email, tipoServico });
     
     return res.status(200).json({
       success: true,
       resposta: fallbackResponse,
       etapa: "fallback",
-      leadScore: calculateFallbackLeadScore(mensagem),
+      leadScore: calculateFallbackLeadScore(mensagem || ""),
       proximaAcao: "continuar_qualificacao",
       agenteAtivo: "sara_fallback",
       timestamp: new Date().toISOString(),
@@ -226,7 +228,6 @@ function calculateFallbackLeadScore(message) {
   if (lowerMsg.includes('urgente') || lowerMsg.includes('rápido')) score += 1;
   
   return Math.min(score, 4);
-}
 }
 
 // Configuração para Vercel

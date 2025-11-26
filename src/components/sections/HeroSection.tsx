@@ -1,9 +1,10 @@
+import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-digital-workspace.jpg";
 
-export function HeroSection() {
+const HeroSection: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32">
       {/* Background Image with Overlay */}
@@ -22,7 +23,7 @@ export function HeroSection() {
         <div className="animate-fade-up">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             Transformando Ideias em
-            <span className="block text-gradient hero-text-glow">
+            <span className="block text-holo-blue hero-text-glow">
               Experiências Digitais
             </span>
           </h1>
@@ -79,3 +80,5 @@ export function HeroSection() {
     </section>
   );
 }
+
+export default HeroSection;

@@ -6,7 +6,7 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
-export function Layout({ children }: LayoutProps) {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -18,3 +18,5 @@ export function Layout({ children }: LayoutProps) {
     </div>
   );
 }
+
+export default Layout;

@@ -6,6 +6,7 @@ import { useToast } from "@/hooks/use-toast";
 import { ChevronLeft, ChevronRight, Check, Loader2, Bot } from "lucide-react";
 import { sendBudgetNotification } from "@/services/notificationService";
 import { processarComAgente, type AgentRequest } from "@/services/aiAgent";
+import { Logo } from "@/components/ui/logo";
 import { BasicInfoStep } from "./steps/BasicInfoStep";
 import { GoalsStep } from "./steps/GoalsStep";
 import { DesignStep } from "./steps/DesignStep";
@@ -56,7 +57,7 @@ const steps = [
   { id: 4, title: "Finalização", description: "Seus dados de contato e orçamento" },
 ];
 
-export function BudgetWizard() {
+const BudgetWizard: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState<BudgetFormData>(initialFormData);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -313,8 +314,8 @@ export function BudgetWizard() {
       {showAiResponse && aiResponse && (
         <Card className="card-elegant mb-6 border-blue-200 bg-gradient-to-r from-blue-50 to-indigo-50">
           <CardHeader>
-            <CardTitle className="text-xl flex items-center gap-2 text-blue-800">
-              <Bot className="w-6 h-6" />
+            <CardTitle className="text-xl flex items-center gap-3 text-blue-800">
+              <Logo size="sm" showText={false} />
               Análise do Especialista em IA
             </CardTitle>
             <CardDescription className="text-blue-600">
@@ -423,3 +424,5 @@ export function BudgetWizard() {
     </div>
   );
 }
+
+export default BudgetWizard;

@@ -29,7 +29,7 @@ const services = [
   }
 ];
 
-export function ServicesSection() {
+const ServicesSection: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-background to-secondary/30">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -82,3 +82,5 @@ export function ServicesSection() {
     </section>
   );
 }
+
+export default ServicesSection;

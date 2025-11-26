@@ -1,7 +1,7 @@
 import { CheckCircle, Code, Lightbulb, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import ronaldPhoto from "@/assets/ronald-photo.jpg";
+import ronaldPhoto from "@/assets/ronald-photo.png";
 
 export default function About() {
   return (

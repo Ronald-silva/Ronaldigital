@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Code2 } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/ui/logo";
 import { cn } from "@/lib/utils";
 
 const navigation = [
@@ -23,11 +24,17 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 glass">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         {/* Logo */}
-        <Link to="/" className="flex items-center space-x-2">
-          <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary">
-            <Code2 className="h-6 w-6 text-white" />
-          </div>
-          <span className="text-xl font-bold text-primary">Ronald Digital</span>
+        <Link to="/" className="transition-opacity hover:opacity-80">
+          <Logo 
+            size="lg" 
+            variant="horizontal"
+            className="hidden sm:flex"
+          />
+          <Logo 
+            size="lg" 
+            variant="icon-only"
+            className="flex sm:hidden"
+          />
         </Link>
 
         {/* Desktop Navigation */}

@@ -1,4 +1,4 @@
-import { BudgetWizard } from "@/components/budget/BudgetWizard";
+import BudgetWizard from "@/components/budget/BudgetWizard";
 
 export default function Orcamento() {
   return (

@@ -54,6 +54,8 @@ interface ConversationContext {
   currentStep: number;
   topics: string[];
   lastIntent?: string;
+  leadScore?: number;
+  usingFallback?: boolean;
 }
 
 export function ChatWidget() {
@@ -676,7 +678,8 @@ export function ChatWidget() {
           nome: context.clientName || 'Cliente Chat',
           email: 'cliente@chat.com',
           mensagem: inputText,
-          tipoServico: context.projectType || ''
+          tipoServico: context.projectType || '',
+          chatHistory: messages // Envia histórico para memória
         }),
       });
 
@@ -735,7 +738,6 @@ export function ChatWidget() {
 
   return (
     <>
-      {/* Estilos CSS Customizados */}
       <style dangerouslySetInnerHTML={{ __html: chatButtonStyles }} />
       
       {/* Chat Button - Neurociência & Psicologia Comportamental */}

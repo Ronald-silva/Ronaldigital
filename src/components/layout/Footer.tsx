@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Code2, Instagram, Linkedin, Mail, Phone } from "lucide-react";
+import { Instagram, Linkedin, Mail, Phone } from "lucide-react";
+import { Logo } from "@/components/ui/logo";
 
 export function Footer() {
   return (
@@ -8,11 +9,17 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <Link to="/" className="flex items-center space-x-2 mb-4">
-              <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-primary-glow">
-                <Code2 className="h-6 w-6 text-white" />
+            <Link to="/" className="mb-4 inline-block">
+              <div className="flex items-center space-x-3">
+                <img 
+                  src="/logomarca.png" 
+                  alt="Ronaldigital" 
+                  className="h-10 w-auto object-contain flex-shrink-0"
+                />
+                <span className="text-xl font-bold leading-tight tracking-tight">
+                  <span className="text-white">Ronal</span><span className="text-primary">digital</span>
+                </span>
               </div>
-              <span className="text-xl font-bold">Ronald Digital</span>
             </Link>
             <p className="text-gray-300 mb-6 max-w-md">
               Transformando ideias em experiências digitais memoráveis. 
