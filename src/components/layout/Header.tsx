@@ -42,6 +42,8 @@ export function Header() {
                 "text-sm font-medium transition-colors hover:text-primary",
                 isActive(item.href) ? "text-primary" : "text-muted-foreground"
               )}
+              translate="no"
+              data-translate="no"
             >
               {item.name}
             </Link>
@@ -86,6 +88,8 @@ export function Header() {
                     : "text-muted-foreground hover:bg-muted hover:text-foreground"
                 )}
                 onClick={() => setMobileMenuOpen(false)}
+                translate="no"
+                data-translate="no"
               >
                 {item.name}
               </Link>

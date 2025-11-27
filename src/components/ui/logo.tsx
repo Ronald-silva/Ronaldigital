@@ -60,7 +60,7 @@ export const Logo: React.FC<LogoProps> = ({
           "text-center leading-tight",
           textSizeClasses[size],
           textClassName
-        )}>
+        )} translate="no" data-translate="no">
           <span className="text-foreground">Ronal</span><span className="text-primary">Digital</span>
         </span>
       </div>
@@ -80,7 +80,7 @@ export const Logo: React.FC<LogoProps> = ({
           "leading-tight tracking-tight",
           textSizeClasses[size],
           textClassName
-        )}>
+        )} translate="no" data-translate="no">
           <span className="text-foreground">Ronal</span><span className="text-primary">Digital</span>
         </span>
         {size === 'xl' && (

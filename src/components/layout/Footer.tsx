@@ -16,7 +16,7 @@ export function Footer() {
                   alt="RonalDigital" 
                   className="h-10 w-auto object-contain flex-shrink-0 rounded-lg"
                 />
-                <span className="text-xl font-bold leading-tight tracking-tight">
+                <span className="text-xl font-bold leading-tight tracking-tight" translate="no" data-translate="no">
                   <span className="text-white">Ronal</span><span className="text-primary">Digital</span>
                 </span>
               </div>
@@ -66,7 +66,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 RonalDigital. Todos os direitos reservados.</p>
+          <p>&copy; 2024 <span translate="no" data-translate="no">RonalDigital</span>. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
