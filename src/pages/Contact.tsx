@@ -27,8 +27,8 @@ export default function Contact() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-xl mx-auto mb-4">
-                  <Mail className="h-8 w-8 text-blue-500" />
+                <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-xl mx-auto mb-4">
+                  <Mail className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="font-semibold mb-2">Email</h3>
                 <p className="text-muted-foreground mb-2">ronald.digital27@gmail.com</p>
@@ -36,8 +36,8 @@ export default function Contact() {
               </div>
 
               <div className="text-center">
-                <div className="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-xl mx-auto mb-4">
-                  <Phone className="h-8 w-8 text-blue-500" />
+                <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-xl mx-auto mb-4">
+                  <Phone className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="font-semibold mb-2">WhatsApp</h3>
                 <p className="text-muted-foreground mb-2">(85) 99199-3833</p>
@@ -45,8 +45,8 @@ export default function Contact() {
               </div>
 
               <div className="text-center">
-                <div className="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-xl mx-auto mb-4">
-                  <MapPin className="h-8 w-8 text-blue-500" />
+                <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-xl mx-auto mb-4">
+                  <MapPin className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="font-semibold mb-2">Localização</h3>
                 <p className="text-muted-foreground mb-2">Fortaleza, CE</p>
@@ -77,8 +77,8 @@ export default function Contact() {
                 </div>
               </div>
               
-              <div className="bg-blue-50 p-4 rounded-lg mt-6">
-                <p className="text-sm text-blue-600">
+              <div className="bg-primary/5 p-4 rounded-lg mt-6">
+                <p className="text-sm text-primary">
                   <strong>Urgências:</strong> Entre em contato via WhatsApp para respostas mais rápidas.
                 </p>
               </div>

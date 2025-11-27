@@ -13,11 +13,11 @@ export function Footer() {
               <div className="flex items-center space-x-3">
                 <img 
                   src="/logomarca.png" 
-                  alt="Ronaldigital" 
+                  alt="RonalDigital" 
                   className="h-10 w-auto object-contain flex-shrink-0"
                 />
                 <span className="text-xl font-bold leading-tight tracking-tight">
-                  <span className="text-white">Ronal</span><span className="text-primary">digital</span>
+                  <span className="text-white">Ronal</span><span className="text-primary">Digital</span>
                 </span>
               </div>
             </Link>
@@ -66,7 +66,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Ronald Digital. Todos os direitos reservados.</p>
+          <p>&copy; 2024 RonalDigital. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

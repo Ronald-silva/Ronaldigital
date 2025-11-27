@@ -24,17 +24,12 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 glass">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         {/* Logo */}
-        <Link to="/" className="transition-opacity hover:opacity-80">
-          <Logo 
-            size="lg" 
-            variant="horizontal"
-            className="hidden sm:flex"
-          />
-          <Logo 
-            size="lg" 
-            variant="icon-only"
-            className="flex sm:hidden"
-          />
+        <Link
+          to="/"
+          className="transition-opacity hover:opacity-80 no-underline"
+        >
+          <Logo size="lg" variant="horizontal" className="hidden sm:flex" />
+          <Logo size="lg" variant="icon-only" className="flex sm:hidden" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -45,9 +40,7 @@ export function Header() {
               to={item.href}
               className={cn(
                 "text-sm font-medium transition-colors hover:text-primary",
-                isActive(item.href)
-                  ? "text-primary"
-                  : "text-muted-foreground"
+                isActive(item.href) ? "text-primary" : "text-muted-foreground"
               )}
             >
               {item.name}

@@ -2,9 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Ronald Digital Design System - Professional, Modern & Impactful */
+/* RonalDigital Design System - Professional, Modern & Impactful */
 
 @layer base {
+  /* Remove link styling from logo text */
+  .no-underline {
+    text-decoration: none !important;
+  }
+  
+  .no-underline * {
+    text-decoration: none !important;
+  }
   :root {
     /* Core Brand Colors */
     --background: 0 0% 100%;

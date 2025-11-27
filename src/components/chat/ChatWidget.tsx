@@ -221,7 +221,7 @@ export function ChatWidget() {
     // Sara usa conhecimento de Neil para descobrir necessidades e educar sobre valor
     if (step === 0) {
       if (intent === 'greeting') {
-        return "👋 Oi! Sou a Sara da Ronald Digital! ✨\n\nComo especialista em marketing digital, sei que um site bem feito pode aumentar suas vendas em até 300%. Que tipo de projeto você tem em mente?";
+        return "👋 Oi! Sou a Sara da RonalDigital! ✨\n\nComo especialista em marketing digital, sei que um site bem feito pode aumentar suas vendas em até 300%. Que tipo de projeto você tem em mente?";
       }
       return "Oi! 🚀 Vou te ajudar a criar algo que realmente converte visitantes em clientes.\n\nMe conta: qual seu objetivo principal? Vender mais, gerar leads, mostrar portfólio...?";
     }
@@ -540,12 +540,12 @@ export function ChatWidget() {
     // 🚨 PRIORIDADE MÁXIMA: Perguntas diretas sobre negócio
     if (lowerMsg.includes('vocês fazem') || lowerMsg.includes('vocês vendem') || lowerMsg.includes('que tipo de') || lowerMsg.includes('vocês trabalham')) {
       if (lowerMsg.includes('computador') || lowerMsg.includes('hardware') || lowerMsg.includes('notebook')) {
-        return "Olá! Não, nós da Ronald Digital não vendemos computadores. 💻\n\nSomos uma agência especializada em:\n• Sites profissionais\n• Landing pages que convertem\n• Portfólios incríveis\n\nQual projeto digital posso te ajudar a criar? 🚀";
+        return "Olá! Não, nós da RonalDigital não vendemos computadores. 💻\n\nSomos uma agência especializada em:\n• Sites profissionais\n• Landing pages que convertem\n• Portfólios incríveis\n\nQual projeto digital posso te ajudar a criar? 🚀";
       }
       if (lowerMsg.includes('app') || lowerMsg.includes('aplicativo')) {
         return "Nosso foco é em sites e páginas web! 🌐\n\nCriamos:\n• Sites responsivos (funcionam como app)\n• Landing pages otimizadas\n• Portfólios profissionais\n\nQue tal um site que funciona perfeitamente no celular? 📱";
       }
-      return "Nós da Ronald Digital somos especialistas em projetos digitais! ✨\n\n🎯 Nossos serviços:\n• Landing Pages (R$ 500-1.000)\n• Portfólios (R$ 400-800)\n• Sites Completos (R$ 800-2.000)\n\nQual tipo de projeto você tem em mente?";
+      return "Nós da RonalDigital somos especialistas em projetos digitais! ✨\n\n🎯 Nossos serviços:\n• Landing Pages (R$ 500-1.000)\n• Portfólios (R$ 400-800)\n• Sites Completos (R$ 800-2.000)\n\nQual tipo de projeto você tem em mente?";
     }
     
     // ⚡ PRIORIDADE ALTA: Expressões de dúvida ou interesse
@@ -582,8 +582,8 @@ export function ChatWidget() {
     // 👋 PERGUNTAS PESSOAIS SOBRE A SARA
     if (lowerMsg.includes('qual seu nome') || lowerMsg.includes('como você se chama') || lowerMsg.includes('quem é você') || lowerMsg.includes('seu nome')) {
       const personalResponses = [
-        "Oi! Eu sou a Sara! 😊\n\nSou especialista em marketing digital da Ronald Digital. Meu trabalho é te ajudar a criar sites incríveis que realmente vendem!\n\nE você, qual seu nome?",
-        "Prazer! Sou a Sara, sua consultora digital! ✨\n\nTrabalho na Ronald Digital ajudando pessoas como você a crescerem online.\n\nComo posso te chamar?",
+        "Oi! Eu sou a Sara! 😊\n\nSou especialista em marketing digital da RonalDigital. Meu trabalho é te ajudar a criar sites incríveis que realmente vendem!\n\nE você, qual seu nome?",
+        "Prazer! Sou a Sara, sua consultora digital! ✨\n\nTrabalho na RonalDigital ajudando pessoas como você a crescerem online.\n\nComo posso te chamar?",
         "Oi! Me chamo Sara e sou apaixonada por criar sites que transformam visitantes em clientes! 🚀\n\nQual seu nome?"
       ];
       
@@ -607,7 +607,7 @@ export function ChatWidget() {
     }
     
     if (lowerMsg.includes('bom dia') || lowerMsg.includes('boa tarde') || lowerMsg.includes('boa noite')) {
-      return "Oi! Que educação! 😊 Prazer em te conhecer!\n\nSou a Sara da Ronald Digital, especialista em transformar ideias em sites incríveis! ✨\n\nMe conta: que tipo de projeto digital você tem em mente?";
+      return "Oi! Que educação! 😊 Prazer em te conhecer!\n\nSou a Sara da RonalDigital, especialista em transformar ideias em sites incríveis! ✨\n\nMe conta: que tipo de projeto digital você tem em mente?";
     }
     
     // 🎨 PERGUNTAS SOBRE SERVIÇOS ESPECÍFICOS
@@ -732,7 +732,7 @@ export function ChatWidget() {
     setMessages([]);
     setContext({ currentStep: 0, topics: [] });
     setTimeout(() => {
-      addMessage('bot', "👋 Oi! Sou a Sara da Ronald Digital! ✨\n\nComo posso te ajudar hoje?");
+      addMessage('bot', "👋 Oi! Sou a Sara da RonalDigital! ✨\n\nComo posso te ajudar hoje?");
     }, 500);
   };
 

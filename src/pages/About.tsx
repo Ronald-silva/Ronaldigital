@@ -10,7 +10,7 @@ export default function About() {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Sobre <span className="text-gradient">Ronald Digital</span>
+            Sobre <span className="text-gradient">RonalDigital</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Estudante apaixonado por programação e desenvolvimento web, especializado em criar experiências digitais únicas
@@ -30,12 +30,10 @@ export default function About() {
           <div className="lg:w-3/5">
             <h2 className="text-3xl font-bold mb-6">Minha História</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              Sou Ronald, desenvolvedor web especializado em criar experiências digitais que realmente convertem. 
-              Com 2 anos de experiência no mercado, já ajudei mais de 50 empresas a transformarem sua presença online.
+            Sou Ronald, desenvolvedor web especializado na criação de sites profissionais e páginas de vendas com foco total em conversão. Trabalho com tecnologias modernas e as mais avançadas do mercado, como React, Tailwind e IA, para entregar projetos rápidos, estratégicos e visualmente impressionantes.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Minha paixão é combinar design elegante com funcionalidade impecável, utilizando as tecnologias mais 
-              modernas do mercado para entregar resultados que superam expectativas.
+            Meu objetivo é simples: transformar sua presença digital em uma ferramenta real de crescimento e vendas. Cada projeto que entrego é construído com cuidado, estratégia e foco absoluto em resultados.
             </p>
             <Button asChild className="btn-gradient">
               <Link to="/contato">Vamos Conversar</Link>
@@ -46,22 +44,22 @@ export default function About() {
         {/* Skills Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
           <div className="card-elegant p-6 rounded-xl text-center">
-            <Code className="h-12 w-12 text-blue-500 mx-auto mb-4" />
+            <Code className="h-12 w-12 text-primary mx-auto mb-4" />
             <h3 className="font-semibold mb-2">Tecnologias Modernas</h3>
             <p className="text-sm text-muted-foreground">HTML5, CSS3, JavaScript, React</p>
           </div>
           <div className="card-elegant p-6 rounded-xl text-center">
-            <Lightbulb className="h-12 w-12 text-blue-500 mx-auto mb-4" />
+            <Lightbulb className="h-12 w-12 text-primary mx-auto mb-4" />
             <h3 className="font-semibold mb-2">Soluções Criativas</h3>
             <p className="text-sm text-muted-foreground">Design único e funcional</p>
           </div>
           <div className="card-elegant p-6 rounded-xl text-center">
-            <Users className="h-12 w-12 text-blue-500 mx-auto mb-4" />
+            <Users className="h-12 w-12 text-primary mx-auto mb-4" />
             <h3 className="font-semibold mb-2">Foco no Cliente</h3>
             <p className="text-sm text-muted-foreground">Atendimento personalizado</p>
           </div>
           <div className="card-elegant p-6 rounded-xl text-center">
-            <CheckCircle className="h-12 w-12 text-blue-500 mx-auto mb-4" />
+            <CheckCircle className="h-12 w-12 text-primary mx-auto mb-4" />
             <h3 className="font-semibold mb-2">Qualidade Garantida</h3>
             <p className="text-sm text-muted-foreground">Projetos de alta qualidade</p>
           </div>

@@ -10,13 +10,13 @@ export default function SaraAI() {
       {/* Header */}
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-3 mb-4">
+          <div className="flex items-center justify-center gap-3 mb-6">
             <Brain className="h-12 w-12 text-purple-600" />
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
               Sara AI
             </h1>
           </div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-6">
             O primeiro sistema de IA multi-agente do Brasil especializado em vendas consultivas. 
             Combinando as melhores metodologias de vendas em uma única inteligência artificial.
           </p>
@@ -152,7 +152,7 @@ export default function SaraAI() {
           <div className="flex items-center justify-center gap-2 text-gray-600">
             <Users className="h-5 w-5" />
             <span className="text-sm">
-              Sistema desenvolvido pela Ronald Digital usando LangChain + Grok API
+              Sistema desenvolvido pela RonalDigital usando LangChain + Grok API
             </span>
           </div>
           

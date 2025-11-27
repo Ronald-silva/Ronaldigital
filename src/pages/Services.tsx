@@ -100,7 +100,7 @@ export default function Services() {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center mb-6">
-                <div className="flex items-center justify-center w-16 h-16 bg-blue-500 rounded-xl mr-4">
+                <div className="flex items-center justify-center w-16 h-16 bg-primary rounded-xl mr-4">
                   <service.icon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold">{service.title}</h3>
@@ -126,8 +126,8 @@ export default function Services() {
                 <h4 className="font-semibold mb-3 text-foreground">Benefícios:</h4>
                 <ul className="space-y-1">
                   {service.benefits.map((benefit) => (
-                    <li key={benefit} className="flex items-center text-sm font-medium text-blue-600">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0" />
+                    <li key={benefit} className="flex items-center text-sm font-medium text-primary">
+                      <div className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0" />
                       {benefit}
                     </li>
                   ))}

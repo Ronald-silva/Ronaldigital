@@ -161,7 +161,7 @@ Para uma análise mais detalhada, recomendamos usar as ferramentas profissionais
         {/* Benefícios da Análise */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <div className="card-elegant p-6 rounded-xl text-center card-hover">
-            <BarChart3 className="w-12 h-12 text-blue-500 mx-auto mb-4" />
+            <BarChart3 className="w-12 h-12 text-primary mx-auto mb-4" />
             <h3 className="font-semibold mb-2">Performance</h3>
             <p className="text-sm text-muted-foreground">Velocidade e otimização técnica</p>
           </div>
@@ -202,7 +202,7 @@ Para uma análise mais detalhada, recomendamos usar as ferramentas profissionais
                 {result.technicalData && (
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div className="bg-muted/50 rounded-lg p-4">
-                      <Clock className="w-6 h-6 text-blue-500 mx-auto mb-2" />
+                      <Clock className="w-6 h-6 text-primary mx-auto mb-2" />
                       <div className="text-lg font-semibold">{result.technicalData.loadTime}ms</div>
                       <div className="text-sm text-muted-foreground">Velocidade</div>
                     </div>
@@ -272,7 +272,7 @@ Para uma análise mais detalhada, recomendamos usar as ferramentas profissionais
                       href={result.tools.pagespeed}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+                      className="inline-flex items-center px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors text-sm font-medium"
                     >
                       Analisar no PageSpeed
                       <ExternalLink className="w-4 h-4 ml-2" />
@@ -388,7 +388,7 @@ Para uma análise mais detalhada, recomendamos usar as ferramentas profissionais
         {/* Por que escolher nossa análise */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <div className="card-elegant p-8 rounded-xl">
-            <Award className="w-12 h-12 text-blue-500 mb-4" />
+            <Award className="w-12 h-12 text-primary mb-4" />
             <h3 className="text-2xl font-bold mb-4">Análise Profissional</h3>
             <p className="text-muted-foreground mb-4">
               Nossa ferramenta utiliza os mesmos critérios que o Google usa para ranquear sites, oferecendo insights precisos e acionáveis.

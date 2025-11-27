@@ -19,7 +19,7 @@ export default function TesteAgente() {
     prazo: ""
   });
   const [isLoading, setIsLoading] = useState(false);
-  const [response, setResponse] = useState<any>(null);
+  const [response, setResponse] = useState<any>(null); // eslint-disable-line @typescript-eslint/no-explicit-any
   const { toast } = useToast();
 
   const config = getAgentConfig();
@@ -105,9 +105,9 @@ export default function TesteAgente() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12">
       <div className="container mx-auto px-4 max-w-4xl">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            🤖 Teste do Agente de IA
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            🤖 Teste do <span className="text-gradient">Agente de IA</span>
           </h1>
           <p className="text-xl text-gray-600">
             Teste nosso especialista em vendas de sites com IA

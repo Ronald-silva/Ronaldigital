@@ -42,8 +42,8 @@ export const Logo: React.FC<LogoProps> = ({
     return (
       <img 
         src="/logomarca.png" 
-        alt="Ronald Digital" 
-        className={cn("object-contain", sizeClasses[size], className)}
+        alt="RonalDigital" 
+        className={cn("object-contain rounded-lg", sizeClasses[size], className)}
       />
     );
   }
@@ -53,15 +53,15 @@ export const Logo: React.FC<LogoProps> = ({
       <div className={cn("flex flex-col items-center space-y-1", className)}>
         <img 
           src="/logomarca.png" 
-          alt="Ronald Digital" 
-          className={cn("object-contain", sizeClasses[size])}
+          alt="RonalDigital" 
+          className={cn("object-contain rounded-lg", sizeClasses[size])}
         />
         <span className={cn(
           "text-center leading-tight",
           textSizeClasses[size],
           textClassName
         )}>
-          <span className="text-foreground">Ronal</span><span className="text-primary">digital</span>
+          <span className="text-foreground">Ronal</span><span className="text-primary">Digital</span>
         </span>
       </div>
     );
@@ -72,8 +72,8 @@ export const Logo: React.FC<LogoProps> = ({
     <div className={cn("flex items-center", spacingClasses[size], className)}>
       <img 
         src="/logomarca.png" 
-        alt="Ronald Digital" 
-        className={cn("object-contain flex-shrink-0", sizeClasses[size])}
+        alt="RonalDigital" 
+        className={cn("object-contain flex-shrink-0 rounded-lg", sizeClasses[size])}
       />
       <div className="flex flex-col">
         <span className={cn(
@@ -81,7 +81,7 @@ export const Logo: React.FC<LogoProps> = ({
           textSizeClasses[size],
           textClassName
         )}>
-          <span className="text-foreground">Ronal</span><span className="text-primary">digital</span>
+          <span className="text-foreground">Ronal</span><span className="text-primary">Digital</span>
         </span>
         {size === 'xl' && (
           <span className="text-xs text-muted-foreground font-medium tracking-wide">
