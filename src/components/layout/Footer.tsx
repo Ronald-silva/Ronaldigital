@@ -14,7 +14,7 @@ export function Footer() {
                 <img 
                   src="/logomarca.png" 
                   alt="RonalDigital" 
-                  className="h-10 w-auto object-contain flex-shrink-0"
+                  className="h-10 w-auto object-contain flex-shrink-0 rounded-lg"
                 />
                 <span className="text-xl font-bold leading-tight tracking-tight">
                   <span className="text-white">Ronal</span><span className="text-primary">Digital</span>
