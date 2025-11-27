@@ -28,8 +28,8 @@ export function Header() {
           to="/"
           className="transition-opacity hover:opacity-80 no-underline"
         >
+          <Logo size="md" variant="horizontal" className="sm:hidden" />
           <Logo size="lg" variant="horizontal" className="hidden sm:flex" />
-          <Logo size="lg" variant="icon-only" className="flex sm:hidden" />
         </Link>
 
         {/* Desktop Navigation */}
