@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Bot, Send, X, User } from "lucide-react";
@@ -66,11 +66,14 @@ export function ChatWidget() {
     currentStep: 0,
     topics: []
   });
-  
+
   // Estados para efeitos psicológicos
   const [showUrgency, setShowUrgency] = useState(false);
   const [attentionPulse, setAttentionPulse] = useState(false);
   const [visitTime, setVisitTime] = useState(0);
+
+  // Ref para auto-scroll
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // Efeito de atenção baseado em tempo (Neurociência: Janela de atenção)
   useEffect(() => {
@@ -96,6 +99,22 @@ export function ChatWidget() {
       clearTimeout(attentionTimer);
     };
   }, []);
+
+  // Auto-scroll quando novas mensagens chegam
+  const scrollToBottom = () => {
+    // Usa setTimeout para garantir que o scroll aconteça DEPOIS da renderização
+    setTimeout(() => {
+      messagesEndRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "end",
+        inline: "nearest"
+      });
+    }, 100);
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
   const addMessage = (type: 'user' | 'bot', text: string) => {
     const newMessage: Message = {
@@ -884,8 +903,8 @@ export function ChatWidget() {
                     {message.type === 'user' ? (
                       <User className="w-4 h-4" />
                     ) : (
-                      <img 
-                        src={saraAvatar} 
+                      <img
+                        src={saraAvatar}
                         alt="Sara"
                         className="w-full h-full object-cover rounded-full"
                         onError={(e) => {
@@ -913,6 +932,8 @@ export function ChatWidget() {
                   </div>
                 </div>
               ))}
+              {/* Elemento para auto-scroll */}
+              <div ref={messagesEndRef} />
             </div>
 
             {/* Quick Replies */}

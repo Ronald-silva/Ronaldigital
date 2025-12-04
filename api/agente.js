@@ -1,5 +1,11 @@
 import { SaraAI } from "../../lib/agents/saraAI.js";
+import { SaraAIv2 } from "../../lib/agents/saraAI-v2.js";
 import cors from "cors";
+
+// 🚀 FEATURE FLAG: Sara 2.0
+// Set SARA_V2=true para ativar Sara 2.0 (recomendado)
+// Set SARA_V2=false ou não setar para usar versão anterior
+const USE_SARA_V2 = process.env.SARA_V2 === 'true' || process.env.SARA_V2 === '1';
 
 // Configuração CORS
 const corsOptions = {
@@ -54,11 +60,12 @@ export default async function handler(req, res) {
 
     // Log para debug (remover em produção)
     console.log("Processando lead:", { nome, email, tipoServico });
+    console.log(`🤖 Usando Sara ${USE_SARA_V2 ? 'v2.0 (Moderna)' : 'v1 (Legada)'}`);
 
-    // Inicializa a Sara AI com escuta ativa
-    const sara = new SaraAI();
-    
-    // Processa a mensagem com a nova lógica de escuta ativa
+    // Inicializa a Sara AI (v2 ou v1 baseado na feature flag)
+    const sara = USE_SARA_V2 ? new SaraAIv2() : new SaraAI();
+
+    // Processa a mensagem
     const resultado = await sara.processMessage(mensagem, {
       nome,
       email,

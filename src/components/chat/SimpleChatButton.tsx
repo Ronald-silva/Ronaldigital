@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Bot, Send, X, User } from "lucide-react";
@@ -14,6 +14,22 @@ export function SimpleChatButton() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [currentMessage, setCurrentMessage] = useState("");
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // Auto-scroll quando novas mensagens chegam
+  const scrollToBottom = () => {
+    setTimeout(() => {
+      messagesEndRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "end",
+        inline: "nearest"
+      });
+    }, 100);
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
   const addMessage = (type: 'user' | 'ai', content: string) => {
     const newMessage: Message = {
@@ -140,7 +156,7 @@ export function SimpleChatButton() {
               }`}>
                 {message.type === 'user' ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
               </div>
-              
+
               {/* Message */}
               <div className={`max-w-[75%] ${message.type === 'user' ? 'text-right' : 'text-left'}`}>
                 <div
@@ -154,13 +170,15 @@ export function SimpleChatButton() {
                     {message.content}
                   </div>
                 </div>
-                
+
                 <div className={`text-xs text-gray-500 mt-1 ${message.type === 'user' ? 'text-right' : 'text-left'}`}>
                   {message.time}
                 </div>
               </div>
             </div>
           ))}
+          {/* Elemento para auto-scroll */}
+          <div ref={messagesEndRef} />
         </div>
 
         {/* Quick Replies */}

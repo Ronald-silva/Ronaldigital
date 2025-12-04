@@ -31,7 +31,14 @@ export function ConversationalChat() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    // Usa setTimeout para garantir que o scroll aconteça DEPOIS da renderização
+    setTimeout(() => {
+      messagesEndRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "end",
+        inline: "nearest"
+      });
+    }, 100);
   };
 
   useEffect(() => {
