@@ -14,9 +14,9 @@
     text-decoration: none !important;
   }
   :root {
-    /* Core Brand Colors */
+    /* Core Brand Colors - Otimizado para Conforto Brutal */
     --background: 0 0% 100%;
-    --foreground: 0 0% 10%; /* Cinza Blazer mais suave para texto */
+    --foreground: 0 0% 13%; /* #212121 - Ratio 14.5:1 - Conforto em leituras longas */
 
     /* Card System */
     --card: 0 0% 100%;
@@ -26,18 +26,19 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 25%;
 
-    /* Azul Holograma Primary - Matching Logo */
-    --primary: 194 100% 50%; /* #00C2FF */
+    /* Cyan Moderado Primary - Otimizado para Legibilidade */
+    --primary: 194 80% 45%; /* Cyan suave #1695BA */
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 194 100% 60%;
+    --primary-glow: 194 85% 55%;
+    --primary-text: 194 75% 35%; /* #158296 - Para textos longos (Ratio 5.5:1) */
 
     /* Sophisticated Neutrals */
     --secondary: 220 15% 97%;
     --secondary-foreground: 220 15% 25%;
 
-    /* Muted Grays */
+    /* Muted Grays - Hierarquia Visual Otimizada */
     --muted: 220 15% 96%;
-    --muted-foreground: 220 10% 46%;
+    --muted-foreground: 0 0% 45%; /* #737373 - Ratio 4.6:1 - Neutro puro */
 
     /* Accent Highlights */
     --accent: 220 15% 94%;
@@ -50,7 +51,7 @@
     /* Interactive Elements */
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 217 91% 60%;
+    --ring: 194 70% 55%; /* Cyan suave para foco */
 
     /* Design Tokens */
     --radius: 0.75rem;
@@ -87,23 +88,24 @@
   }
 
   .dark {
-    --background: 0 0% 10%; /* Cinza Blazer #1A1A1A */
-    --foreground: 0 0% 100%; /* Branco #FFFFFF */
+    --background: 0 0% 10%; /* Cinza Blazer #1A1A1A - Conforto noturno */
+    --foreground: 0 0% 97%; /* #F7F7F7 - Branco suavizado (menos agressivo) */
 
     --card: 0 0% 12%;
-    --card-foreground: 0 0% 100%;
+    --card-foreground: 0 0% 97%;
 
     --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 100%;
+    --popover-foreground: 0 0% 97%;
 
-    --primary: 194 100% 50%; /* Azul Holograma #00C2FF */
+    --primary: 194 80% 45%; /* Cyan suave #1695BA */
     --primary-foreground: 0 0% 100%;
+    --primary-text: 194 75% 50%; /* Cyan mais brilhante para dark mode */
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted-foreground: 0 0% 60%; /* #999999 - Cinza neutro puro */
 
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
@@ -113,10 +115,10 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --ring: 194 70% 55%; /* Cyan suave para foco */
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary: 194 75% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
@@ -208,8 +210,9 @@
   /* Glass Effects */
   .glass {
     backdrop-filter: blur(10px);
-    background: hsl(0 0% 100% / 0.8);
-    border: 1px solid hsl(0 0% 100% / 0.2);
+    background: hsl(220 15% 96% / 0.95);
+    border-bottom: 1px solid hsl(220 13% 91%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
 
   /* Gradient Text */
@@ -218,6 +221,11 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  /* Primary Text - Otimizado para Leitura Longa */
+  .text-primary-readable {
+    color: hsl(var(--primary-text));
   }
 
   /* Brand Colors - Matching Logo */

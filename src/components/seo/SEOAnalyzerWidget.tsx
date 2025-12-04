@@ -247,7 +247,7 @@ export function SEOAnalyzerWidget() {
                       <Button
                         onClick={() => {
                           // Aqui você pode implementar ação para contato
-                          window.open('https://wa.me/5585991993833?text=Olá! Vi a análise SEO do meu site e gostaria de melhorar os resultados.', '_blank');
+                          window.open('https://wa.me/5585991575525?text=Olá! Vi a análise SEO do meu site e gostaria de melhorar os resultados.', '_blank');
                         }}
                         size="sm"
                         className="flex-1 bg-green-600 hover:bg-green-700"

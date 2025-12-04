@@ -77,12 +77,12 @@ const categories = [
 export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
-  const filteredItems = selectedCategory === "all" 
-    ? portfolioItems 
+  const filteredItems = selectedCategory === "all"
+    ? portfolioItems
     : portfolioItems.filter(item => item.category === selectedCategory);
 
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-16">

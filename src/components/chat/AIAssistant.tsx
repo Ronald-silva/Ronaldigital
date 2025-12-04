@@ -417,7 +417,7 @@ export function AIAssistant() {
                   Nova conversa
                 </button>
                 <button
-                  onClick={() => window.open('https://wa.me/5585991993833', '_blank')}
+                  onClick={() => window.open('https://wa.me/5585991575525', '_blank')}
                   className="hover:text-green-600 transition-colors"
                 >
                   WhatsApp

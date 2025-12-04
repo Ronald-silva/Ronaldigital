@@ -153,7 +153,7 @@ export function SuccessStep({ formData }: SuccessStepProps) {
           <strong>Dúvidas?</strong> Entre em contato conosco:
         </p>
         <p className="text-sm">
-          WhatsApp: <span className="text-primary font-medium">(85) 99199-3833</span> | 
+          WhatsApp: <span className="text-primary font-medium">(85) 99157-5525</span> |
           E-mail: <span className="text-primary font-medium">ronald.digital27@gmail.com</span>
         </p>
       </div>

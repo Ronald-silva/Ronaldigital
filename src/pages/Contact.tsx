@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Contact() {
 
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -40,7 +40,7 @@ export default function Contact() {
                   <Phone className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="font-semibold mb-2">WhatsApp</h3>
-                <p className="text-muted-foreground mb-2">(85) 99199-3833</p>
+                <p className="text-muted-foreground mb-2">(85) 99157-5525</p>
                 <p className="text-sm text-muted-foreground">Para conversas rápidas</p>
               </div>
 

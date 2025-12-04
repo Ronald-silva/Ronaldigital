@@ -27,7 +27,7 @@ VITE_OPENAI_API_KEY=sua_chave_openai_aqui
 
 # Configurações do negócio
 VITE_BUSINESS_EMAIL=ronald.digital27@gmail.com
-VITE_BUSINESS_PHONE=5585991993833
+VITE_BUSINESS_PHONE=5585991575525
 ```
 
 ### 2. **Obter Chave Grok (Gratuita)**

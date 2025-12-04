@@ -66,7 +66,7 @@ export const EMAILJS_CONFIG = {
   TEMPLATE_ID: 'template_ugsfr4a', // Seu Template ID
   PUBLIC_KEY: 'sv-MDlteolEbEu00p', // Sua Public Key
   TO_EMAIL: 'ronald.digital27@gmail.com',
-  WHATSAPP_NUMBER: '5585991993833', // SEU NÚMERO AQUI
+  WHATSAPP_NUMBER: '5585991575525', // SEU NÚMERO AQUI
 };
 ```
 
@@ -75,8 +75,8 @@ export const EMAILJS_CONFIG = {
 ### Formato do Número
 - **Código do país**: 55 (Brasil)
 - **DDD**: 85 (Fortaleza)
-- **Número**: 991993833
-- **Resultado**: `5585991993833`
+- **Número**: 991575525
+- **Resultado**: `5585991575525`
 
 ### Como funciona
 - Quando um orçamento é enviado, abre automaticamente o WhatsApp
@@ -100,7 +100,7 @@ export const EMAILJS_CONFIG = {
 
 ### WhatsApp não abre
 - Verifique se o número está correto
-- Teste o formato: `5585991993833`
+- Teste o formato: `5585991575525`
 - Certifique-se que o WhatsApp Web está funcionando
 
 ### Erro de CORS

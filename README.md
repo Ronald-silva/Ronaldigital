@@ -50,7 +50,7 @@ OPENAI_API_KEY=your_openai_api_key_here
 
 # Configuracoes do seu negocio
 BUSINESS_EMAIL=ronald.digital27@gmail.com
-BUSINESS_PHONE=5585991993833
+BUSINESS_PHONE=5585991575525
 BUSINESS_NAME=Ronald Digital
 
 # Faixas de preco dos servicos
@@ -229,7 +229,7 @@ Para duvidas ou problemas, entre em contato:
 
 Email: ronald.digital27@gmail.com
 
-WhatsApp: +55 85 99199-3833
+WhatsApp: +55 85 99157-5525
 
 ---
 

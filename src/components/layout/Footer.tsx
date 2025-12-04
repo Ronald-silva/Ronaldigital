@@ -59,7 +59,7 @@ export function Footer() {
               </li>
               <li className="flex items-center space-x-2 text-gray-300">
                 <Phone className="h-4 w-4" />
-                <span>(85) 99199-3833</span>
+                <span>(85) 99157-5525</span>
               </li>
             </ul>
           </div>

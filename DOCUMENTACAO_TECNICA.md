@@ -536,7 +536,7 @@ GEMINI_API_KEY=your_gemini_api_key_here
 
 # Configurações do Negócio
 BUSINESS_EMAIL=ronald.digital27@gmail.com
-BUSINESS_PHONE=5585991993833
+BUSINESS_PHONE=5585991575525
 BUSINESS_NAME=RonalDigital
 
 # Faixas de Preço
@@ -907,7 +907,7 @@ const logger = {
 
 ### Informações de Contato
 - **Email**: ronald.digital27@gmail.com
-- **WhatsApp**: +55 85 99199-3833
+- **WhatsApp**: +55 85 99157-5525
 - **Website**: https://ronaldigital.vercel.app
 
 ### Documentação Adicional

@@ -218,18 +218,18 @@ export function ConversationalChat() {
         <div className="relative">
           <Button
             onClick={() => setIsOpen(true)}
-            className="rounded-full w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 shadow-lg hover:shadow-xl transition-all duration-300"
+            className="rounded-full w-16 h-16 bg-gradient-to-br from-cyan-600 to-cyan-700 hover:from-cyan-700 hover:to-cyan-800 shadow-lg hover:shadow-xl transition-all duration-300"
           >
             <Bot className="w-7 h-7" />
           </Button>
-          
+
           {/* Pulse animation */}
-          <div className="absolute inset-0 rounded-full bg-blue-400 animate-ping opacity-20"></div>
-          
+          <div className="absolute inset-0 rounded-full bg-cyan-400 animate-ping opacity-20"></div>
+
           {/* Tooltip */}
-          <div className="absolute -top-14 -left-20 bg-gray-900 text-white px-4 py-2 rounded-lg text-sm whitespace-nowrap opacity-90 shadow-lg">
+          <div className="absolute -top-14 -left-20 bg-slate-800 text-white px-4 py-2 rounded-lg text-sm whitespace-nowrap opacity-95 shadow-lg backdrop-blur-sm">
             💬 Oi! Precisa de um site?
-            <div className="absolute bottom-[-6px] left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[6px] border-r-[6px] border-t-[6px] border-l-transparent border-r-transparent border-t-gray-900"></div>
+            <div className="absolute bottom-[-6px] left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[6px] border-r-[6px] border-t-[6px] border-l-transparent border-r-transparent border-t-slate-800"></div>
           </div>
         </div>
       </div>
@@ -238,26 +238,26 @@ export function ConversationalChat() {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 w-96 max-w-[calc(100vw-2rem)]">
-      <Card className="shadow-2xl border-blue-200 bg-white">
-        <CardHeader className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-t-lg">
+      <Card className="shadow-2xl border-gray-200 bg-white">
+        <CardHeader className="bg-gradient-to-r from-slate-700 to-slate-800 text-white rounded-t-lg">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="relative">
-                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm">
                   <Bot className="w-5 h-5" />
                 </div>
-                <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-white"></div>
+                <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 rounded-full border-2 border-white"></div>
               </div>
               <div>
-                <CardTitle className="text-lg">Ronald</CardTitle>
-                <p className="text-blue-100 text-xs">Especialista em Sites • Online</p>
+                <CardTitle className="text-lg font-semibold">Ronald</CardTitle>
+                <p className="text-slate-300 text-xs">Especialista em Sites • Online</p>
               </div>
             </div>
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setIsOpen(false)}
-              className="text-white hover:bg-blue-800 h-8 w-8 p-0"
+              className="text-white hover:bg-slate-900/50 h-8 w-8 p-0"
             >
               <X className="w-4 h-4" />
             </Button>
@@ -266,7 +266,7 @@ export function ConversationalChat() {
         
         <CardContent className="p-0">
           {/* Messages */}
-          <div className="h-80 overflow-y-auto p-4 space-y-3">
+          <div className="h-80 overflow-y-auto p-4 space-y-3 bg-gradient-to-b from-gray-50 to-white">
             {messages.map((message) => (
               <div
                 key={message.id}
@@ -274,27 +274,27 @@ export function ConversationalChat() {
               >
                 {/* Avatar */}
                 <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-medium ${
-                  message.type === 'user' ? 'bg-blue-600' : 'bg-gray-600'
+                  message.type === 'user' ? 'bg-gradient-to-br from-cyan-600 to-cyan-700 shadow-sm' : 'bg-slate-600'
                 }`}>
                   {message.type === 'user' ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
                 </div>
-                
+
                 {/* Message */}
                 <div className={`max-w-[75%] ${message.type === 'user' ? 'text-right' : 'text-left'}`}>
                   {message.isTyping ? (
-                    <div className="bg-gray-100 p-3 rounded-2xl">
+                    <div className="bg-slate-100 p-3 rounded-2xl">
                       <div className="flex items-center gap-1">
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                        <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce"></div>
+                        <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                        <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                       </div>
                     </div>
                   ) : (
                     <div
-                      className={`p-3 rounded-2xl ${
+                      className={`p-3 rounded-2xl shadow-sm ${
                         message.type === 'user'
-                          ? 'bg-blue-600 text-white rounded-br-md'
-                          : 'bg-gray-100 text-gray-800 rounded-bl-md'
+                          ? 'bg-gradient-to-br from-cyan-600 to-cyan-700 text-white rounded-br-md'
+                          : 'bg-white text-slate-800 border border-slate-200 rounded-bl-md'
                       }`}
                     >
                       <div className="text-sm whitespace-pre-wrap leading-relaxed">
@@ -302,8 +302,8 @@ export function ConversationalChat() {
                       </div>
                     </div>
                   )}
-                  
-                  <div className={`text-xs text-gray-500 mt-1 ${message.type === 'user' ? 'text-right' : 'text-left'}`}>
+
+                  <div className={`text-xs text-slate-500 mt-1 ${message.type === 'user' ? 'text-right' : 'text-left'}`}>
                     {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                   </div>
                 </div>
@@ -314,8 +314,8 @@ export function ConversationalChat() {
 
           {/* Quick Replies */}
           {getQuickReplies().length > 0 && (
-            <div className="px-4 pb-2">
-              <div className="flex flex-wrap gap-2">
+            <div className="px-4 pb-2 bg-white border-t border-slate-100">
+              <div className="flex flex-wrap gap-2 pt-2">
                 {getQuickReplies().map((reply, index) => (
                   <Button
                     key={index}
@@ -325,7 +325,7 @@ export function ConversationalChat() {
                       setCurrentMessage(reply);
                       setTimeout(() => handleSendMessage(), 100);
                     }}
-                    className="text-xs h-7 px-3 rounded-full border-blue-200 text-blue-600 hover:bg-blue-50"
+                    className="text-xs h-7 px-3 rounded-full border-cyan-200 text-cyan-700 hover:bg-cyan-50 hover:border-cyan-300 transition-colors"
                   >
                     {reply}
                   </Button>
@@ -335,7 +335,7 @@ export function ConversationalChat() {
           )}
 
           {/* Input Area */}
-          <div className="border-t bg-white p-4">
+          <div className="border-t border-slate-200 bg-white p-4">
             <div className="flex items-end gap-2">
               <div className="flex-1">
                 <Input
@@ -344,14 +344,14 @@ export function ConversationalChat() {
                   onKeyPress={handleKeyPress}
                   placeholder="Digite sua mensagem..."
                   disabled={isLoading}
-                  className="border-gray-200 focus:border-blue-400 rounded-full px-4 py-2"
+                  className="border-slate-200 focus:border-cyan-500 focus:ring-cyan-500/20 rounded-full px-4 py-2 text-slate-900 placeholder:text-slate-400"
                 />
               </div>
               <Button
                 onClick={handleSendMessage}
                 disabled={isLoading || !currentMessage.trim()}
                 size="sm"
-                className="rounded-full w-10 h-10 p-0 bg-blue-600 hover:bg-blue-700"
+                className="rounded-full w-10 h-10 p-0 bg-gradient-to-br from-cyan-600 to-cyan-700 hover:from-cyan-700 hover:to-cyan-800 shadow-sm disabled:opacity-50"
               >
                 {isLoading ? (
                   <Loader2 className="w-4 h-4 animate-spin" />
@@ -360,23 +360,23 @@ export function ConversationalChat() {
                 )}
               </Button>
             </div>
-            
+
             {/* Footer */}
-            <div className="flex items-center justify-between mt-3 text-xs text-gray-500">
+            <div className="flex items-center justify-between mt-3 text-xs text-slate-500">
               <div className="flex items-center gap-2">
-                <Sparkles className="w-3 h-3" />
+                <Sparkles className="w-3 h-3 text-cyan-600" />
                 <span>Powered by IA</span>
               </div>
               <div className="flex gap-3">
                 <button
                   onClick={resetChat}
-                  className="hover:text-blue-600 transition-colors"
+                  className="hover:text-cyan-600 transition-colors"
                 >
                   Nova conversa
                 </button>
                 <button
-                  onClick={() => window.open('https://wa.me/5585991993833', '_blank')}
-                  className="hover:text-green-600 transition-colors"
+                  onClick={() => window.open('https://wa.me/5585991575525', '_blank')}
+                  className="hover:text-emerald-600 transition-colors"
                 >
                   WhatsApp
                 </button>

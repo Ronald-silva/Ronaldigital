@@ -5,7 +5,7 @@ import ronaldPhoto from "@/assets/ronald-photo.png";
 
 export default function About() {
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-16">

@@ -11,7 +11,7 @@ export const EMAILJS_CONFIG = {
   TO_EMAIL: "ronald.digital27@gmail.com",
 
   // Seu número do WhatsApp (com código do país, sem + ou espaços)
-  WHATSAPP_NUMBER: "5585991993833", // ⚠️ SUBSTITUA pelo seu número real
+  WHATSAPP_NUMBER: "5585991575525", // ✅ Número atualizado
 };
 
 // Template de email recomendado para o EmailJS:

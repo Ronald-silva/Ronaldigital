@@ -85,7 +85,7 @@ export const processarComAgente = async (data: AgentRequest): Promise<AgentRespo
     if (!config) {
       return {
         success: false,
-        resposta: "Olá! Obrigado pelo seu interesse. Nosso assistente de IA não está disponível no momento, mas nossa equipe recebeu sua mensagem e entrará em contato em breve. Para urgências, entre em contato via WhatsApp: (85) 99199-3833",
+        resposta: "Olá! Obrigado pelo seu interesse. Nosso assistente de IA não está disponível no momento, mas nossa equipe recebeu sua mensagem e entrará em contato em breve. Para urgências, entre em contato via WhatsApp: (85) 99157-5525",
         leadScore: 0,
         classificacao: 'FRIO',
         proximaAcao: 'contato_manual',
@@ -233,7 +233,7 @@ const gerarRespostaFallback = (data: AgentRequest) => {
     resposta += ` Enviei algumas informações para seu email. Qualquer dúvida, estou à disposição!`;
   }
   
-  resposta += `\n\n📱 WhatsApp: (85) 99199-3833\n📧 Email: ronald.digital27@gmail.com`;
+  resposta += `\n\n📱 WhatsApp: (85) 99157-5525\n📧 Email: ronald.digital27@gmail.com`;
   
   return {
     resposta,

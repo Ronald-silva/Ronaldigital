@@ -307,7 +307,7 @@ export function ChatWidget() {
       }
       
       if (intent === 'contact') {
-        return `PERFEITO! 🚀 Vamos fazer negócio!\n\nMe chama no WhatsApp: (85) 99199-3833\n\nOu me passa seu número que eu te chamo AGORA! Vou mandar a proposta completa e podemos começar hoje mesmo!`;
+        return `PERFEITO! 🚀 Vamos fazer negócio!\n\nMe chama no WhatsApp: (85) 99157-5525\n\nOu me passa seu número que eu te chamo AGORA! Vou mandar a proposta completa e podemos começar hoje mesmo!`;
       }
     }
     
@@ -648,7 +648,7 @@ export function ChatWidget() {
     }
     
     if (lowerMsg.includes('pensar') || lowerMsg.includes('decidir')) {
-      return "Claro! Pensar é importante! 🤔\n\nMas enquanto você pensa, que tal eu te enviar alguns exemplos dos nossos trabalhos?\n\n📱 **WhatsApp:** (85) 99199-3833\n\n💡 **Dica:** Tenho apenas 3 vagas este mês. Que tal garantir a sua com uma consultoria gratuita?";
+      return "Claro! Pensar é importante! 🤔\n\nMas enquanto você pensa, que tal eu te enviar alguns exemplos dos nossos trabalhos?\n\n📱 **WhatsApp:** (85) 99157-5525\n\n💡 **Dica:** Tenho apenas 3 vagas este mês. Que tal garantir a sua com uma consultoria gratuita?";
     }
     
     // ⏰ PERGUNTAS SOBRE PRAZO
@@ -658,12 +658,12 @@ export function ChatWidget() {
     
     // 📞 CONTATO
     if (lowerMsg.includes('contato') || lowerMsg.includes('telefone') || lowerMsg.includes('whatsapp') || lowerMsg.includes('falar')) {
-      return "Claro! Aqui estão nossos contatos: 📞\n\n📱 **WhatsApp:** (85) 99199-3833\n📧 **Email:** contato@ronalddigital.com\n🌐 **Site:** ronalddigital.com\n\nMas fica aqui comigo também! Posso te ajudar com tudo: orçamentos, dúvidas, exemplos...\n\nQue tipo de projeto você tem em mente? 😊";
+      return "Claro! Aqui estão nossos contatos: 📞\n\n📱 **WhatsApp:** (85) 99157-5525\n📧 **Email:** contato@ronalddigital.com\n🌐 **Site:** ronalddigital.com\n\nMas fica aqui comigo também! Posso te ajudar com tudo: orçamentos, dúvidas, exemplos...\n\nQue tipo de projeto você tem em mente? 😊";
     }
     
     // 📚 EXEMPLOS/PORTFÓLIO
     if (lowerMsg.includes('exemplo') || lowerMsg.includes('trabalho') || lowerMsg.includes('ver') || lowerMsg.includes('mostrar')) {
-      return "Adoro mostrar nossos trabalhos! 🎨\n\n🌐 **Veja nosso portfólio:** ronalddigital.com/portfolio\n\nOu me chama no WhatsApp **(85) 99199-3833** que envio exemplos específicos!\n\nMe conta: que tipo de empresa você tem? Assim posso mostrar casos similares:\n• Restaurante que aumentou pedidos em 200%\n• Loja que dobrou vendas online\n• Profissional que triplicou clientes 🎯";
+      return "Adoro mostrar nossos trabalhos! 🎨\n\n🌐 **Veja nosso portfólio:** ronalddigital.com/portfolio\n\nOu me chama no WhatsApp **(85) 99157-5525** que envio exemplos específicos!\n\nMe conta: que tipo de empresa você tem? Assim posso mostrar casos similares:\n• Restaurante que aumentou pedidos em 200%\n• Loja que dobrou vendas online\n• Profissional que triplicou clientes 🎯";
     }
 
     // ❓ COMO FUNCIONA / PROCESSO
@@ -765,40 +765,40 @@ export function ChatWidget() {
           <div className="relative group">
             {/* Tooltip Animado com Urgência */}
             <div className="absolute bottom-full right-0 mb-2 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none transform translate-y-2 group-hover:translate-y-0">
-              <div className="bg-gradient-to-r from-purple-900 to-blue-900 text-white px-4 py-3 rounded-xl text-sm whitespace-nowrap shadow-2xl border border-purple-400/30 backdrop-blur-sm">
+              <div className="bg-slate-800 text-white px-4 py-3 rounded-xl text-sm whitespace-nowrap shadow-2xl border border-slate-700 backdrop-blur-sm">
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
                   <span className="font-medium">💬 Sara está online agora!</span>
                 </div>
-                <div className="text-xs text-purple-200 mt-1">
+                <div className="text-xs text-slate-300 mt-1">
                   ✨ Resposta em menos de 30 segundos
                 </div>
                 {/* Arrow */}
-                <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-purple-900"></div>
+                <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-slate-800"></div>
               </div>
             </div>
             
             {/* Efeitos de Fundo - Dopamina Visual */}
             <div className="absolute inset-0 rounded-full">
               {/* Anel de energia rotativo */}
-              <div className="absolute inset-0 rounded-full border-2 border-transparent bg-gradient-to-r from-purple-500 via-blue-500 to-green-500 animate-spin opacity-60" 
+              <div className="absolute inset-0 rounded-full border-2 border-transparent bg-gradient-to-r from-cyan-500 to-cyan-600 animate-spin opacity-50"
                    style={{ animationDuration: '3s' }}></div>
-              
+
               {/* Pulsos concêntricos - Efeito hipnótico */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 animate-ping opacity-20"></div>
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 animate-ping opacity-15" 
+              <div className="absolute inset-0 rounded-full bg-cyan-400 animate-ping opacity-20"></div>
+              <div className="absolute inset-0 rounded-full bg-cyan-500 animate-ping opacity-15"
                    style={{ animationDelay: '0.5s' }}></div>
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-400 to-blue-400 animate-ping opacity-10" 
+              <div className="absolute inset-0 rounded-full bg-cyan-400 animate-ping opacity-10"
                    style={{ animationDelay: '1s' }}></div>
             </div>
             
             {/* Button Principal - Gatilho de Ação */}
             <Button
               onClick={openChat}
-              className="chat-button-magnetic chat-button-breathe rounded-full w-16 h-16 bg-gradient-to-br from-purple-600 via-blue-600 to-green-600 hover:from-purple-700 hover:via-blue-700 hover:to-green-700 shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 relative overflow-hidden transform hover:scale-110 active:scale-95"
+              className="chat-button-magnetic chat-button-breathe rounded-full w-16 h-16 bg-gradient-to-br from-cyan-600 to-cyan-700 hover:from-cyan-700 hover:to-cyan-800 shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 relative overflow-hidden transform hover:scale-110 active:scale-95"
               style={{
-                background: 'linear-gradient(135deg, #8B5CF6 0%, #3B82F6 50%, #10B981 100%)',
-                boxShadow: '0 20px 40px rgba(139, 92, 246, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1)',
+                background: 'linear-gradient(135deg, #0891b2 0%, #0e7490 100%)',
+                boxShadow: '0 20px 40px rgba(8, 145, 178, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1)',
               }}
             >
               {/* Avatar da Sara - Conexão Emocional */}
@@ -813,7 +813,7 @@ export function ChatWidget() {
                   }}
                 />
                 {/* Indicador de status online */}
-                <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-white animate-pulse"></div>
+                <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-emerald-500 rounded-full border-2 border-white animate-pulse"></div>
               </div>
               
               {/* Efeito de brilho interno */}
@@ -851,11 +851,11 @@ export function ChatWidget() {
         <div className="fixed bottom-6 right-6 z-50 w-96 max-w-[calc(100vw-2rem)]">
           <div className="bg-white rounded-lg shadow-2xl border border-gray-200 overflow-hidden">
             {/* Header */}
-            <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-4">
+            <div className="bg-gradient-to-r from-slate-700 to-slate-800 text-white p-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
                   <div className="relative">
-                    <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center overflow-hidden">
+                    <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center overflow-hidden backdrop-blur-sm">
                       <img 
                         src={saraAvatar} 
                         alt="Sara - Coordenadora de Projetos"
@@ -867,18 +867,18 @@ export function ChatWidget() {
                         }}
                       />
                     </div>
-                    <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-white"></div>
+                    <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 rounded-full border-2 border-white"></div>
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Sara</h3>
-                    <p className="text-blue-100 text-xs">Coordenadora de Projetos • Online</p>
+                    <p className="text-slate-300 text-xs">Coordenadora de Projetos • Online</p>
                   </div>
                 </div>
                 <Button
                   onClick={() => setIsOpen(false)}
                   variant="ghost"
                   size="sm"
-                  className="text-white hover:bg-blue-800 h-8 w-8 p-0"
+                  className="text-white hover:bg-slate-900/50 h-8 w-8 p-0"
                 >
                   <X className="w-4 h-4" />
                 </Button>
@@ -886,7 +886,7 @@ export function ChatWidget() {
             </div>
 
             {/* Messages */}
-            <div className="h-80 overflow-y-auto p-4 space-y-3 bg-gray-50">
+            <div className="h-80 overflow-y-auto p-4 space-y-3 bg-gradient-to-b from-gray-50 to-white">
               {messages.map((message) => (
                 <div
                   key={message.id}
@@ -897,7 +897,7 @@ export function ChatWidget() {
                   {/* Avatar */}
                   <div
                     className={`w-8 h-8 rounded-full flex items-center justify-center text-white text-sm flex-shrink-0 overflow-hidden ${
-                      message.type === 'user' ? 'bg-blue-600' : 'bg-gray-100'
+                      message.type === 'user' ? 'bg-gradient-to-br from-cyan-600 to-cyan-700 shadow-sm' : 'bg-slate-100'
                     }`}
                   >
                     {message.type === 'user' ? (
@@ -909,7 +909,7 @@ export function ChatWidget() {
                         className="w-full h-full object-cover rounded-full"
                         onError={(e) => {
                           e.currentTarget.style.display = 'none';
-                          e.currentTarget.parentElement!.innerHTML = '<div class="w-6 h-6 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xs">S</div>';
+                          e.currentTarget.parentElement!.innerHTML = '<div class="w-6 h-6 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold text-xs">S</div>';
                         }}
                       />
                     )}
@@ -918,15 +918,15 @@ export function ChatWidget() {
                   {/* Message */}
                   <div className={`max-w-[75%] ${message.type === 'user' ? 'text-right' : 'text-left'}`}>
                     <div
-                      className={`px-4 py-2 rounded-2xl ${
+                      className={`px-4 py-2 rounded-2xl shadow-sm ${
                         message.type === 'user'
-                          ? 'bg-blue-600 text-white rounded-br-sm'
-                          : 'bg-white text-gray-800 border rounded-bl-sm'
+                          ? 'bg-gradient-to-br from-cyan-600 to-cyan-700 text-white rounded-br-sm'
+                          : 'bg-white text-slate-800 border border-slate-200 rounded-bl-sm'
                       }`}
                     >
                       <p className="text-sm whitespace-pre-wrap leading-relaxed">{message.text}</p>
                     </div>
-                    <p className={`text-xs text-gray-500 mt-1 ${message.type === 'user' ? 'text-right' : 'text-left'}`}>
+                    <p className={`text-xs text-slate-500 mt-1 ${message.type === 'user' ? 'text-right' : 'text-left'}`}>
                       {message.time}
                     </p>
                   </div>
@@ -956,7 +956,7 @@ export function ChatWidget() {
               const quickReplies = getQuickReplies();
               
               return quickReplies.length > 0 && (
-                <div className="px-4 py-2 bg-gray-50 border-t">
+                <div className="px-4 py-2 bg-white border-t border-slate-100">
                   <div className="flex flex-wrap gap-2">
                     {quickReplies.map((text) => (
                       <Button
@@ -967,7 +967,7 @@ export function ChatWidget() {
                         }}
                         variant="outline"
                         size="sm"
-                        className="text-xs h-7 px-3 rounded-full border-blue-200 text-blue-600 hover:bg-blue-50"
+                        className="text-xs h-7 px-3 rounded-full border-cyan-200 text-cyan-700 hover:bg-cyan-50 hover:border-cyan-300 transition-colors"
                       >
                         {text}
                       </Button>
@@ -978,36 +978,36 @@ export function ChatWidget() {
             })()}
 
             {/* Input */}
-            <div className="p-4 bg-white border-t">
+            <div className="p-4 bg-white border-t border-slate-200">
               <div className="flex items-center space-x-2">
                 <Input
                   value={inputText}
                   onChange={(e) => setInputText(e.target.value)}
                   onKeyPress={(e) => e.key === 'Enter' && sendMessage()}
                   placeholder="Digite sua mensagem..."
-                  className="flex-1 rounded-full border-gray-300 focus:border-blue-500"
+                  className="flex-1 rounded-full border-slate-200 focus:border-cyan-500 focus:ring-cyan-500/20 text-slate-900 placeholder:text-slate-400"
                 />
                 <Button
                   onClick={sendMessage}
                   disabled={!inputText.trim()}
                   size="sm"
-                  className="rounded-full w-10 h-10 p-0 bg-blue-600 hover:bg-blue-700 disabled:opacity-50"
+                  className="rounded-full w-10 h-10 p-0 bg-gradient-to-br from-cyan-600 to-cyan-700 hover:from-cyan-700 hover:to-cyan-800 shadow-sm disabled:opacity-50"
                 >
                   <Send className="w-4 h-4" />
                 </Button>
               </div>
-              
+
               {/* Footer */}
-              <div className="flex items-center justify-between mt-3 text-xs text-gray-500">
+              <div className="flex items-center justify-between mt-3 text-xs text-slate-500">
                 <span className="flex items-center space-x-1">
                   <span>💬</span>
                   <span>Chat em tempo real</span>
                 </span>
                 <button
-                  onClick={() => window.open('https://wa.me/5585991993833', '_blank')}
-                  className="hover:text-green-600 transition-colors"
+                  onClick={() => window.open('https://wa.me/5585991575525', '_blank')}
+                  className="hover:text-emerald-600 transition-colors"
                 >
-                  WhatsApp: (85) 99199-3833
+                  WhatsApp: (85) 99157-5525
                 </button>
               </div>
             </div>
