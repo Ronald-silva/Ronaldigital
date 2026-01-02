@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Bot, Send, X, User } from "lucide-react";
 import saraAvatar from "@/assets/sara-avatar.png";
+import { processarComAgente } from "@/services/aiAgent";
 
 // Estilos CSS para animações neurociência-baseadas
 const chatButtonStyles = `
@@ -58,8 +59,8 @@ interface ConversationContext {
   usingFallback?: boolean;
 }
 
-export function ChatWidget() {
-  const [isOpen, setIsOpen] = useState(false);
+export function ChatWidget({ embedded = false }: { embedded?: boolean }) {
+  const [isOpen, setIsOpen] = useState(embedded);
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputText, setInputText] = useState("");
   const [context, setContext] = useState<ConversationContext>({
@@ -115,6 +116,17 @@ export function ChatWidget() {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  useEffect(() => {
+    if (embedded) {
+      setIsOpen(true);
+      if (messages.length === 0) {
+         setTimeout(() => {
+            addMessage('bot', "👋 Oi! Sou a Sara da RonalDigital! ✨\n\nComo posso te ajudar hoje?");
+         }, 500);
+      }
+    }
+  }, [embedded]);
 
   const addMessage = (type: 'user' | 'bot', text: string) => {
     const newMessage: Message = {
@@ -593,9 +605,9 @@ export function ChatWidget() {
       return "Excelente! Vou criar algo perfeito para seu negócio! 🚀\n\nPara dar o orçamento exato, preciso saber:\n• Qual seu orçamento disponível?\n• Para quando você precisa?\n• Tem preferência de funcionalidades?\n\nCom essas informações, posso criar uma proposta sob medida!";
     }
 
-    // 🎯 INTERESSE DE COMPRA GERAL
+    // 🎯 INTERESSE DE COMPRA GERAL - Refinado para não ser redundante
     if (lowerMsg.includes('quero') || lowerMsg.includes('preciso') || lowerMsg.includes('gostaria') || lowerMsg.includes('interessado')) {
-      return "Que ótimo! Fico feliz em te ajudar! 🚀\n\nPara criar a proposta perfeita, me conta:\n• Que tipo de projeto? (site, landing page, portfólio)\n• Para que tipo de negócio?\n• Qual seu prazo?\n\n💡 **Dica:** Uma landing page bem feita pode aumentar suas vendas em 300%!";
+      return "Que ótimo! Fico muito feliz em saber do seu interesse! 🚀\n\nEstou analisando os detalhes que você enviou para criar uma estratégia única. \n\nVocê teria algum prazo específico em mente para colocar esse projeto no ar? ⏰";
     }
     
     // 👋 PERGUNTAS PESSOAIS SOBRE A SARA
@@ -686,23 +698,21 @@ export function ChatWidget() {
     addMessage('user', inputText);
     setInputText("");
     
+    // Chama o serviço do agente diretamente
     try {
-      // Chama a API real da Sara AI com escuta ativa
-      const response = await fetch('/api/agente', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          nome: context.clientName || 'Cliente Chat',
-          email: 'cliente@chat.com',
-          mensagem: inputText,
-          tipoServico: context.projectType || '',
-          chatHistory: messages // Envia histórico para memória
-        }),
+      const result = await processarComAgente({
+        nome: context.clientName || 'Cliente Chat',
+        email: 'cliente@chat.com',
+        mensagem: inputText,
+        tipoServico: context.projectType || '',
+        telefone: '', // Opcional
+        orcamento: context.budget || '',
+        prazo: context.timeline || '',
+        chatHistory: messages.map(m => ({
+          role: m.type === 'user' ? 'user' : 'assistant',
+          content: m.text
+        }))
       });
-
-      const result = await response.json();
       
       if (result.success) {
         // Atualiza contexto com informações da Sara AI
@@ -716,19 +726,19 @@ export function ChatWidget() {
         addMessage('bot', result.resposta);
         
         // Log para debug
-        console.log('✅ API Sara funcionou:', {
+        console.log('✅ AI Service funcionou:', {
           leadScore: result.leadScore,
-          agente: result.agenteAtivo,
+          classificacao: result.classificacao,
           acao: result.proximaAcao
         });
       } else {
-        console.warn('⚠️ API retornou erro:', result);
+        console.warn('⚠️ AI Service retornou erro:', result);
         // Fallback inteligente quando API falha
         const fallbackResponse = getIntelligentFallback(inputText, context);
         addMessage('bot', fallbackResponse);
       }
     } catch (error) {
-      console.error('❌ Erro ao chamar API Sara:', error);
+      console.error('❌ Erro ao chamar AI Service:', error);
       console.log('🔄 Ativando fallback inteligente para:', inputText);
       
       // Fallback inteligente quando há erro de conexão
@@ -760,7 +770,8 @@ export function ChatWidget() {
       <style dangerouslySetInnerHTML={{ __html: chatButtonStyles }} />
       
       {/* Chat Button - Neurociência & Psicologia Comportamental */}
-      {!isOpen && (
+      {/* Chat Button - Neurociência & Psicologia Comportamental */}
+      {!isOpen && !embedded && (
         <div className="fixed bottom-6 right-6 z-50">
           <div className="relative group">
             {/* Tooltip Animado com Urgência */}
@@ -848,8 +859,15 @@ export function ChatWidget() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 z-50 w-96 max-w-[calc(100vw-2rem)]">
-          <div className="bg-white rounded-lg shadow-2xl border border-gray-200 overflow-hidden">
+        <div className={embedded 
+          ? "w-full max-w-5xl mx-auto h-[700px] flex flex-col relative animate-in fade-in duration-300"
+          : "fixed bottom-6 right-6 z-50 w-96 max-w-[calc(100vw-2rem)]"
+        }>
+          <div className={`${
+            embedded 
+              ? "flex flex-col h-full bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden" 
+              : "bg-white rounded-lg shadow-2xl border border-gray-200 overflow-hidden"
+          }`}>
             {/* Header */}
             <div className="bg-gradient-to-r from-slate-700 to-slate-800 text-white p-4">
               <div className="flex items-center justify-between">
@@ -874,14 +892,16 @@ export function ChatWidget() {
                     <p className="text-slate-300 text-xs">Coordenadora de Projetos • Online</p>
                   </div>
                 </div>
-                <Button
-                  onClick={() => setIsOpen(false)}
-                  variant="ghost"
-                  size="sm"
-                  className="text-white hover:bg-slate-900/50 h-8 w-8 p-0"
-                >
-                  <X className="w-4 h-4" />
-                </Button>
+                {!embedded && (
+                  <Button
+                    onClick={() => setIsOpen(false)}
+                    variant="ghost"
+                    size="sm"
+                    className="text-white hover:bg-slate-900/50 h-8 w-8 p-0"
+                  >
+                    <X className="w-4 h-4" />
+                  </Button>
+                )}
               </div>
             </div>
 

@@ -1,31 +1,31 @@
-import { Monitor, Palette, TrendingUp, Globe } from "lucide-react";
+import { Monitor, Palette, TrendingUp, Globe, Bot, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const services = [
   {
-    icon: Monitor,
-    title: "Sites Institucionais",
-    description: "Sites corporativos modernos, responsivos e otimizados para SEO que fortalecem sua marca.",
-    features: ["Design Responsivo", "SEO Otimizado", "Carregamento Rápido"]
-  },
-  {
-    icon: Palette,
-    title: "Portfólios Profissionais",
-    description: "Portfólios impactantes que destacam seu trabalho e atraem clientes ideais.",
-    features: ["Design Único", "Galeria Interativa", "Otimização Mobile"]
-  },
-  {
     icon: TrendingUp,
     title: "Landing Pages",
-    description: "Páginas de alta conversão estrategicamente desenvolvidas para gerar leads e vendas.",
-    features: ["Alta Conversão", "A/B Testing", "Analytics Integrado"]
+    description: "Páginas focadas 100% em conversão. Transforme visitantes em clientes pagantes.",
+    features: ["Copywriting Persuasivo", "Alta Conversão", "Carregamento Instantâneo"]
+  },
+  {
+    icon: Bot,
+    title: "Agentes de IA",
+    description: "Funcionários digitais que atendem, qualificam e vendem para você 24 horas por dia.",
+    features: ["Atendimento 24/7", "Integração WhatsApp", "Redução de Custos"]
+  },
+  {
+    icon: Monitor,
+    title: "Sites Institucionais",
+    description: "Sua sede digital profissional. Transmita autoridade e confiança imediata.",
+    features: ["Design Premium", "SEO Otimizado", "Painel Administrativo"]
   },
   {
     icon: Globe,
-    title: "Blogs Personalizados",
-    description: "Blogs funcionais e atraentes que engajam sua audiência e melhoram seu SEO.",
-    features: ["CMS Intuitivo", "SEO Friendly", "Design Atrativo"]
+    title: "Blogs & SEO",
+    description: "Atraia tráfego orgânico qualificado e torne-se a autoridade número 1 do seu nicho.",
+    features: ["Estratégia de SEO", "Gestão de Conteúdo", "Ranqueamento Google"]
   }
 ];
 

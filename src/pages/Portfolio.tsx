@@ -172,7 +172,7 @@ export default function Portfolio() {
               Estes são apenas alguns exemplos do nosso trabalho. Cada projeto é único e desenvolvido especialmente para atender às necessidades do cliente.
             </p>
             <Button asChild className="btn-gradient">
-              <Link to="/orcamento">Solicitar Orçamento</Link>
+              <Link to="/sara-ai">Conversar com IA</Link>
             </Button>
           </div>
         </div>

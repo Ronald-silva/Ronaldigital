@@ -10,7 +10,7 @@ export default function About() {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Sobre <span className="text-gradient">RonalDigital</span>
+            Sobre Ronal<span className="text-gradient">Digital</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Estudante apaixonado por programação e desenvolvimento web, especializado em criar experiências digitais únicas

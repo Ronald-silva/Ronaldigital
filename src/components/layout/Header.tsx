@@ -10,7 +10,6 @@ const navigation = [
   { name: "Sobre", href: "/sobre" },
   { name: "Serviços", href: "/servicos" },
   { name: "Portfólio", href: "/portfolio" },
-  { name: "Análise SEO", href: "/analise-seo" },
   { name: "Contato", href: "/contato" },
 ];
 
@@ -53,7 +52,7 @@ export function Header() {
         {/* CTA Button */}
         <div className="hidden lg:flex">
           <Button asChild className="btn-gradient">
-            <Link to="/orcamento">Solicitar Orçamento</Link>
+            <Link to="/sara-ai">Falar com IA</Link>
           </Button>
         </div>
 
@@ -96,8 +95,8 @@ export function Header() {
             ))}
             <div className="pt-4">
               <Button asChild className="w-full btn-gradient">
-                <Link to="/orcamento" onClick={() => setMobileMenuOpen(false)}>
-                  Solicitar Orçamento
+                <Link to="/sara-ai" onClick={() => setMobileMenuOpen(false)}>
+                  Falar com IA
                 </Link>
               </Button>
             </div>

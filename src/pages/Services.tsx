@@ -1,4 +1,4 @@
-import { Monitor, Palette, TrendingUp, Globe, Check, ArrowRight } from "lucide-react";
+import { Monitor, Palette, TrendingUp, Globe, Check, ArrowRight, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -19,6 +19,24 @@ const services = [
       "Aumente sua credibilidade online",
       "Melhore o posicionamento no Google",
       "Conquiste mais clientes"
+    ]
+  },
+  {
+    icon: Bot,
+    title: "Agentes de IA & Chatbots",
+    description: "Funcionários digitais inteligentes que trabalham 24h por dia no seu WhatsApp e Site, qualificando leads e vendendo no automático.",
+    features: [
+      "Atendimento instantâneo (0 delay)",
+      "Qualificação automática de leads",
+      "Integração oficial com WhatsApp Business",
+      "Treinado com o manual da sua empresa",
+      "Agendamento automático de reuniões",
+      "Dashboard de conversas em tempo real"
+    ],
+    benefits: [
+      "Reduza custos com equipe de suporte",
+      "Nunca mais perca vendas na madrugada",
+      "Libere seu time para tarefas estratégicas"
     ]
   },
   {
@@ -172,8 +190,8 @@ export default function Services() {
             Solicite um orçamento personalizado e vamos transformar sua visão em realidade digital.
           </p>
           <Button asChild className="btn-gradient">
-            <Link to="/orcamento">
-              Solicitar Orçamento Personalizado
+            <Link to="/sara-ai">
+              Conversar com IA
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
