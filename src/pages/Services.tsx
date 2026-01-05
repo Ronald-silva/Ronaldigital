@@ -191,7 +191,7 @@ export default function Services() {
           </p>
           <Button asChild className="btn-gradient">
             <Link to="/sara-ai">
-              Conversar com IA
+              Conversar com Sara
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>

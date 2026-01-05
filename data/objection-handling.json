@@ -1,0 +1,316 @@
+{
+  "objection_handling_guide": {
+    "golden_rules": [
+      "NUNCA discuta ou contra-argumente diretamente",
+      "SEMPRE valide primeiro ('Entendo...', 'Faz sentido...')",
+      "Use técnica Feel-Felt-Found ('Entendo como você se sente. Outros clientes se sentiram assim. O que eles descobriram foi...')",
+      "Transforme objeção em pergunta para aprofundar",
+      "Use histórias e casos reais, não teoria"
+    ],
+    "objection_types": {
+      "price": {
+        "category": "Objeções de Preço",
+        "objections": {
+          "muito_caro": {
+            "cliente_diz": [
+              "Está muito caro",
+              "Não tenho esse dinheiro",
+              "Muito acima do meu orçamento",
+              "Esperava pagar menos"
+            ],
+            "framework": "LAIR (Label, Acknowledge, Investigate, Reframe)",
+            "responses": [
+              {
+                "technique": "Custo vs Investimento",
+                "response": "Entendo perfeitamente. A questão é: isso é um custo ou um investimento? Se um site trouxer apenas 2 clientes novos por mês, ele já se pagou. E depois disso? É lucro puro. Como você vê isso?",
+                "when_to_use": "Cliente vê como despesa, não investimento"
+              },
+              {
+                "technique": "Custo de NÃO ter",
+                "response": "Faz sentido olhar o preço. Mas me deixa te perguntar: quanto você está PERDENDO por mês sem isso? Se você perde 3 clientes por mês porque não tem site, isso é quanto em dinheiro? Geralmente é muito mais que o investimento.",
+                "when_to_use": "Cliente não considerou custo de oportunidade"
+              },
+              {
+                "technique": "Comparação com alternativas",
+                "response": "Comparado com o quê? Plataformas como Wix cobram R$ 50-100/mês PARA SEMPRE. Em 2 anos você paga R$ 2.400 e o site ainda não é seu. Aqui você paga R$ 800 UMA VEZ e é 100% seu. Qual faz mais sentido financeiramente?",
+                "when_to_use": "Cliente comparando com plataformas mensais"
+              },
+              {
+                "technique": "Break down",
+                "response": "Vamos olhar por outro ângulo: R$ 1.000 parcelado em 3x são R$ 333/mês. Menos que um funcionário ou 2 dias de aluguel. E esse site trabalha 24h por dia captando clientes. Nessa perspectiva, como você vê?",
+                "when_to_use": "Ajudar cliente a ver proporcionalmente"
+              },
+              {
+                "technique": "ROI direto",
+                "response": "Te entendo! Deixa eu te mostrar o ROI: se seu ticket médio é R$ 100 e o site traz 1 cliente novo por mês, em 10 meses ele já se pagou. Depois disso, trabalha de graça por anos. Seu negócio dura mais que 10 meses, certo?",
+                "when_to_use": "Cliente precisa ver retorno tangível"
+              }
+            ],
+            "qualifying_questions": [
+              "Comparado com que você acha caro?",
+              "Quanto vale para você ter mais clientes?",
+              "Se eu mostrar como isso se paga em X meses, faz sentido?",
+              "O que está dentro do seu orçamento? (Posso ter opção mais enxuta)"
+            ]
+          },
+          "nao_tenho_dinheiro_agora": {
+            "cliente_diz": [
+              "Não tenho dinheiro agora",
+              "Mês que vem tenho",
+              "Quando tiver dinheiro eu volto"
+            ],
+            "responses": [
+              {
+                "technique": "Custo de esperar",
+                "response": "Entendo totalmente. Mas pensa comigo: cada mês sem site é um mês perdendo clientes para quem TEM site. Se você perder 5 clientes nesse mês de espera, isso é quanto? Geralmente é mais que o investimento no site. Faz sentido esperar e perder mais?",
+                "when_to_use": "Mostrar urgência"
+              },
+              {
+                "technique": "Facilitar pagamento",
+                "response": "Sem problemas! Por isso trabalhamos com parcelamento. Posso dividir em 3x sem juros. Fica R$ 300/mês. Cabe no seu fluxo de caixa hoje? Ou posso fazer entrada de R$ 200 e o resto em 30 dias quando você receber.",
+                "when_to_use": "Flexibilizar formas de pagamento"
+              },
+              {
+                "technique": "Desafiar prioridade",
+                "response": "Entendo. Me ajuda a entender: se crescer seu negócio é prioridade, por que não encontrar uma forma de fazer acontecer agora? O que precisa mudar para isso virar prioridade?",
+                "when_to_use": "Questionar se é desculpa ou real"
+              }
+            ]
+          },
+          "vou_comparar_precos": {
+            "cliente_diz": [
+              "Vou pesquisar outros orçamentos",
+              "Preciso comparar preços",
+              "Vou ver com outros fornecedores"
+            ],
+            "responses": [
+              {
+                "technique": "Apoie e diferencie",
+                "response": "Perfeito! Deve mesmo comparar. Só uma dica: não compare APENAS preço. Compare tecnologia (React vs WordPress lento), prazo (entrego em 5 dias vs 30), suporte, e se inclui SEO. Preço baixo geralmente significa qualidade baixa ou custos escondidos. Quando comparar, me avisa o que achou?",
+                "when_to_use": "Cliente em fase de pesquisa"
+              },
+              {
+                "technique": "Urgência suave",
+                "response": "Claro! Só te dou um heads up: tenho apenas 2 vagas abertas esse mês. Se você decidir depois, pode ser que precise esperar até [próximo mês]. Quando você pretende decidir?",
+                "when_to_use": "Criar senso de escassez real"
+              }
+            ]
+          }
+        }
+      },
+      "timing": {
+        "category": "Objeções de Timing",
+        "objections": {
+          "vou_pensar": {
+            "cliente_diz": [
+              "Vou pensar",
+              "Deixa eu avaliar",
+              "Preciso analisar melhor"
+            ],
+            "diagnosis": "Geralmente significa: 1) Não está claro o valor, 2) Tem medo de decidir errado, 3) Não é prioridade, 4) Precisa consultar alguém",
+            "responses": [
+              {
+                "technique": "Descubra o REAL motivo",
+                "response": "Claro! Entendo que é uma decisão importante. Me ajuda: quando você diz 'vou pensar', é sobre o preço, o timing, ou tem alguma dúvida específica que eu posso esclarecer agora?",
+                "when_to_use": "Descobrir objeção real escondida"
+              },
+              {
+                "technique": "Assumir venda e reverse",
+                "response": "Tranquilo! Deixa eu te perguntar: tirando 'pensar', tem ALGO que te impede de começar? Se tivesse 100% de certeza que funciona, você começaria agora?",
+                "when_to_use": "Testar se é desculpa"
+              },
+              {
+                "technique": "Custo de adiar",
+                "response": "Faz todo sentido pensar bem! Só te faço uma provocação: enquanto você pensa, seus concorrentes estão AGINDO. O mercado não espera. O que você precisa para tomar a decisão HOJE?",
+                "when_to_use": "Criar urgência"
+              }
+            ]
+          },
+          "nao_agora": {
+            "cliente_diz": [
+              "Não é o momento",
+              "Talvez ano que vem",
+              "Mais pra frente",
+              "Agora não posso"
+            ],
+            "responses": [
+              {
+                "technique": "Challenge timing",
+                "response": "Entendo. Mas me ajuda: se NÃO é o momento de crescer agora, quando é? O que muda daqui 3 meses que não pode mudar agora? Geralmente o 'momento certo' nunca chega. Os que crescem são os que CRIAM o momento.",
+                "when_to_use": "Desafiar pensamento"
+              },
+              {
+                "technique": "Custo de esperar",
+                "response": "Tranquilo! Só me deixa te mostrar uma coisa: se você esperar 6 meses, quantos clientes você vai perder nesse tempo? Vamos dizer 10 clientes x R$ 100 = R$ 1.000 de faturamento perdido. Isso é mais que o custo do site. Ainda faz sentido esperar?",
+                "when_to_use": "Quantificar perda"
+              }
+            ]
+          }
+        }
+      },
+      "competition": {
+        "category": "Objeções sobre Concorrência",
+        "objections": {
+          "posso_fazer_sozinho": {
+            "cliente_diz": [
+              "Posso fazer no Wix",
+              "Meu sobrinho faz",
+              "Vou fazer eu mesmo",
+              "Vi um tutorial no YouTube"
+            ],
+            "responses": [
+              {
+                "technique": "Apoie e diferencie",
+                "response": "Pode sim! E Wix é uma ferramenta legal para começar. Só te faço 3 perguntas: 1) Você tem 40-60 horas pra aprender e fazer? 2) Você sabe otimizar para o Google e conversão? 3) Você vai pagar R$ 50/mês PRO SEMPRE ou prefere pagar uma vez só? A maioria começa no Wix e depois vem pra mim refazer do jeito certo.",
+                "when_to_use": "Cliente considerando DIY"
+              },
+              {
+                "technique": "Valor do tempo",
+                "response": "Seu tempo de empresário vale quanto por hora? Vamos dizer R$ 50/hora. Fazer um site leva uns 40h = R$ 2.000 do SEU tempo + frustração + resultado amador. Ou você pode pagar R$ 800 e ter profissional, em 5 dias, otimizado. Qual usa melhor seu tempo?",
+                "when_to_use": "Mostrar custo de oportunidade"
+              },
+              {
+                "technique": "Risco e garantia",
+                "response": "Pode tentar! Só que se não der certo, você perdeu tempo, dinheiro e momentum. Comigo você tem garantia: se não gostar, refazemos. Seu sobrinho dá garantia? E se ele sumir? E o suporte quando algo quebrar? Com profissional você dorme tranquilo.",
+                "when_to_use": "Mostrar risco vs segurança"
+              }
+            ]
+          },
+          "fulano_cobra_mais_barato": {
+            "cliente_diz": [
+              "Achei mais barato em outro lugar",
+              "Fulano cobra R$ 400",
+              "Vi por R$ 300 no Fiverr"
+            ],
+            "responses": [
+              {
+                "technique": "Qualidade vs preço baixo",
+                "response": "Interessante! E o que ele oferece por R$ 400? Geralmente preço baixo significa: 1) Template pronto (não personalizado), 2) Código porco que quebra, 3) Sem SEO, 4) Sem suporte. Barato sai CARO quando você precisa refazer. Quer economia ou quer RESULTADO?",
+                "when_to_use": "Cliente priorizando preço"
+              },
+              {
+                "technique": "Posicionar valor",
+                "response": "Entendo! Minha pergunta: você quer o MAIS BARATO ou o MELHOR ROI? Um site de R$ 400 que não converte é prejuízo. Um de R$ 1.000 que traz 10 clientes é lucro. Qual você prefere?",
+                "when_to_use": "Reframing"
+              }
+            ]
+          }
+        }
+      },
+      "trust": {
+        "category": "Objeções de Confiança",
+        "objections": {
+          "nao_conheco_seu_trabalho": {
+            "cliente_diz": [
+              "Não conheço seus trabalhos",
+              "Pode me mandar portfólio?",
+              "Tem referências?"
+            ],
+            "responses": [
+              {
+                "technique": "Social proof específico",
+                "response": "Claro! Deixa eu te mostrar um caso parecido com o seu: fiz o site do [AuditPrime/BarberFlow/etc]. O problema dele era [X], criei [solução], e o resultado foi [Y]. Vou te mandar o link agora. Algo parecido resolveria pra você?",
+                "when_to_use": "Cliente precisa de prova social"
+              },
+              {
+                "technique": "Risk reversal",
+                "response": "Justo! Por isso trabalho assim: você aprova o design ANTES de pagar tudo. Se não gostar, refazemos até ficar perfeito. E tem 7 dias de garantia. Risco ZERO pra você. Dessa forma você se sente confortável?",
+                "when_to_use": "Reduzir risco percebido"
+              }
+            ]
+          },
+          "e_se_nao_der_certo": {
+            "cliente_diz": [
+              "E se não funcionar?",
+              "Como sei que vai dar resultado?",
+              "E se eu não gostar?"
+            ],
+            "responses": [
+              {
+                "technique": "Garantia explícita",
+                "response": "Ótima pergunta! Funciona assim: 1) Você aprova cada etapa antes de seguir, 2) Se não gostar de algo, refazemos SEM cobrar mais, 3) Garantia de 30 dias. Se tiver qualquer problema, eu conserto. Basicamente, o risco é MEU, não seu. Isso te dá segurança?",
+                "when_to_use": "Eliminar medo"
+              }
+            ]
+          }
+        }
+      },
+      "authority": {
+        "category": "Objeções de Autoridade",
+        "objections": {
+          "preciso_falar_com_socio": {
+            "cliente_diz": [
+              "Preciso falar com meu sócio",
+              "Minha esposa que decide",
+              "Tenho que consultar"
+            ],
+            "responses": [
+              {
+                "technique": "Trazer decisor pra conversa",
+                "response": "Perfeito! Decisões em conjunto são as melhores. Pra facilitar: posso explicar tudo de novo pro seu sócio agora? Ou prefere que eu mande um resumo por escrito que você mostra pra ele? Assim vocês decidem juntos com todas as informações.",
+                "when_to_use": "Incluir stakeholder"
+              },
+              {
+                "technique": "Confirmar fit primeiro",
+                "response": "Tranquilo! Mas antes de você falar com ele, deixa eu te perguntar: pra VOCÊ, isso faz sentido? Você vê valor? Porque se você não vê, não adianta eu convencer seu sócio. Se você vê, eu te ajudo a apresentar pra ele de forma que faça sentido.",
+                "when_to_use": "Confirmar buy-in pessoal"
+              }
+            ]
+          }
+        }
+      },
+      "need": {
+        "category": "Objeções de Necessidade",
+        "objections": {
+          "nao_preciso_disso": {
+            "cliente_diz": [
+              "Não preciso de site",
+              "Meu negócio funciona sem isso",
+              "Já tenho Instagram"
+            ],
+            "responses": [
+              {
+                "technique": "Future pacing",
+                "response": "Entendo! E funciona mesmo - HOJE. Mas me deixa te fazer uma provocação: onde você quer estar daqui 1 ano? Se quer crescer 2x, 3x, o que te trouxe até aqui NÃO vai te levar pra lá. Instagram é ótimo pra engajamento, mas 80% das pesquisas de 'serviço perto de mim' são no Google. Você quer estar lá quando alguém procurar?",
+                "when_to_use": "Criar visão de futuro"
+              },
+              {
+                "technique": "Competitor threat",
+                "response": "Justo! E Instagram funciona bem pra relacionamento. Mas seus concorrentes TÊM site. Quando alguém pesquisa '[seu serviço] [sua cidade]', eles aparecem e você não. Quantos clientes você perde assim? Não precisa acreditar em mim, pesquisa agora no Google e vê quem aparece.",
+                "when_to_use": "Mostrar ameaça competitiva"
+              }
+            ]
+          },
+          "nao_vendi_nada_com_ultimo_site": {
+            "cliente_diz": [
+              "Já tive site e não funcionou",
+              "Site não vende",
+              "Gastei dinheiro e não deu retorno"
+            ],
+            "responses": [
+              {
+                "technique": "Diagnosticar o porquê",
+                "response": "Entendo sua frustração! E isso geralmente acontece por 3 motivos: 1) Site bonito mas SEM otimização (não aparece no Google), 2) Sem chamadas de ação claras, 3) Lento ou confuso. Posso ver seu site antigo e te dizer exatamente onde errou? Assim você não repete o erro.",
+                "when_to_use": "Transformar experiência ruim em aprendizado"
+              },
+              {
+                "technique": "Diferenciar abordagem",
+                "response": "Faz sentido sua resistência! A diferença aqui é: meu foco não é site 'bonito', é site que CONVERTE. Todo site que faço tem: 1) SEO para aparecer no Google, 2) Velocidade otimizada, 3) Calls-to-action estratégicas. Se não trouxer resultado em 3 meses, vemos o que ajustar. Topa testar de novo, do jeito CERTO?",
+                "when_to_use": "Reconstruir confiança"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "objection_handling_process": {
+      "step_1_listen": "Deixe cliente falar completamente. NÃO interrompa.",
+      "step_2_empathize": "Valide: 'Entendo...', 'Faz sentido...', 'Já ouvi isso antes...'",
+      "step_3_clarify": "Faça pergunta: 'Quando você diz X, você quer dizer Y?'",
+      "step_4_isolate": "Confirme se é ÚNICA objeção: 'Tirando isso, algo mais te impede?'",
+      "step_5_answer": "Responda com história/caso/dado, não opinião",
+      "step_6_confirm": "Confirme que respondeu: 'Isso esclarece? Ainda tem dúvida?'",
+      "step_7_advance": "Próximo passo: 'Então podemos seguir para...?'"
+    }
+  }
+}

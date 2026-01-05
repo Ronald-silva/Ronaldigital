@@ -35,7 +35,7 @@ const HeroSection: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button asChild size="lg" className="btn-gradient text-lg px-8 py-4 w-full sm:w-60">
               <Link to="/sara-ai">
-                Conversar com IA
+                Conversar com Sara
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>

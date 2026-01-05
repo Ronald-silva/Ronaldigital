@@ -63,6 +63,7 @@ export function ChatWidget({ embedded = false }: { embedded?: boolean }) {
   const [isOpen, setIsOpen] = useState(embedded);
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputText, setInputText] = useState("");
+  const [isTyping, setIsTyping] = useState(false);
   const [context, setContext] = useState<ConversationContext>({
     currentStep: 0,
     topics: []
@@ -115,15 +116,20 @@ export function ChatWidget({ embedded = false }: { embedded?: boolean }) {
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+  }, [messages, isTyping]);
 
   useEffect(() => {
     if (embedded) {
       setIsOpen(true);
       if (messages.length === 0) {
-         setTimeout(() => {
-            addMessage('bot', "👋 Oi! Sou a Sara da RonalDigital! ✨\n\nComo posso te ajudar hoje?");
-         }, 500);
+        // Mostra "Sara está digitando..." e depois a mensagem
+        const initChat = async () => {
+          setIsTyping(true);
+          await new Promise(resolve => setTimeout(resolve, 1500));
+          setIsTyping(false);
+          await addMultipleMessages('bot', "👋 Oi! Sou a Sara da RonalDigital! ✨\n\nComo posso te ajudar hoje?");
+        };
+        initChat();
       }
     }
   }, [embedded]);
@@ -136,6 +142,68 @@ export function ChatWidget({ embedded = false }: { embedded?: boolean }) {
       time: new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })
     };
     setMessages(prev => [...prev, newMessage]);
+  };
+
+  // Função para dividir mensagens longas em chunks naturais (CONSERVADORA)
+  const splitMessageIntoChunks = (text: string): string[] => {
+    // Regra: SÓ divide se for MUITO longo (>400 caracteres)
+    // E no máximo em 2 mensagens
+    if (text.length < 400) {
+      return [text];
+    }
+
+    // Tenta encontrar um ponto de divisão natural no meio da mensagem
+    const midpoint = Math.floor(text.length / 2);
+
+    // Procura por quebra de linha dupla próxima ao meio
+    const breakPoint = text.indexOf('\n\n', midpoint - 100);
+
+    if (breakPoint !== -1 && breakPoint < midpoint + 100) {
+      return [
+        text.substring(0, breakPoint).trim(),
+        text.substring(breakPoint).trim()
+      ];
+    }
+
+    // Se não encontrou quebra natural, retorna mensagem inteira
+    // (melhor uma mensagem longa que múltiplas mensagens spam)
+    return [text];
+  };
+
+  // Envia múltiplas mensagens com delay (estilo WhatsApp)
+  const addMultipleMessages = async (type: 'user' | 'bot', text: string) => {
+    if (type === 'user') {
+      // Mensagens do usuário sempre são únicas
+      addMessage(type, text);
+      return;
+    }
+
+    // Divide a resposta da Sara em chunks naturais
+    const chunks = splitMessageIntoChunks(text);
+
+    // Se for apenas 1 chunk, envia direto
+    if (chunks.length === 1) {
+      addMessage(type, text);
+      return;
+    }
+
+    // Envia múltiplas mensagens com delay REALISTA (não spam!)
+    for (let i = 0; i < chunks.length; i++) {
+      // Mostra typing indicator antes da segunda mensagem (pausa natural)
+      if (i > 0) {
+        setIsTyping(true);
+        await new Promise(resolve => setTimeout(resolve, 2000)); // 2 segundos de "digitação"
+        setIsTyping(false);
+      }
+
+      // Envia a mensagem
+      addMessage(type, chunks[i]);
+
+      // Pequeno delay após enviar
+      if (i < chunks.length - 1) {
+        await new Promise(resolve => setTimeout(resolve, 300));
+      }
+    }
   };
 
   // Extrai informações da mensagem do usuário
@@ -694,16 +762,20 @@ export function ChatWidget({ embedded = false }: { embedded?: boolean }) {
 
   const sendMessage = async () => {
     if (!inputText.trim()) return;
-    
+
     addMessage('user', inputText);
+    const userMsg = inputText;
     setInputText("");
-    
+
+    // Ativa o indicador "Sara está digitando..."
+    setIsTyping(true);
+
     // Chama o serviço do agente diretamente
     try {
       const result = await processarComAgente({
         nome: context.clientName || 'Cliente Chat',
         email: 'cliente@chat.com',
-        mensagem: inputText,
+        mensagem: userMsg,
         tipoServico: context.projectType || '',
         telefone: '', // Opcional
         orcamento: context.budget || '',
@@ -713,18 +785,20 @@ export function ChatWidget({ embedded = false }: { embedded?: boolean }) {
           content: m.text
         }))
       });
-      
+
       if (result.success) {
         // Atualiza contexto com informações da Sara AI
         setContext(prev => ({
           ...prev,
           currentStep: prev.currentStep + 1,
-          lastIntent: getIntent(inputText),
+          lastIntent: getIntent(userMsg),
           leadScore: result.leadScore || prev.leadScore || 0
         }));
-        
-        addMessage('bot', result.resposta);
-        
+
+        // Desativa o typing e mostra a resposta (com múltiplas mensagens se necessário)
+        setIsTyping(false);
+        await addMultipleMessages('bot', result.resposta);
+
         // Log para debug
         console.log('✅ AI Service funcionou:', {
           leadScore: result.leadScore,
@@ -734,35 +808,40 @@ export function ChatWidget({ embedded = false }: { embedded?: boolean }) {
       } else {
         console.warn('⚠️ AI Service retornou erro:', result);
         // Fallback inteligente quando API falha
-        const fallbackResponse = getIntelligentFallback(inputText, context);
-        addMessage('bot', fallbackResponse);
+        const fallbackResponse = getIntelligentFallback(userMsg, context);
+        setIsTyping(false);
+        await addMultipleMessages('bot', fallbackResponse);
       }
     } catch (error) {
       console.error('❌ Erro ao chamar AI Service:', error);
-      console.log('🔄 Ativando fallback inteligente para:', inputText);
-      
+      console.log('🔄 Ativando fallback inteligente para:', userMsg);
+
       // Fallback inteligente quando há erro de conexão
-      const fallbackResponse = getIntelligentFallback(inputText, context);
-      addMessage('bot', fallbackResponse);
-      
+      const fallbackResponse = getIntelligentFallback(userMsg, context);
+      setIsTyping(false);
+      await addMultipleMessages('bot', fallbackResponse);
+
       // Atualiza contexto mesmo no fallback
       setContext(prev => ({
         ...prev,
         currentStep: prev.currentStep + 1,
-        lastIntent: getIntent(inputText),
+        lastIntent: getIntent(userMsg),
         usingFallback: true
       }));
     }
   };
 
-  const openChat = () => {
+  const openChat = async () => {
     setIsOpen(true);
     // Sempre limpa mensagens antigas e reseta contexto
     setMessages([]);
     setContext({ currentStep: 0, topics: [] });
-    setTimeout(() => {
-      addMessage('bot', "👋 Oi! Sou a Sara da RonalDigital! ✨\n\nComo posso te ajudar hoje?");
-    }, 500);
+
+    // Mostra "Sara está digitando..." e depois a mensagem
+    setIsTyping(true);
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    setIsTyping(false);
+    await addMultipleMessages('bot', "👋 Oi! Sou a Sara da RonalDigital! ✨\n\nComo posso te ajudar hoje?");
   };
 
   return (
@@ -952,6 +1031,39 @@ export function ChatWidget({ embedded = false }: { embedded?: boolean }) {
                   </div>
                 </div>
               ))}
+
+              {/* Typing Indicator - Sara está digitando */}
+              {isTyping && (
+                <div className="flex items-start space-x-2 animate-in fade-in duration-300">
+                  {/* Avatar da Sara */}
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden bg-slate-100">
+                    <img
+                      src={saraAvatar}
+                      alt="Sara"
+                      className="w-full h-full object-cover rounded-full"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.parentElement!.innerHTML = '<div class="w-6 h-6 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold text-xs">S</div>';
+                      }}
+                    />
+                  </div>
+
+                  {/* Bubble de digitação */}
+                  <div className="max-w-[75%]">
+                    <div className="px-4 py-3 rounded-2xl rounded-bl-sm bg-white border border-slate-200 shadow-sm">
+                      <div className="flex items-center space-x-1">
+                        <span className="text-xs text-slate-600 mr-2">Sara está digitando</span>
+                        <div className="flex space-x-1">
+                          <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
+                          <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
+                          <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {/* Elemento para auto-scroll */}
               <div ref={messagesEndRef} />
             </div>

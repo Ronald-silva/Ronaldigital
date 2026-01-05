@@ -1,0 +1,347 @@
+{
+  "products": {
+    "landing_page": {
+      "name": "Landing Page",
+      "price_range": "R$ 500 - R$ 1.000",
+      "delivery_time": "3-7 dias",
+      "ideal_for": [
+        "Validação de produto/ideia",
+        "Campanhas de lançamento",
+        "Captação de leads",
+        "Vendas de produto único",
+        "Eventos e webinars"
+      ],
+      "variants": {
+        "basic": {
+          "name": "Landing Page Básica",
+          "price": "R$ 500-700",
+          "ideal_for": "Quem está começando ou testando mercado",
+          "delivery": "3-4 dias",
+          "includes": [
+            "1 página otimizada",
+            "Formulário de captação",
+            "Botão WhatsApp flutuante",
+            "Responsivo (mobile/desktop)",
+            "Hospedagem grátis primeiro ano"
+          ],
+          "not_includes": [
+            "Copywriting profissional",
+            "Animações avançadas",
+            "Integrações com CRM"
+          ]
+        },
+        "premium": {
+          "name": "Landing Page de Alta Conversão",
+          "price": "R$ 800-1.200",
+          "ideal_for": "Lançamentos, produtos premium, maximizar conversão",
+          "delivery": "5-7 dias",
+          "includes": [
+            "Tudo da versão básica",
+            "Copywriting persuasivo (eu escrevo os textos)",
+            "Design premium com animações",
+            "Pixel Facebook/Google Analytics",
+            "Teste A/B de headlines",
+            "Integração com email marketing",
+            "2 revisões incluídas"
+          ]
+        }
+      },
+      "when_to_recommend": {
+        "signals": [
+          "Cliente quer 'vender um produto'",
+          "Cliente quer 'captar leads'",
+          "Cliente tem orçamento limitado (< R$ 1.000)",
+          "Cliente precisa de algo 'rápido'",
+          "Cliente quer 'testar ideia'"
+        ],
+        "questions_to_ask": [
+          "Qual o objetivo principal: vender direto ou captar contatos?",
+          "Você já tem os textos prontos ou precisa de ajuda nisso?",
+          "Tem prazo específico para lançar?"
+        ]
+      },
+      "upsells": [
+        {
+          "addon": "Chatbot IA 24h",
+          "price": "+R$ 300-500",
+          "pitch": "Imagina: sua LP capta leads e a IA qualifica na hora, mandando só os quentes pro seu WhatsApp. Cliente da madrugada vira venda de manhã."
+        },
+        {
+          "addon": "Integração CRM",
+          "price": "+R$ 200",
+          "pitch": "Leads vão automaticamente pro seu CRM/Planilha. Zero trabalho manual, você só foca em vender."
+        },
+        {
+          "addon": "Tráfego Pago (Gestão)",
+          "price": "+R$ 500/mês",
+          "pitch": "LP sem tráfego não vende. Posso gerenciar suas campanhas no Google/Facebook pra você."
+        }
+      ],
+      "competitive_advantages": {
+        "vs_wix": "Wix cobra R$ 50/mês PARA SEMPRE e carrega em 3-5s. Nossa LP você paga UMA VEZ e carrega em <1s. Em 2 anos, Wix custou R$ 1.200 e você tem site amador. Nossa LP: R$ 700 uma vez e site profissional pra vida.",
+        "vs_wordpress": "WordPress é lento, pesado e cheio de plugins que travam. Nossa LP é código limpo, otimizado, carrega 5x mais rápido = mais conversão.",
+        "vs_canva": "Canva é bom pra fazer, mas não hospeda e não é otimizado pra SEO/conversão. Nossa LP já vem com tudo configurado: domínio, hospedagem, analytics, pixel."
+      },
+      "common_objections": {
+        "muito_caro": "Entendo! Mas pensa assim: R$ 700 pode te trazer 5, 10 clientes novos. Se cada cliente vale R$ 500, você recupera em 2 vendas. É investimento, não gasto. Posso parcelar em 2-3x se ajudar.",
+        "posso_fazer_no_wix": "Pode sim! Mas Wix cobra R$ 50/mês pra sempre (R$ 1.200 em 2 anos) e você mesmo faz (tempo = dinheiro). Comigo, R$ 700 uma vez, EU faço profissional, e você foca no seu negócio.",
+        "nao_preciso_agora": "Tranquilo! Mas só pra você saber: cada mês sem LP online é dinheiro que você deixa de faturar. Quer que eu te mande um exemplo de LP pra você ver o potencial?"
+      }
+    },
+    "website": {
+      "name": "Site Institucional/Empresarial",
+      "price_range": "R$ 800 - R$ 2.000",
+      "delivery_time": "7-15 dias",
+      "ideal_for": [
+        "Empresas que precisam de credibilidade",
+        "Profissionais liberais (advogados, médicos, dentistas)",
+        "Consultórias e agências",
+        "Negócios B2B",
+        "Quem precisa mostrar portfólio de serviços"
+      ],
+      "variants": {
+        "basic": {
+          "name": "Site Institucional Básico",
+          "price": "R$ 800-1.200",
+          "pages": "4-6 páginas",
+          "includes": [
+            "Home + Sobre + Serviços + Contato",
+            "Design profissional e responsivo",
+            "Formulário de contato",
+            "Integração WhatsApp",
+            "SEO básico (meta tags, sitemap)",
+            "Hospedagem grátis 1 ano"
+          ]
+        },
+        "premium": {
+          "name": "Site Corporativo Premium",
+          "price": "R$ 1.500-2.500",
+          "pages": "8-12 páginas",
+          "includes": [
+            "Tudo da versão básica",
+            "Blog integrado",
+            "Área de depoimentos",
+            "Galeria de projetos/portfólio",
+            "SEO avançado (otimização completa)",
+            "Analytics e heatmap",
+            "3 revisões incluídas",
+            "Suporte 6 meses"
+          ]
+        }
+      },
+      "when_to_recommend": {
+        "signals": [
+          "Cliente menciona 'profissional liberal' (médico, advogado, dentista)",
+          "Cliente fala em 'credibilidade', 'autoridade'",
+          "Cliente tem vários serviços pra mostrar",
+          "Cliente quer 'ser encontrado no Google'",
+          "Negócio B2B ou consultoria"
+        ],
+        "questions_to_ask": [
+          "Seu cliente precisa confiar em você antes de contratar? (Sim = Site)",
+          "Você tem vários serviços ou só um? (Vários = Site, Um = LP)",
+          "Quer aparecer no Google quando procurarem seu nicho?"
+        ]
+      },
+      "upsells": [
+        {
+          "addon": "Blog com SEO",
+          "price": "+R$ 400",
+          "pitch": "Blog = motor de crescimento no Google. Você cria conteúdo, eu otimizo, Google te ranqueia. Clientes acham você organicamente."
+        },
+        {
+          "addon": "Agente IA de Atendimento",
+          "price": "+R$ 800 setup + R$ 150/mês",
+          "pitch": "Depois do site no ar, adiciona IA que responde dúvidas 24h e agenda consultas. Cliente da madrugada vira paciente de manhã."
+        }
+      ],
+      "competitive_advantages": {
+        "vs_wordpress": "WordPress é 70% do mercado mas é pesado, vulnerável e precisa de manutenção constante. Nosso site é React/Next.js: 5x mais rápido, mais seguro, zero manutenção.",
+        "vs_wix": "Wix é limitado, genérico e cobra mensalidade eterna. Nosso site é sob medida, você não paga mensalidade, e é 100% seu."
+      }
+    },
+    "ai_agent": {
+      "name": "Automações com Agente de IA",
+      "price_range": "R$ 800 - R$ 2.500 (setup) + R$ 100-300/mês",
+      "delivery_time": "5-10 dias",
+      "ideal_for": [
+        "Empresas que recebem muitas perguntas repetitivas",
+        "Negócios que precisam qualificar leads",
+        "Serviços com agendamento (consultas, reuniões)",
+        "Atendimento 24/7",
+        "Escalar vendas sem contratar"
+      ],
+      "variants": {
+        "chatbot_atendimento": {
+          "name": "Chatbot de Atendimento",
+          "price": "R$ 800-1.200 setup + R$ 100/mês",
+          "ideal_for": "Responder dúvidas frequentes 24h",
+          "includes": [
+            "IA treinada no seu negócio",
+            "Responde dúvidas comuns",
+            "Coleta informações de contato",
+            "Integra WhatsApp/site",
+            "Passa pra humano quando necessário"
+          ]
+        },
+        "qualificador_leads": {
+          "name": "Qualificador de Leads com IA",
+          "price": "R$ 1.500-2.000 setup + R$ 200/mês",
+          "ideal_for": "Filtrar leads quentes antes de você atender",
+          "includes": [
+            "Tudo do Chatbot Atendimento",
+            "Qualifica leads (BANT)",
+            "Pontua leads (quente/morno/frio)",
+            "Agenda reuniões automaticamente",
+            "Notifica você só com leads quentes",
+            "Dashboard de métricas"
+          ],
+          "case_study": "Medeiros Veículos - 80% dos leads qualificados automaticamente. Vendedor só fala com cliente quente."
+        },
+        "agente_vendas": {
+          "name": "Agente de IA Vendedor",
+          "price": "R$ 2.000-3.000 setup + R$ 300/mês",
+          "ideal_for": "Vender produtos/serviços de forma consultiva",
+          "includes": [
+            "Tudo do Qualificador",
+            "Metodologias de venda (SPIN, BANT)",
+            "Envia propostas automaticamente",
+            "Follow-up inteligente",
+            "Integra com CRM",
+            "Relatórios de conversão"
+          ]
+        }
+      },
+      "when_to_recommend": {
+        "signals": [
+          "Cliente reclama de 'muito atendimento manual'",
+          "Cliente quer 'atender 24h'",
+          "Cliente perde leads 'de madrugada/fim de semana'",
+          "Cliente quer 'escalar sem contratar'",
+          "Cliente já tem site/LP mas quer mais conversão"
+        ],
+        "questions_to_ask": [
+          "Quantas mensagens/leads você recebe por dia?",
+          "Quantos desses são perguntas repetitivas?",
+          "Você perde clientes por não responder rápido?"
+        ],
+        "positioning": "IA não substitui você, LIBERA você pra focar no que importa. Ela filtra, qualifica, agenda. Você só fala com quem tá pronto pra fechar."
+      },
+      "case_studies_to_mention": [
+        "BarberFlow - Sistema de agendamento que economizou 15h/semana",
+        "Medeiros Veículos - IA que qualifica leads de test-drive automaticamente",
+        "HS Forge Luxury - Atendimento premium 24h com IA consultiva"
+      ]
+    },
+    "portfolio": {
+      "name": "Currículo Digital / Portfólio",
+      "price_range": "R$ 400 - R$ 800",
+      "delivery_time": "3-5 dias",
+      "ideal_for": [
+        "Freelancers e profissionais autônomos",
+        "Criativos (fotógrafos, designers, arquitetos)",
+        "Quem busca emprego/clientes",
+        "Apresentar trabalhos de forma impactante"
+      ],
+      "includes": [
+        "Design moderno e interativo",
+        "Seção Sobre Mim",
+        "Galeria de projetos/trabalhos",
+        "Habilidades e experiências",
+        "Depoimentos (se tiver)",
+        "Formulário de contato",
+        "Links para redes sociais",
+        "Responsivo e otimizado"
+      ],
+      "case_study": "Currículo Julia - Exemplo de portfólio digital interativo e profissional",
+      "when_to_recommend": {
+        "signals": [
+          "Cliente é freelancer/profissional liberal",
+          "Cliente menciona 'buscar emprego/clientes'",
+          "Cliente é criativo (fotógrafo, designer, arquiteto)",
+          "Cliente quer 'mostrar trabalhos'"
+        ]
+      },
+      "upsell": {
+        "addon": "Blog Pessoal",
+        "price": "+R$ 300",
+        "pitch": "Currículo + Blog = autoridade. Você escreve sobre sua área, Google te ranqueia, clientes te acham organicamente."
+      }
+    },
+    "blog": {
+      "name": "Blog Profissional",
+      "price_range": "R$ 600 - R$ 1.200",
+      "delivery_time": "5-7 dias",
+      "ideal_for": [
+        "Construir autoridade no nicho",
+        "Tráfego orgânico (Google)",
+        "Educação de leads",
+        "Marketing de conteúdo"
+      ],
+      "includes": [
+        "Design otimizado para leitura",
+        "CMS fácil (você edita posts sozinho)",
+        "SEO on-page configurado",
+        "Categorias e tags",
+        "Comentários (opcional)",
+        "Newsletter (captura emails)",
+        "Responsivo e rápido"
+      ],
+      "case_study": "Major Heribaldo - Blog pessoal com SEO otimizado",
+      "when_to_recommend": {
+        "signals": [
+          "Cliente quer 'aparecer no Google'",
+          "Cliente fala em 'autoridade', 'educar mercado'",
+          "Cliente quer 'tráfego orgânico gratuito'",
+          "Cliente já produz conteúdo (YouTube, Instagram)"
+        ]
+      },
+      "positioning": "Blog não é só escrever. É plantar sementes no Google que viram clientes meses depois. Você escreve uma vez, ranqueia pra sempre."
+    },
+    "seo": {
+      "name": "Otimização de SEO",
+      "price_range": "R$ 500 - R$ 1.500 (one-time) ou R$ 300/mês (recorrente)",
+      "delivery_time": "Resultados em 2-4 meses",
+      "ideal_for": [
+        "Quem já tem site mas não aparece no Google",
+        "Negócios locais (dentista, advogado em [cidade])",
+        "Quem quer tráfego orgânico constante"
+      ],
+      "variants": {
+        "one_time": {
+          "name": "SEO Técnico (One-time)",
+          "price": "R$ 500-800",
+          "includes": [
+            "Auditoria completa do site",
+            "Correção de erros técnicos",
+            "Otimização de velocidade",
+            "Meta tags e sitemap",
+            "Schema markup",
+            "Relatório de antes/depois"
+          ]
+        },
+        "recorrente": {
+          "name": "SEO Contínuo",
+          "price": "R$ 300-600/mês",
+          "includes": [
+            "Tudo do SEO Técnico",
+            "Pesquisa de palavras-chave",
+            "Criação de conteúdo otimizado",
+            "Link building",
+            "Relatório mensal de rankings",
+            "Ajustes contínuos"
+          ]
+        }
+      },
+      "when_to_recommend": {
+        "signals": [
+          "Cliente tem site mas 'ninguém acha'",
+          "Cliente quer 'parar de depender de tráfego pago'",
+          "Cliente busca 'crescimento sustentável'",
+          "Negócio local (quer aparecer em 'dentista [cidade]')"
+        ]
+      },
+      "positioning": "SEO é investimento de longo prazo. Tráfego pago para quando você para de pagar. SEO continua trazendo cliente mês após mês, de graça."
+    }
+  }
+}

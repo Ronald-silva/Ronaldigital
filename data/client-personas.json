@@ -1,0 +1,364 @@
+{
+  "personas": {
+    "empreendedor_iniciante": {
+      "descricao": "Acabou de abrir negócio ou está nos primeiros 6 meses",
+      "sinais_identificacao": [
+        "acabei de abrir",
+        "estou começando",
+        "primeira vez",
+        "não tenho clientes ainda",
+        "estou montando"
+      ],
+      "perfil": {
+        "dores": [
+          "Falta de credibilidade",
+          "Poucos clientes",
+          "Orçamento apertado",
+          "Não sabe por onde começar",
+          "Medo de investir errado"
+        ],
+        "motivacoes": [
+          "Querer crescer rápido",
+          "Profissionalizar",
+          "Parecer estabelecido",
+          "Competir com maiores"
+        ],
+        "objecoes_comuns": [
+          "Muito caro para quem está começando",
+          "Não tenho dinheiro agora",
+          "Vou esperar ter mais clientes primeiro",
+          "Posso fazer no Wix"
+        ]
+      },
+      "playbook": {
+        "framework_primario": "CHAMP",
+        "tom": "Empático, encorajador, educativo",
+        "abordagem": "Mostre que é ESSENCIAL investir desde o início para crescer certo",
+        "argumentos_chave": [
+          "Credibilidade desde dia 1 - clientes confiam mais",
+          "Custo de começar errado (Wix, amador) é MAIOR que fazer certo",
+          "Quem investe em presença digital no início cresce 3x mais rápido",
+          "Parcelamento facilita - menos que aluguel/funcionário",
+          "Você TEM que parecer profissional para competir"
+        ],
+        "produtos_ideais": ["landing_page", "portfolio"],
+        "value_proposition": "Comece CERTO desde o dia 1. Profissionalismo gera confiança, confiança gera vendas.",
+        "proof_points": [
+          "Currículo digital profissional destaca você entre centenas de PDFs genéricos",
+          "Landing page otimizada captura leads 24h - seu site trabalha enquanto você dorme"
+        ],
+        "perguntas_qualificadoras": [
+          "Qual seu objetivo para os primeiros 6 meses?",
+          "Você quer parecer amador ou profissional?",
+          "Quanto vale para você ganhar credibilidade desde já?",
+          "Se pudesse ter 10 clientes no próximo mês, investiria quanto?"
+        ],
+        "red_flags": [
+          "Não tem plano de negócio",
+          "Está 'testando' sem compromisso",
+          "Orçamento zero absoluto"
+        ]
+      }
+    },
+    "profissional_liberal": {
+      "descricao": "Advogados, médicos, dentistas, contadores, consultores",
+      "sinais_identificacao": [
+        "sou advogado",
+        "médico",
+        "dentista",
+        "consultor",
+        "contador",
+        "atendo clientes",
+        "escritório"
+      ],
+      "perfil": {
+        "dores": [
+          "Depende de indicação (não tem controle)",
+          "Concorrentes aparecem no Google e ele não",
+          "Clientes não confiam sem conhecer",
+          "Dificuldade em mostrar autoridade",
+          "Preço alto precisa justificar"
+        ],
+        "motivacoes": [
+          "Autoridade e credibilidade",
+          "Ser encontrado no Google",
+          "Parecer estabelecido/sério",
+          "Justificar preço premium",
+          "Reduzir dependência de indicação"
+        ],
+        "objecoes_comuns": [
+          "Meus clientes vêm por indicação",
+          "Não preciso de marketing",
+          "Meu trabalho fala por si",
+          "É caro"
+        ]
+      },
+      "playbook": {
+        "framework_primario": "GPCT + MEDDIC",
+        "tom": "Profissional, respeitoso, consultivo, use dados",
+        "abordagem": "Autoridade e SEO - aparecer quando buscarem",
+        "argumentos_chave": [
+          "75% das pessoas pesquisam profissional no Google ANTES de contratar",
+          "Site profissional justifica preço premium - transmite confiança",
+          "Depender só de indicação limita crescimento - Google é escalável",
+          "Concorrentes COM site captam os clientes que pesquisam",
+          "Depoimentos no site convertem 3x mais que sem"
+        ],
+        "produtos_ideais": ["website", "seo"],
+        "value_proposition": "Seja encontrado por quem busca e inspire confiança profissional",
+        "proof_points": [
+          "Case AuditPrime: Contador sem site não aparecia. Com site + SEO, 3 contratos no primeiro mês do Google. ROI em 1 mês.",
+          "Case HS Forge Luxury: Site premium para atendimento diferenciado"
+        ],
+        "perguntas_qualificadoras": [
+          "Quantos clientes você perde porque não te acham no Google?",
+          "Você googla seu nome + profissão + cidade. Você aparece?",
+          "Quando cliente pesquisa, prefere ser achado ou ignorado?",
+          "Quanto vale 1 cliente novo por mês para você?"
+        ],
+        "roi_angle": "Se 1 cliente novo/mês vem do site, com ticket de R$ 1.000, são R$ 12k/ano. Investimento de R$ 1.500 = ROI de 800%",
+        "red_flags": [
+          "Não valoriza marketing",
+          "Acha que 'boca a boca' é suficiente",
+          "Não quer investir em crescimento"
+        ]
+      }
+    },
+    "comercio_local": {
+      "descricao": "Barbearias, salões, restaurantes, lojas físicas, academias",
+      "sinais_identificacao": [
+        "barbearia",
+        "salão",
+        "restaurante",
+        "loja",
+        "academia",
+        "loja física",
+        "comércio",
+        "tenho ponto"
+      ],
+      "perfil": {
+        "dores": [
+          "Clientes ligam fora do horário e não conseguem agendar",
+          "Concorrente tem sistema online e ele não",
+          "Perde tempo respondendo perguntas repetitivas",
+          "Não aparece em 'perto de mim' no Google",
+          "Cancelamentos de última hora",
+          "Dificuldade em mostrar cardápio/serviços"
+        ],
+        "motivacoes": [
+          "Automatizar agendamentos",
+          "Reduzir no-shows",
+          "Atender 24h (mesmo fechado)",
+          "Competir com apps/plataformas grandes",
+          "Economizar tempo da equipe"
+        ],
+        "objetivos": [
+          "Mais agendamentos",
+          "Menos trabalho manual",
+          "Aparecer em buscas locais"
+        ]
+      },
+      "playbook": {
+        "framework_primario": "SPIN + ROI Calculator",
+        "tom": "Prático, direto, focado em resultados tangíveis",
+        "abordagem": "Economia de tempo + mais clientes",
+        "argumentos_chave": [
+          "Clientes querem agendar 24h - se você não tem sistema, vão pro concorrente",
+          "IA/Sistema economiza 10-15h/semana da sua equipe",
+          "Google Maps prioriza negócios COM site nas buscas locais",
+          "Sistema de agendamento reduz no-shows em 40%",
+          "Cardápio/serviços online aumenta ticket médio em 25%"
+        ],
+        "produtos_ideais": ["ai_agent", "website", "landing_page"],
+        "value_proposition": "Trabalhe menos, venda mais, automatize o que é repetitivo",
+        "proof_points": [
+          "Case BarberFlow: Salão economizou 15h/semana com agendamento online, 30% mais agendamentos",
+          "Case Medeiros Veículos: IA qualifica leads 24h, vendedor economiza 4h/dia, conversão +25%"
+        ],
+        "perguntas_qualificadoras": [
+          "Quantas horas/semana você gasta respondendo 'quanto custa X?'",
+          "Quantos clientes ligam de madrugada/domingo e você perde?",
+          "Seu tempo vale quanto por hora? (mostre economia)",
+          "Se pudesse economizar 10h/semana, o que faria com esse tempo?"
+        ],
+        "roi_angle": "Use ROI Calculator para IA: Economiza Xh + converte Y clientes a mais = R$ Z/mês de benefício",
+        "linguagem": "Use exemplos práticos, números concretos, evite jargão técnico"
+      }
+    },
+    "pequeno_empresario_digital": {
+      "descricao": "Vende produtos/serviços online, infoprodutos, cursos, e-commerce pequeno",
+      "sinais_identificacao": [
+        "vendo online",
+        "infoproduto",
+        "curso",
+        "produto digital",
+        "ecommerce",
+        "dropshipping",
+        "afiliado"
+      ],
+      "perfil": {
+        "dores": [
+          "Conversão baixa",
+          "Tráfego caro (ads)",
+          "Carrinho abandonado",
+          "Não sabe otimizar funil",
+          "Plataformas cobram muito"
+        ],
+        "motivacoes": [
+          "Aumentar conversão",
+          "Reduzir custo de aquisição",
+          "Otimizar funil de vendas",
+          "Ser independente de plataformas",
+          "Escalar vendas"
+        ],
+        "conhecimento_tecnico": "Médio-alto"
+      },
+      "playbook": {
+        "framework_primario": "Challenger Sale + Gap Selling",
+        "tom": "Técnico mas acessível, focado em métricas",
+        "abordagem": "Otimização, conversão, ROI de anúncios",
+        "argumentos_chave": [
+          "Landing page otimizada aumenta conversão de 2% para 8% = 4x ROI nos anúncios",
+          "Velocidade de carregamento: cada 1s de atraso = 7% menos conversão",
+          "Checkout próprio vs plataforma: economize taxas de 5-10%",
+          "Página de vendas com copy persuasivo converte 300% mais",
+          "Teste A/B otimizado pode dobrar vendas sem mais tráfego"
+        ],
+        "produtos_ideais": ["landing_page", "website"],
+        "value_proposition": "Converta mais com o mesmo tráfego - otimização >>> mais ads",
+        "proof_points": [
+          "Case SalesNet: LP com 12% de conversão vs 2-3% média do mercado",
+          "Tecnologia React = 0.8s de carregamento vs 3-5s WordPress"
+        ],
+        "perguntas_qualificadoras": [
+          "Qual sua taxa de conversão atual?",
+          "Quanto você gasta em tráfego por mês?",
+          "Se eu aumentar sua conversão de X% para Y%, quanto isso vale?",
+          "Qual seu CAC (custo de aquisição)? E se reduzíssemos 50%?"
+        ],
+        "roi_angle": "Se você gasta R$ 5k/mês em ads e conversão sobe de 3% para 6%, você dobra resultado com MESMO orçamento = R$ 60k/ano a mais",
+        "linguagem": "Use termos como CAC, LTV, conversão, funil, CTR - eles entendem"
+      }
+    },
+    "solopreneur_criativo": {
+      "descricao": "Freelancers, fotógrafos, designers, arquitetos, artistas",
+      "sinais_identificacao": [
+        "freelancer",
+        "fotógrafo",
+        "designer",
+        "arquiteto",
+        "criativo",
+        "trabalho sozinho",
+        "portfólio"
+      ],
+      "perfil": {
+        "dores": [
+          "Dificuldade em mostrar portfólio",
+          "Depende de Instagram (não profissional)",
+          "Clientes não levam a sério",
+          "Precisa parecer estabelecido",
+          "Currículo PDF se perde"
+        ],
+        "motivacoes": [
+          "Mostrar trabalhos de forma profissional",
+          "Ser levado a sério",
+          "Conseguir clientes melhores (que pagam mais)",
+          "Diferenciação",
+          "Credibilidade"
+        ],
+        "sensibilidade_estetica": "ALTA - design importa muito"
+      },
+      "playbook": {
+        "framework_primario": "Value-First + GPCT",
+        "tom": "Criativo, inspirador, focado em estética e diferenciação",
+        "abordagem": "Portfólio = seu melhor vendedor trabalhando 24h",
+        "argumentos_chave": [
+          "94% dos clientes decidem ANTES de falar com você - portfólio decide por você",
+          "Instagram é efêmero, portfólio é permanente e profissional",
+          "Clientes que pagam BEM pesquisam no Google, não só no Insta",
+          "Portfólio personalizado transmite VOCÊ, template é genérico",
+          "SEO: quando alguém busca 'fotógrafo [cidade]', você quer aparecer"
+        ],
+        "produtos_ideais": ["portfolio"],
+        "value_proposition": "Seu trabalho merece uma vitrine profissional que vende por você 24h",
+        "proof_points": [
+          "Portfólio digital profissional mostra seu trabalho de forma muito mais impactante que PDF ou Instagram",
+          "Ter um site próprio passa credibilidade e diferencia você da concorrência"
+        ],
+        "perguntas_qualificadoras": [
+          "Como clientes descobrem seu trabalho hoje?",
+          "Quantos clientes você perde porque não te acham profissional o suficiente?",
+          "Se 1 cliente melhor (que paga 50% mais) vier do portfólio, vale investir R$ 600?",
+          "Você quer competir com amadores ou com profissionais?"
+        ],
+        "roi_angle": "Cliente melhor paga R$ 500 a mais por projeto. 2 clientes assim já pagou o portfólio. Depois? Lucro.",
+        "linguagem": "Focado em estética, diferenciação, storytelling do trabalho deles"
+      }
+    },
+    "decisor_corporativo": {
+      "descricao": "Gerente, diretor, CEO de empresa estabelecida (5+ funcionários)",
+      "sinais_identificacao": [
+        "sou gerente",
+        "diretor",
+        "empresa",
+        "equipe de X pessoas",
+        "corporativo",
+        "CNPJ ativo há anos"
+      ],
+      "perfil": {
+        "dores": [
+          "Site antigo/desatualizado",
+          "Imagem não condiz com qualidade real",
+          "Perder contratos para concorrentes 'mais modernos'",
+          "Processo de vendas manual/ineficiente",
+          "Dependência de equipe grande"
+        ],
+        "motivacoes": [
+          "Modernizar imagem",
+          "Aumentar eficiência",
+          "Reduzir custos operacionais",
+          "Escalar sem contratar",
+          "Métricas e ROI claros"
+        ],
+        "processo_decisao": "Mais longo, múltiplos stakeholders, precisa de aprovação"
+      },
+      "playbook": {
+        "framework_primario": "MEDDIC + Business Case",
+        "tom": "Corporativo, formal, baseado em dados",
+        "abordagem": "Business case sólido com ROI quantificado",
+        "argumentos_chave": [
+          "Site moderno reduz CAC em 30-50% (atração inbound)",
+          "Automação via IA economiza 1 FTE (funcionário full-time) = R$ 4k/mês",
+          "Credibilidade digital aumenta taxa de fechamento em 40%",
+          "SEO gera leads orgânicos (CAC próximo de R$ 0) vs ads caros",
+          "Investimento CapEx one-time vs OpEx recorrente de plataformas"
+        ],
+        "produtos_ideais": ["website", "ai_agent", "seo"],
+        "value_proposition": "Modernize presença digital, aumente eficiência, reduza custos",
+        "proof_points": [
+          "Case HS Forge Luxury: Site premium + IA consultiva, 35% dos atendimentos viraram agendamentos",
+          "Empresas com presença digital forte têm 67% mais leads que sem"
+        ],
+        "perguntas_meddic": [
+          "Quais métricas você quer impactar? (leads, CAC, conversão?)",
+          "Quem aprova investimentos dessa natureza?",
+          "Qual seu processo de decisão? Quantas pessoas envolvidas?",
+          "Quando vocês planejam implementar?",
+          "Qual o budget aprovado para marketing digital este ano?"
+        ],
+        "roi_angle": "Apresente business case formal: Investimento R$ X, Benefício R$ Y/mês, Payback Z meses, IRR %",
+        "linguagem": "Formal, use jargão corporativo (stakeholder, ROI, KPI, eficiência operacional)",
+        "documentos": "Pronto para fornecer proposta formal, cronograma, SLA"
+      }
+    }
+  },
+  "como_usar_personas": {
+    "passo_1": "Identifique a persona baseada em sinais_identificacao nas primeiras 2-3 mensagens",
+    "passo_2": "Ajuste TOM e LINGUAGEM conforme persona",
+    "passo_3": "Use FRAMEWORK_PRIMARIO da persona para qualificar",
+    "passo_4": "Apresente ARGUMENTOS_CHAVE relevantes",
+    "passo_5": "Mostre PROOF_POINTS (cases) que a persona se identifica",
+    "passo_6": "Calcule e apresente ROI no ângulo que faz sentido pra persona",
+    "passo_7": "Antecipe e responda OBJEÇÕES_COMUNS da persona"
+  }
+}

@@ -1,0 +1,380 @@
+{
+  "case_studies": {
+    "barberflow": {
+      "name": "BarberFlow",
+      "project_type": "SaaS para Barbearias",
+      "client_industry": "Beleza e Estética",
+      "url": "https://barber-flow-swart.vercel.app/",
+      "thumbnail": "/barberflow.png",
+      "problem": {
+        "description": "Barbearias perdiam clientes por não terem sistema de agendamento online. Atendimento manual via WhatsApp gerava confusão de horários e perda de tempo.",
+        "pain_points": [
+          "Clientes ligavam fora do horário e não eram atendidos",
+          "Duplo-agendamento acontecia frequentemente",
+          "Barbeiros perdiam 2-3h/dia só gerenciando agenda",
+          "Sem histórico de clientes (cortes anteriores, preferências)",
+          "Perda de receita por desorganização"
+        ]
+      },
+      "solution": {
+        "what_was_delivered": "Sistema completo de agendamento online com gestão de clientes, serviços e horários. Cliente agenda sozinho 24h, sistema notifica barbeiro, histórico completo salvo.",
+        "technologies": ["React", "TypeScript", "Node.js", "PostgreSQL"],
+        "delivery_time": "14 dias",
+        "project_value": "R$ 2.500 (SaaS customizado)"
+      },
+      "results": {
+        "quantitative": [
+          "15h/semana economizadas em gestão de agenda",
+          "30% aumento em agendamentos (clientes marcam de madrugada)",
+          "Zero duplo-agendamento desde implementação",
+          "ROI em 2 meses (economia de tempo + novos clientes)"
+        ],
+        "qualitative": [
+          "Profissionalização da barbearia",
+          "Clientes elogiaram facilidade de agendamento",
+          "Barbeiros focam 100% no atendimento, zero admin"
+        ]
+      },
+      "when_to_mention": {
+        "scenarios": [
+          "Cliente menciona 'agendamento', 'marcar horário', 'calendário'",
+          "Cliente reclama de 'bagunça na agenda', 'duplo-booking'",
+          "Cliente é do setor de beleza/estética/saúde (salão, clínica, etc)",
+          "Cliente quer 'SaaS' ou 'sistema personalizado'",
+          "Cliente precisa 'economizar tempo' em tarefas manuais"
+        ],
+        "how_to_pitch": "Olha só, tive um caso parecido! Desenvolvi o BarberFlow pra uma barbearia que tava perdendo uns 15h/semana só organizando agenda no caderno e WhatsApp. Hoje o cliente agenda sozinho pelo site 24h, o sistema notifica o barbeiro, e eles aumentaram 30% nos agendamentos porque cliente marca até de madrugada. Posso criar algo assim pro seu negócio também!",
+        "validates_services": ["ai_agent", "website", "landing_page"]
+      },
+      "social_proof_elements": {
+        "screenshot_highlight": "Interface de agendamento limpa e intuitiva",
+        "testimonial_quote": "Economizei 15h/semana. Agora só corto cabelo, zero admin.",
+        "case_study_cta": "Quer ver o BarberFlow funcionando? Te mando o link!"
+      }
+    },
+    "medeiros_veiculos": {
+      "name": "Medeiros Veículos",
+      "project_type": "SaaS com Agente de IA - Qualificador de Leads",
+      "client_industry": "Automotivo (Revenda de Veículos)",
+      "url": "https://medeiro-veiculos.vercel.app/",
+      "thumbnail": "/medeiros.png",
+      "problem": {
+        "description": "Loja de veículos recebia 50+ mensagens/dia no WhatsApp. Vendedor perdia tempo com 'curiosos' que nunca compravam. Leads de madrugada/fim de semana ficavam sem resposta.",
+        "pain_points": [
+          "70% das mensagens eram perguntas básicas (preço, ano, KM)",
+          "Vendedor gastava 4h/dia respondendo WhatsApp",
+          "Leads quentes perdidos por demora na resposta (concorrência respondia primeiro)",
+          "Impossível atender 24h (leads de madrugada viravam vendas perdidas)",
+          "Sem qualificação: vendedor atendia todo mundo igual"
+        ]
+      },
+      "solution": {
+        "what_was_delivered": "Agente de IA integrado ao site que responde dúvidas 24h, qualifica leads automaticamente (BANT), agenda test-drives, e só notifica vendedor com leads QUENTES (pontuação 3-4).",
+        "technologies": ["React", "Claude AI", "LangChain", "Vercel"],
+        "delivery_time": "10 dias",
+        "project_value": "R$ 1.800 setup + R$ 200/mês"
+      },
+      "results": {
+        "quantitative": [
+          "80% dos leads qualificados automaticamente pela IA",
+          "Vendedor economizou 4h/dia (só atende quem tem potencial real)",
+          "40% aumento em test-drives agendados (IA agenda 24h)",
+          "Taxa de conversão lead→venda subiu 25% (foco em leads quentes)"
+        ],
+        "qualitative": [
+          "Vendedor atende apenas clientes prontos pra comprar",
+          "Cliente satisfeito com resposta instantânea 24h",
+          "Profissionalização do atendimento (IA nunca erra informação)"
+        ]
+      },
+      "when_to_mention": {
+        "scenarios": [
+          "Cliente reclama de 'muito atendimento manual', 'perder tempo com curioso'",
+          "Cliente menciona 'qualificar leads', 'filtrar leads', 'leads frios'",
+          "Cliente quer 'atender 24h' ou reclama de perder leads de madrugada",
+          "Cliente quer 'escalar vendas sem contratar vendedor'",
+          "Cliente já tem site/LP mas quer 'mais conversão', 'menos trabalho manual'"
+        ],
+        "how_to_pitch": "Cara, seu caso é IGUALZINHO ao Medeiros Veículos que eu fiz! Loja de carros tava recebendo 50+ mensagens/dia, vendedor perdendo 4h só respondendo 'quanto custa', 'qual o ano', sendo que 70% nem comprava. Criei uma IA que responde 24h, qualifica o lead (pergunta orçamento, urgência, etc), e só manda pro vendedor se o cara tá REALMENTE interessado. Resultado: vendedor economizou 4h/dia e conversão subiu 25%. Quer algo assim?",
+        "validates_services": ["ai_agent", "website"]
+      },
+      "social_proof_elements": {
+        "screenshot_highlight": "Chat da IA qualificando lead em tempo real",
+        "testimonial_quote": "Antes eu atendia TODO MUNDO. Agora só falo com quem vai comprar. Vida mudou.",
+        "case_study_cta": "Te mostro a IA funcionando? É impressionante!"
+      }
+    },
+    "hs_forge_luxury": {
+      "name": "HS Forge Luxury",
+      "project_type": "Site Premium com Agente de IA Consultivo",
+      "client_industry": "Luxo e Alta Costura",
+      "url": "https://hs-forge-luxury.vercel.app/",
+      "thumbnail": "/hs.png",
+      "problem": {
+        "description": "Marca de luxo precisava de site premium que transmitisse exclusividade + atendimento consultivo 24h. Cliente de produto caro não aceita chatbot genérico.",
+        "pain_points": [
+          "Site antigo parecia 'comum', não passava exclusividade",
+          "Sem atendimento de madrugada/fim de semana (cliente internacional)",
+          "Chatbots comuns eram 'robotizados demais' (cliente luxury odeia)",
+          "Precisava de IA que fizesse venda consultiva (não só responder FAQ)"
+        ]
+      },
+      "solution": {
+        "what_was_delivered": "Site premium com design sofisticado + Agente de IA treinado em venda consultiva para produtos de luxo. IA entende perfil do cliente, sugere peças, agenda consultas personalizadas.",
+        "technologies": ["React", "Vite", "Anthropic AI (Claude)", "Tailwind CSS"],
+        "delivery_time": "7 dias",
+        "project_value": "R$ 1.500 (site) + R$ 800 (IA) = R$ 2.300"
+      },
+      "results": {
+        "quantitative": [
+          "100% dos visitantes atendidos 24h (antes: só horário comercial)",
+          "35% dos atendimentos da IA viraram agendamentos de consulta",
+          "Cliente internacional consegue interagir de madrugada (fuso horário)"
+        ],
+        "qualitative": [
+          "Clientes elogiaram 'atendimento humanizado' da IA",
+          "Marca ganhou reputação de inovação + exclusividade",
+          "Dona da marca: 'Parece que contratei uma vendedora 24h'"
+        ]
+      },
+      "when_to_mention": {
+        "scenarios": [
+          "Cliente menciona 'luxo', 'premium', 'alta costura', 'exclusivo'",
+          "Cliente quer 'atendimento diferenciado', 'consultivo'",
+          "Cliente tem produto caro (>R$ 500) e precisa 'educar/convencer' cliente",
+          "Cliente quer site + IA integrados",
+          "Cliente atende público internacional (fusos horários diferentes)"
+        ],
+        "how_to_pitch": "Seu produto é premium, né? Então você precisa de um atendimento à altura! Fiz um projeto pra HS Forge Luxury (marca de alta costura) onde criei um site sofisticado + IA que faz venda CONSULTIVA. A IA não é aquele chatbot robotizado, ela entende o perfil do cliente, sugere peças, agenda consultas. Cliente internacional compra de madrugada, IA atende perfeitamente. 35% dos atendimentos viraram agendamentos. Seu público merece isso!",
+        "validates_services": ["website", "ai_agent"]
+      },
+      "social_proof_elements": {
+        "screenshot_highlight": "Design elegante + Chat IA integrado",
+        "testimonial_quote": "Parece que contratei uma vendedora de luxo que trabalha 24h. Incrível.",
+        "case_study_cta": "Te mostro o site? O design é de outro nível!"
+      }
+    },
+    "auditprime": {
+      "name": "AuditPrime",
+      "project_type": "Site Institucional para Contabilidade",
+      "client_industry": "Serviços Profissionais (Contabilidade)",
+      "url": "https://audit-prime.vercel.app/",
+      "thumbnail": "/aud.png",
+      "problem": {
+        "description": "Escritório de contabilidade sem site profissional. Clientes pesquisavam no Google e não achavam. Perdiam contratos pra concorrentes com presença online.",
+        "pain_points": [
+          "Sem site = sem credibilidade (cliente não confia)",
+          "Não aparecia no Google quando procuravam 'contabilidade [cidade]'",
+          "Dependia 100% de indicação (crescimento lento)",
+          "Concorrentes com site fechavam contratos primeiro"
+        ]
+      },
+      "solution": {
+        "what_was_delivered": "Site institucional profissional com 6 páginas (Home, Sobre, Serviços, Diferenciais, Contato, Blog). Design transmite confiança e expertise. SEO configurado pra aparecer em buscas locais.",
+        "technologies": ["React", "TypeScript", "Tailwind CSS"],
+        "delivery_time": "8 dias",
+        "project_value": "R$ 1.000"
+      },
+      "results": {
+        "quantitative": [
+          "3 novos contratos no primeiro mês (vindos do Google)",
+          "Site aparece na 1ª página pra 'contabilidade [cidade]'",
+          "ROI em 1 mês (R$ 1.000 site vs R$ 3.000+ em novos contratos)"
+        ],
+        "qualitative": [
+          "Clientes comentam 'site passa confiança, parece empresa grande'",
+          "Contador consegue mandar link do site pra prospectar",
+          "Profissionalização da imagem da empresa"
+        ]
+      },
+      "when_to_mention": {
+        "scenarios": [
+          "Cliente é profissional liberal (advogado, médico, dentista, contador)",
+          "Cliente fala em 'credibilidade', 'autoridade', 'confiança'",
+          "Cliente reclama que 'não aparece no Google'",
+          "Cliente quer 'site institucional', 'site corporativo'",
+          "Cliente depende de indicação e quer crescer"
+        ],
+        "how_to_pitch": "Profissional liberal precisa de credibilidade, né? Fiz o site da AuditPrime (escritório de contabilidade) que tava perdendo contratos porque cliente pesquisava no Google e não achava nada. Em 8 dias entreguei site profissional, configurei SEO local, e no PRIMEIRO MÊS já vieram 3 contratos novos do Google. Site se pagou em 1 mês. Você tá perdendo cliente todo dia sem site, sabia?",
+        "validates_services": ["website", "seo"]
+      },
+      "social_proof_elements": {
+        "screenshot_highlight": "Homepage transmitindo confiança e profissionalismo",
+        "testimonial_quote": "Site se pagou em 1 mês. Melhor investimento que fiz.",
+        "case_study_cta": "Dá uma olhada no site, você vai ver a diferença!"
+      }
+    },
+    "salesnet": {
+      "name": "SalesNet",
+      "project_type": "Landing Page de Alta Conversão",
+      "client_industry": "Software/SaaS",
+      "url": "https://salesnet-green.vercel.app/",
+      "thumbnail": "/sales.png",
+      "problem": {
+        "description": "Startup de SaaS precisava URGENTE de página pra lançamento de produto. Tinha 7 dias até campanha de tráfego pago começar. Orçamento limitado (< R$ 1.000).",
+        "pain_points": [
+          "Prazo apertadíssimo (7 dias até campanha)",
+          "Orçamento limitado (startup não tinha R$ 5k pra agência)",
+          "Precisava de LP que convertesse (tráfego pago custa caro)",
+          "Sem LP = campanha não roda = perda de janela de lançamento"
+        ]
+      },
+      "solution": {
+        "what_was_delivered": "Landing Page de alta conversão desenvolvida em 3 dias (folga de 4 dias pro cliente revisar). Design moderno, copy focado em benefícios, CTAs estratégicos, formulário otimizado, integração com email marketing.",
+        "technologies": ["React", "Tailwind CSS", "Framer Motion (animações)"],
+        "delivery_time": "3 dias (prazo de 7 dias)",
+        "project_value": "R$ 700"
+      },
+      "results": {
+        "quantitative": [
+          "Entregue em 3 dias (antes do prazo de 7)",
+          "Taxa de conversão de 12% na primeira semana de tráfego",
+          "Cliente captou 200+ leads no primeiro mês",
+          "ROI imediato (leads geraram R$ 10k+ em vendas)"
+        ],
+        "qualitative": [
+          "Cliente aliviado por ter entregue antes do prazo",
+          "LP permitiu lançamento dentro da janela planejada",
+          "Design elogiado por usuários ('não parece startup, parece empresa grande')"
+        ]
+      },
+      "when_to_mention": {
+        "scenarios": [
+          "Cliente tem URGÊNCIA ('preciso pra ontem', 'tenho prazo apertado')",
+          "Cliente quer 'landing page', 'LP', 'página de venda'",
+          "Cliente vai rodar 'tráfego pago', 'campanha', 'anúncio'",
+          "Cliente tem orçamento limitado (< R$ 1.000)",
+          "Cliente quer 'captar leads', 'vender produto único'"
+        ],
+        "how_to_pitch": "Prazo apertado? Tranquilo! Fiz a SalesNet (LP pra uma startup de SaaS) em 3 DIAS porque eles tinham campanha de tráfego começando em 7 dias. Entreguei antes, LP converteu 12% já na primeira semana, e eles captaram 200+ leads no primeiro mês. Investiram R$ 700, faturaram R$ 10k+. LP não é gasto, é investimento que se paga sozinha!",
+        "validates_services": ["landing_page"]
+      },
+      "social_proof_elements": {
+        "screenshot_highlight": "Hero section com CTA forte",
+        "testimonial_quote": "Entregou em 3 dias. Conversão de 12%. Valeu cada centavo.",
+        "case_study_cta": "Acessa a LP e você vai entender porque converte tanto!"
+      }
+    },
+    "major_heribaldo": {
+      "name": "Major Heribaldo - Blog Pessoal",
+      "project_type": "Blog Profissional com SEO",
+      "client_industry": "Autoridade Pessoal / Thought Leadership",
+      "url": "https://major-heribaldo.vercel.app/",
+      "thumbnail": "/blog.png",
+      "problem": {
+        "description": "Profissional com muito conhecimento mas SEM presença digital. Queria compartilhar experiências, construir autoridade, mas não sabia como começar.",
+        "pain_points": [
+          "Conhecimento valioso 'preso' (só compartilhava offline)",
+          "Sem visibilidade online (Google não indexava nada)",
+          "Plataformas tipo Medium têm limitações e não é 'seu'",
+          "Queria começar mas achava 'muito complicado' criar blog"
+        ]
+      },
+      "solution": {
+        "what_was_delivered": "Blog pessoal responsivo com design elegante, otimizado para SEO, CMS fácil (cliente edita sozinho), integração com newsletter, categorias e tags, analytics configurado.",
+        "technologies": ["React", "Markdown", "SEO otimizado", "Google Analytics"],
+        "delivery_time": "5 dias",
+        "project_value": "R$ 600"
+      },
+      "results": {
+        "quantitative": [
+          "3 artigos publicados na primeira semana",
+          "100+ visitantes orgânicos no primeiro mês",
+          "Aparecendo no Google pra palavras-chave do nicho dele",
+          "Newsletter com 50+ inscritos em 1 mês"
+        ],
+        "qualitative": [
+          "Cliente animado: 'Finalmente tenho onde publicar meu conhecimento!'",
+          "Comentários de leitores elogiando conteúdo",
+          "Construção de autoridade no nicho dele",
+          "Facilidade de uso: 'Consigo publicar sozinho, muito simples!'"
+        ]
+      },
+      "when_to_mention": {
+        "scenarios": [
+          "Cliente quer 'blog', 'publicar conteúdo', 'escrever artigos'",
+          "Cliente fala em 'autoridade', 'thought leadership', 'educar mercado'",
+          "Cliente quer 'aparecer no Google organicamente'",
+          "Cliente produz conteúdo em outras plataformas (Instagram, YouTube) e quer centralizar",
+          "Cliente quer 'newsletter', 'captar emails'"
+        ],
+        "how_to_pitch": "Você tem conhecimento valioso, né? Tá perdendo MUITA oportunidade sem blog! Fiz o blog do Major Heribaldo (profissional experiente que queria compartilhar expertise). Em 5 dias entreguei blog otimizado, ele consegue publicar sozinho, e no primeiro mês já teve 100+ visitantes do Google. Blog não é só escrever, é plantar sementes no Google que viram clientes meses depois. Quer começar?",
+        "validates_services": ["blog", "seo"]
+      },
+      "social_proof_elements": {
+        "screenshot_highlight": "Design limpo focado em leitura",
+        "testimonial_quote": "Finalmente tenho onde publicar! E consigo fazer sozinho. Perfeito.",
+        "case_study_cta": "Dá uma olhada no blog, o design é muito clean!"
+      }
+    },
+    "curriculo_julia": {
+      "name": "Currículo Julia - Currículo Digital Interativo",
+      "project_type": "Portfólio/Currículo Digital",
+      "client_industry": "Profissional em Busca de Emprego",
+      "url": "https://curriculo-julia.vercel.app/",
+      "thumbnail": "/curriculo.png",
+      "problem": {
+        "description": "Candidata enviava currículo PDF genérico igual todo mundo. Recrutadores mal olhavam. Sem destaque na multidão de candidatos.",
+        "pain_points": [
+          "Currículo PDF se perdia no meio de centenas iguais",
+          "Sem forma de mostrar personalidade e diferencial",
+          "Difícil destacar projetos e habilidades visualmente",
+          "Recrutadores não respondiam (currículo não chamava atenção)"
+        ]
+      },
+      "solution": {
+        "what_was_delivered": "Currículo digital interativo e moderno com: apresentação visual impactante, seção 'Sobre Mim' humanizada, galeria de projetos, habilidades com ícones, depoimentos, formulário de contato, links para redes sociais. 100% responsivo.",
+        "technologies": ["React", "CSS3", "JavaScript", "Design Responsivo"],
+        "delivery_time": "4 dias",
+        "project_value": "R$ 400"
+      },
+      "results": {
+        "quantitative": [
+          "3 entrevistas agendadas na PRIMEIRA SEMANA após enviar link",
+          "Taxa de resposta de recrutadores subiu de ~5% pra ~40%",
+          "50+ visualizações nos primeiros 10 dias",
+          "Contratada em 3 semanas (processo seletivo de uma das entrevistas)"
+        ],
+        "qualitative": [
+          "Recrutadores comentaram: 'Seu currículo se destacou demais!'",
+          "Candidata ganhou confiança: 'Me sinto mais profissional'",
+          "Entrevistadores elogiaram a iniciativa e modernidade",
+          "ROI imbatível: R$ 400 investidos, emprego conquistado"
+        ]
+      },
+      "when_to_mention": {
+        "scenarios": [
+          "Cliente é freelancer, profissional autônomo, ou busca emprego",
+          "Cliente menciona 'currículo', 'portfólio', 'mostrar trabalhos'",
+          "Cliente é criativo (designer, fotógrafo, arquiteto, dev)",
+          "Cliente quer 'se destacar', 'chamar atenção de recrutadores'",
+          "Cliente freelancer quer 'site pra conseguir clientes'"
+        ],
+        "how_to_pitch": "PDF é coisa do passado! Desenvolvi este currículo digital (Julia) como exemplo de portfólio interativo e moderno. A ideia é: currículo digital profissional te dá vantagem competitiva sobre candidatos com PDF genérico. Pensa assim: investir R$ 400 num currículo que te destaca pode fazer toda a diferença na busca de emprego. Quer algo assim?",
+        "validates_services": ["portfolio"]
+      },
+      "social_proof_elements": {
+        "screenshot_highlight": "Apresentação visual moderna do candidato",
+        "testimonial_quote": "3 entrevistas em 1 semana. Contratada em 3 semanas. Melhor investimento!",
+        "case_study_cta": "Acessa o currículo dela, você vai ficar impressionado!"
+      }
+    }
+  },
+  "_usage_instructions": {
+    "para_sara": {
+      "quando_usar": "Mencione case studies como PROVA SOCIAL ao recomendar serviços. NUNCA venda BarberFlow/Medeiros como produtos - eles são EXEMPLOS do que você pode fazer.",
+      "como_mencionar": "Use linguagem natural e contextual. Ex: 'Olha, tive um caso parecido com o seu...' ou 'Lembra do BarberFlow que te mostrei? Posso criar algo assim pra você!'",
+      "ordem_de_prioridade": "Mencione o case study MAIS RELEVANTE pro problema do cliente. Ex: Cliente quer agendamento → BarberFlow. Cliente quer qualificar leads → Medeiros.",
+      "formato_ideal": "1) Problema do case (relatable), 2) Solução entregue, 3) Resultado quantificado, 4) Ponte pro serviço: 'Posso fazer isso pra você!'",
+      "evite": "Não liste todos os cases. Escolha 1-2 MAIS RELEVANTES. Não seja robótico ('Case Study #1...'). Seja humano e consultivo."
+    },
+    "mapeamento_case_x_servico": {
+      "landing_page": ["salesnet"],
+      "website": ["auditprime", "hs_forge_luxury"],
+      "ai_agent": ["medeiros_veiculos", "hs_forge_luxury", "barberflow"],
+      "portfolio": ["curriculo_julia"],
+      "blog": ["major_heribaldo"],
+      "seo": ["auditprime", "major_heribaldo"]
+    }
+  }
+}

@@ -89,7 +89,7 @@ export default function Contact() {
                 <div className="absolute top-0 right-0 -mt-4 -mr-4 bg-primary/10 w-24 h-24 rounded-full blur-xl animate-pulse" />
               <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
                 <Brain className="h-5 w-5 text-primary" />
-                Fale com a Sara AI
+                Conversar com Sara
               </h3>
               <p className="text-muted-foreground mb-6">
                 Tenha um atendimento imediato e personalizado com nossa especialista em vendas e soluções digitais.

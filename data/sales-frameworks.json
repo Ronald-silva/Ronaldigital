@@ -1,0 +1,389 @@
+{
+  "qualification_frameworks": {
+    "bant": {
+      "name": "BANT (IBM Classic)",
+      "description": "Framework clássico de qualificação criado pela IBM",
+      "when_to_use": "Vendas transacionais, ciclos curtos, produtos bem definidos",
+      "criteria": {
+        "budget": {
+          "questions": [
+            "Qual faixa de investimento você tem disponível?",
+            "Isso está dentro do orçamento aprovado?",
+            "Quando vocês planejam o orçamento?"
+          ],
+          "signals": ["R$", "orçamento", "investimento", "quanto custa", "valor"],
+          "scoring_weight": 25
+        },
+        "authority": {
+          "questions": [
+            "Você é quem toma a decisão final?",
+            "Alguém mais precisa aprovar?",
+            "Quem mais está envolvido nessa decisão?"
+          ],
+          "signals": ["eu decido", "sou o dono", "tenho autonomia", "preciso consultar"],
+          "scoring_weight": 25
+        },
+        "need": {
+          "questions": [
+            "Qual problema você está tentando resolver?",
+            "Por que isso é importante agora?",
+            "O que acontece se não resolver?"
+          ],
+          "signals": ["preciso", "problema", "dificuldade", "desafio", "urgente"],
+          "scoring_weight": 25
+        },
+        "timeline": {
+          "questions": [
+            "Para quando você precisa que esteja funcionando?",
+            "Tem algum evento/deadline específico?",
+            "Qual a urgência?"
+          ],
+          "signals": ["urgente", "rápido", "essa semana", "mês que vem", "prazo"],
+          "scoring_weight": 25
+        }
+      },
+      "qualification_levels": {
+        "hot": {
+          "criteria_met": 4,
+          "action": "propose_solution_now",
+          "message": "Cliente qualificado! Todos os critérios atendidos. Apresente solução completa."
+        },
+        "warm": {
+          "criteria_met": "2-3",
+          "action": "qualify_further",
+          "message": "Cliente promissor. Descubra os critérios faltantes."
+        },
+        "cold": {
+          "criteria_met": "0-1",
+          "action": "nurture",
+          "message": "Lead não qualificado ainda. Eduque e cultive relacionamento."
+        }
+      }
+    },
+    "meddic": {
+      "name": "MEDDIC (Enterprise Sales)",
+      "description": "Framework avançado para vendas complexas B2B criado pela PTC",
+      "when_to_use": "Vendas enterprise, ciclos longos, múltiplos stakeholders, alto valor",
+      "criteria": {
+        "metrics": {
+          "description": "Métricas quantificáveis que o cliente quer melhorar",
+          "questions": [
+            "Qual métrica você quer impactar? (vendas, leads, economia de tempo?)",
+            "Quanto você quer melhorar?",
+            "Como você mede sucesso hoje?"
+          ],
+          "examples": [
+            "Aumentar vendas em 30%",
+            "Reduzir custo de aquisição em R$ 50",
+            "Economizar 10h/semana da equipe"
+          ]
+        },
+        "economic_buyer": {
+          "description": "Quem tem o orçamento e autoridade final",
+          "questions": [
+            "Quem aprova investimentos acima de R$ X?",
+            "Quem assina o contrato?",
+            "Posso falar diretamente com essa pessoa?"
+          ],
+          "red_flags": [
+            "Não sei quem decide",
+            "Preciso falar com vários departamentos",
+            "O dono não está envolvido"
+          ]
+        },
+        "decision_criteria": {
+          "description": "Critérios objetivos usados para escolher fornecedor",
+          "questions": [
+            "O que é mais importante para você: preço, qualidade, prazo?",
+            "Como você vai comparar as opções?",
+            "Quais são os deal-breakers?"
+          ],
+          "common_criteria": ["ROI", "Prazo de entrega", "Suporte", "Tecnologia", "Portfólio"]
+        },
+        "decision_process": {
+          "description": "Processo e timeline de tomada de decisão",
+          "questions": [
+            "Qual o processo de aprovação?",
+            "Quais são os próximos passos?",
+            "Quando vocês tomam a decisão?"
+          ],
+          "map_stakeholders": true
+        },
+        "identify_pain": {
+          "description": "Dor real e quantificada que o cliente sente",
+          "questions": [
+            "Qual o maior problema que isso causa hoje?",
+            "Quanto isso está custando em dinheiro/tempo?",
+            "O que você já tentou fazer?"
+          ],
+          "pain_types": [
+            "Financeiro: Perdendo R$ X por mês",
+            "Operacional: Desperdiçando Y horas/semana",
+            "Estratégico: Perdendo mercado para concorrentes",
+            "Reputacional: Clientes reclamando"
+          ]
+        },
+        "champion": {
+          "description": "Aliado interno que defende sua solução",
+          "questions": [
+            "Quem internamente vê valor nisso?",
+            "Quem vai me ajudar a vender internamente?",
+            "Posso contar com você para defender isso?"
+          ],
+          "champion_traits": [
+            "Influência na organização",
+            "Acredita na solução",
+            "Tem acesso ao Economic Buyer",
+            "Disposto a investir tempo"
+          ]
+        }
+      },
+      "scoring": "Cada critério vale 0-2 pontos. Score 10-12 = HOT, 6-9 = WARM, 0-5 = COLD"
+    },
+    "champ": {
+      "name": "CHAMP (Modern Alternative to BANT)",
+      "description": "Framework moderno que coloca desafios antes de orçamento",
+      "when_to_use": "Vendas consultivas, clientes que não sabem o orçamento ainda",
+      "criteria": {
+        "challenges": {
+          "description": "Desafios e problemas atuais do cliente",
+          "questions": [
+            "Qual seu maior desafio hoje?",
+            "O que está te impedindo de crescer?",
+            "Se pudesse resolver UMA coisa, qual seria?"
+          ],
+          "technique": "Descubra PRIMEIRO os problemas, não o orçamento"
+        },
+        "authority": {
+          "description": "Quem decide e quem influencia",
+          "questions": [
+            "Quem mais está envolvido nessa decisão?",
+            "Como vocês tomam decisões de compra?",
+            "Você pode me apresentar ao decisor?"
+          ]
+        },
+        "money": {
+          "description": "Capacidade e disposição de investir (pergunta DEPOIS)",
+          "questions": [
+            "Se eu mostrar como resolver [desafio], faz sentido investir R$ X?",
+            "Quanto custa NÃO resolver esse problema?",
+            "Qual o custo de oportunidade?"
+          ],
+          "framework": "Ancre o valor ANTES de falar de preço"
+        },
+        "prioritization": {
+          "description": "Urgência e prioridade vs outras iniciativas",
+          "questions": [
+            "Isso é prioridade top 3 para vocês agora?",
+            "O que mais vocês estão avaliando?",
+            "Por que agora e não daqui 3 meses?"
+          ]
+        }
+      },
+      "advantage_over_bant": "Foca em valor e problemas antes de orçamento, criando urgência natural"
+    },
+    "gpct": {
+      "name": "GPCT (Goals, Plans, Challenges, Timeline)",
+      "description": "Framework consultivo focado em objetivos do cliente",
+      "when_to_use": "Vendas consultivas, quando cliente busca crescimento/transformação",
+      "criteria": {
+        "goals": {
+          "questions": [
+            "Qual seu objetivo de negócio para esse ano?",
+            "Onde você quer estar daqui 6 meses?",
+            "O que sucesso significa para você?"
+          ],
+          "examples": [
+            "Dobrar faturamento",
+            "Abrir segunda unidade",
+            "Contratar 5 pessoas"
+          ]
+        },
+        "plans": {
+          "questions": [
+            "O que você já planejou fazer para atingir isso?",
+            "Quais iniciativas já estão em andamento?",
+            "O que funciona e o que não funciona no plano atual?"
+          ]
+        },
+        "challenges": {
+          "questions": [
+            "O que está te impedindo de executar o plano?",
+            "Quais obstáculos você vê?",
+            "Onde você está travado?"
+          ]
+        },
+        "timeline": {
+          "questions": [
+            "Quando você quer atingir esse objetivo?",
+            "Tem algum marco importante no caminho?",
+            "O que acontece se você não atingir no prazo?"
+          ]
+        }
+      },
+      "flow": "Goals → Plans → Identify gaps → Position solution as bridge"
+    }
+  },
+  "negotiation_techniques": {
+    "spin_selling": {
+      "creator": "Neil Rackham (Huthwaite Research)",
+      "description": "Metodologia baseada em 35.000 vendas estudadas",
+      "phases": {
+        "situation": {
+          "purpose": "Entender contexto atual do cliente",
+          "questions": [
+            "Como você faz [processo X] hoje?",
+            "Quanto tempo isso toma?",
+            "Quem está envolvido?"
+          ],
+          "warning": "Não faça muitas perguntas de situação. Cliente fica entediado."
+        },
+        "problem": {
+          "purpose": "Identificar problemas, dificuldades, insatisfações",
+          "questions": [
+            "Isso te causa algum problema?",
+            "Você está satisfeito com os resultados?",
+            "O que você mudaria se pudesse?"
+          ],
+          "technique": "Perguntas abertas que fazem cliente verbalizar a dor"
+        },
+        "implication": {
+          "purpose": "Amplificar a dor, mostrar consequências",
+          "questions": [
+            "Como isso impacta suas vendas?",
+            "Quanto isso está custando por mês?",
+            "E se isso continuar pelos próximos 6 meses?",
+            "Como sua equipe se sente sobre isso?"
+          ],
+          "power": "Cliente percebe que problema é maior do que pensava"
+        },
+        "need_payoff": {
+          "purpose": "Cliente verbaliza o valor da solução",
+          "questions": [
+            "Se resolvêssemos isso, qual seria o impacto?",
+            "Quanto você economizaria?",
+            "Como sua vida mudaria?",
+            "Vale a pena investir para resolver?"
+          ],
+          "technique": "Cliente VENDE para si mesmo"
+        }
+      },
+      "key_insight": "Em vendas complexas, fazer cliente perceber valor > apresentar features"
+    },
+    "challenger_sale": {
+      "creator": "Matthew Dixon & Brent Adamson (Corporate Executive Board)",
+      "description": "Desafie o pensamento do cliente, ensine algo novo",
+      "model": {
+        "teach": {
+          "description": "Ensine algo que o cliente NÃO sabe",
+          "examples": [
+            "Você sabia que 75% das pessoas julgam credibilidade pelo site?",
+            "Empresas que blogam geram 67% mais leads",
+            "Sites otimizados convertem 400% mais que não otimizados"
+          ],
+          "technique": "Commercial Insight - insight que leva à sua solução"
+        },
+        "tailor": {
+          "description": "Personalize para o contexto DELE",
+          "technique": "Use dados do negócio dele, não genéricos"
+        },
+        "take_control": {
+          "description": "Seja assertivo, guie a conversa",
+          "examples": [
+            "Baseado no que você me contou, recomendo [X]. Faz sentido?",
+            "A melhor opção para você é [Y]. Quando começamos?",
+            "Não recomendo [Z] porque [razão]. Sugiro [alternativa]."
+          ]
+        }
+      },
+      "challenger_moves": [
+        "Desafiar suposições: 'A maioria pensa X, mas na verdade é Y'",
+        "Introduzir urgência: 'Cada mês que passa, você perde R$ Z'",
+        "Ser prescritivo: 'A solução CERTA para você é...'",
+        "Dizer não quando apropriado: 'Isso não é o ideal para você'"
+      ]
+    },
+    "sandler_method": {
+      "creator": "David Sandler",
+      "description": "Venda invertida - cliente vende para você",
+      "principles": {
+        "pain_first": "Descubra a DOR antes de apresentar solução",
+        "no_presentations": "Nunca apresente sem dor identificada e quantificada",
+        "qualify_hard": "Melhor desqualificar cedo que perder tempo",
+        "upfront_contracts": "Estabeleça próximos passos antes de cada conversa"
+      },
+      "submarine": {
+        "description": "7 compartimentos da venda Sandler",
+        "compartments": [
+          "Bonding & Rapport: Conexão genuína",
+          "Up-Front Contract: Alinhar expectativas",
+          "Pain: Descobrir dor real",
+          "Budget: Orçamento disponível",
+          "Decision: Processo de decisão",
+          "Fulfillment: Apresentar solução",
+          "Post-Sell: Confirmar compromisso"
+        ]
+      },
+      "negative_reverse_selling": {
+        "technique": "Use psicologia reversa suave",
+        "examples": [
+          "'Talvez isso não seja pra você se...'",
+          "'A maioria não consegue investir isso'",
+          "'Só funciona se você realmente se comprometer'"
+        ]
+      }
+    },
+    "gap_selling": {
+      "creator": "Keenan",
+      "description": "Venda o GAP entre estado atual e futuro desejado",
+      "framework": {
+        "current_state": {
+          "discover": "Onde cliente está HOJE (situação atual COMPLETA)",
+          "questions": [
+            "Como as coisas funcionam hoje?",
+            "Quais são os números atuais?",
+            "Como você se sente sobre isso?"
+          ]
+        },
+        "future_state": {
+          "discover": "Onde cliente QUER estar",
+          "questions": [
+            "Onde você quer estar daqui 6 meses?",
+            "Como seria o cenário ideal?",
+            "Quais métricas você quer atingir?"
+          ]
+        },
+        "the_gap": {
+          "quantify": "A distância entre atual e desejado EM NÚMEROS",
+          "formula": "Gap = Future State - Current State",
+          "example": "Atual: R$ 10k/mês | Desejado: R$ 30k/mês | GAP: R$ 20k/mês = R$ 240k/ano"
+        },
+        "impact_of_gap": {
+          "questions": [
+            "O que esse GAP está custando hoje?",
+            "Como isso afeta você pessoalmente?",
+            "Quem mais é impactado?"
+          ],
+          "amplify": "Quanto maior a dor do gap, maior a urgência de fechar"
+        }
+      },
+      "positioning": "Sua solução é a PONTE que atravessa o GAP"
+    }
+  },
+  "value_proposition_formulas": {
+    "before_after_bridge": {
+      "formula": "ANTES [problema] → DEPOIS [resultado] → PONTE [sua solução]",
+      "example": "ANTES você perdia leads de madrugada → DEPOIS você atende 24h e converte 40% mais → PONTE: Agente de IA que nunca dorme"
+    },
+    "problem_agitate_solve": {
+      "formula": "PROBLEMA [identifique] → AGITE [amplifique dor] → RESOLVA [solução]",
+      "example": "PROBLEMA: Site lento afasta clientes → AGITE: Cada segundo de demora = 7% menos vendas → RESOLVA: Sites otimizados que carregam em 0.8s"
+    },
+    "4u_formula": {
+      "useful": "Útil: Resolve problema real",
+      "urgent": "Urgente: Precisa resolver AGORA",
+      "unique": "Único: Diferente da concorrência",
+      "ultra_specific": "Ultra-específico: Números e detalhes exatos"
+    }
+  }
+}

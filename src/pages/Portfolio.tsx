@@ -6,72 +6,83 @@ import { Link } from "react-router-dom";
 const portfolioItems = [
   {
     id: 1,
-    title: "Portfólio Fotógrafo",
-    category: "portfolio",
-    description: "Portfólio elegante para fotógrafo profissional com galeria interativa",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-    technologies: ["React", "CSS3", "JavaScript"],
-    liveUrl: "#",
+    title: "BarberFlow - SaaS para Barbearias",
+    category: "saas",
+    description: "Sistema completo de agendamento online para barbearias com gestão de clientes, horários e serviços",
+    image: "/barberflow.png",
+    technologies: ["React", "TypeScript", "Node.js", "PostgreSQL"],
+    liveUrl: "https://barber-flow-swart.vercel.app/",
     githubUrl: "#"
   },
   {
     id: 2,
-    title: "Site Empresa Tech",
-    category: "site",
-    description: "Site institucional moderno para empresa de tecnologia",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop",
-    technologies: ["React", "Tailwind", "TypeScript"],
-    liveUrl: "#",
+    title: "Medeiros Veículos - Qualificador de Leads",
+    category: "saas",
+    description: "SaaS com agente de IA para qualificação automática de leads e agendamento inteligente de visitas",
+    image: "/medeiros.png",
+    technologies: ["React", "Claude AI", "LangChain", "Vercel"],
+    liveUrl: "https://medeiro-veiculos.vercel.app/",
     githubUrl: "#"
   },
   {
     id: 3,
-    title: "Landing Page SaaS",
-    category: "landing",
-    description: "Landing page de alta conversão para produto SaaS",
-    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop",
-    technologies: ["Next.js", "Tailwind", "Framer Motion"],
-    liveUrl: "#",
+    title: "HS Forge Luxury - Site com IA",
+    category: "site",
+    description: "Site premium com agente de IA integrado para atendimento personalizado e vendas consultivas",
+    image: "/hs.png",
+    technologies: ["React", "Vite", "Anthropic AI", "Tailwind"],
+    liveUrl: "https://hs-forge-luxury.vercel.app/",
     githubUrl: "#"
   },
   {
     id: 4,
-    title: "Blog Pessoal",
-    category: "blog",
-    description: "Blog responsivo com sistema de gestão de conteúdo",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop",
-    technologies: ["React", "Node.js", "MongoDB"],
-    liveUrl: "#",
+    title: "AuditPrime - Contabilidade",
+    category: "site",
+    description: "Site profissional para escritório de contabilidade com foco em credibilidade e conversão de clientes",
+    image: "/aud.png",
+    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    liveUrl: "https://audit-prime.vercel.app/",
     githubUrl: "#"
   },
   {
     id: 5,
-    title: "E-commerce Fashion",
-    category: "site",
-    description: "Loja online completa com carrinho e pagamento",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop",
-    technologies: ["React", "Node.js", "Stripe"],
-    liveUrl: "#",
+    title: "SalesNet - Landing Page",
+    category: "landing",
+    description: "Landing page de alta conversão com design moderno e call-to-actions estrategicamente posicionados",
+    image: "/sales.png",
+    technologies: ["React", "Tailwind", "Framer Motion"],
+    liveUrl: "https://salesnet-green.vercel.app/",
     githubUrl: "#"
   },
   {
     id: 6,
-    title: "Portfolio Designer",
+    title: "Major Heribaldo - Blog Pessoal",
+    category: "blog",
+    description: "Blog pessoal responsivo com design elegante e otimizado para SEO e performance",
+    image: "/blog.png",
+    technologies: ["React", "Markdown", "SEO", "Analytics"],
+    liveUrl: "https://major-heribaldo.vercel.app/",
+    githubUrl: "#"
+  },
+  {
+    id: 7,
+    title: "Currículo Digital Interativo",
     category: "portfolio",
-    description: "Portfólio criativo para designer gráfico",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop",
-    technologies: ["React", "GSAP", "CSS3"],
-    liveUrl: "#",
+    description: "Portfólio/currículo digital moderno e interativo com apresentação profissional de habilidades",
+    image: "/curriculo.png",
+    technologies: ["React", "CSS3", "JavaScript", "Responsive"],
+    liveUrl: "https://curriculo-julia.vercel.app/",
     githubUrl: "#"
   }
 ];
 
 const categories = [
   { value: "all", label: "Todos" },
-  { value: "portfolio", label: "Portfólios" },
+  { value: "saas", label: "SaaS" },
   { value: "site", label: "Sites" },
   { value: "landing", label: "Landing Pages" },
-  { value: "blog", label: "Blogs" }
+  { value: "blog", label: "Blogs" },
+  { value: "portfolio", label: "Portfólios" }
 ];
 
 export default function Portfolio() {
@@ -87,10 +98,10 @@ export default function Portfolio() {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Nosso <span className="text-gradient">Portfólio</span>
+            Projetos <span className="text-gradient">Reais</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Cada projeto é desenvolvido com foco em resultados, combinando design moderno e funcionalidade excepcional
+            Cada projeto entregue com excelência, combinando design moderno, inteligência artificial e resultados mensuráveis
           </p>
         </div>
 
@@ -117,6 +128,7 @@ export default function Portfolio() {
                   src={item.image}
                   alt={item.title}
                   className="w-full h-48 object-cover transition-transform group-hover:scale-105"
+                  style={item.id === 7 ? { objectPosition: 'center top' } : undefined}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                   <div className="absolute bottom-4 left-4 right-4">
@@ -124,7 +136,8 @@ export default function Portfolio() {
                       {item.liveUrl !== "#" && (
                         <Button size="sm" variant="secondary" asChild>
                           <a href={item.liveUrl} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="h-4 w-4" />
+                            <ExternalLink className="h-4 w-4 mr-1" />
+                            Ver Site
                           </a>
                         </Button>
                       )}
@@ -135,25 +148,27 @@ export default function Portfolio() {
                           </a>
                         </Button>
                       )}
-                      {item.liveUrl === "#" && item.githubUrl === "#" && (
-                        <div className="bg-black/50 text-white px-3 py-1 rounded text-sm">
-                          Em breve
-                        </div>
-                      )}
                     </div>
                   </div>
                 </div>
               </div>
-              
+
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-xl font-semibold">{item.title}</h3>
+                  {item.category === "saas" && (
+                    <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs rounded-full">
+                      SaaS
+                    </span>
+                  )}
+                </div>
                 <p className="text-muted-foreground mb-4">{item.description}</p>
-                
+
                 <div className="flex flex-wrap gap-2">
                   {item.technologies.map((tech) => (
-                    <span 
+                    <span
                       key={tech}
-                      className="px-2 py-1 bg-blue-100 text-blue-500 text-xs rounded-full"
+                      className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs rounded-full"
                     >
                       {tech}
                     </span>
@@ -164,16 +179,38 @@ export default function Portfolio() {
           ))}
         </div>
 
+        {/* Stats Section */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="card-elegant p-6 text-center rounded-xl">
+            <div className="text-4xl font-bold text-gradient mb-2">{portfolioItems.length}</div>
+            <div className="text-muted-foreground">Projetos Entregues</div>
+          </div>
+          <div className="card-elegant p-6 text-center rounded-xl">
+            <div className="text-4xl font-bold text-gradient mb-2">2</div>
+            <div className="text-muted-foreground">SaaS em Produção</div>
+          </div>
+          <div className="card-elegant p-6 text-center rounded-xl">
+            <div className="text-4xl font-bold text-gradient mb-2">100%</div>
+            <div className="text-muted-foreground">Clientes Satisfeitos</div>
+          </div>
+        </div>
+
         {/* CTA Section */}
         <div className="mt-16 text-center">
           <div className="card-elegant p-8 rounded-xl">
-            <h2 className="text-3xl font-bold mb-4">Gostou do que viu?</h2>
+            <h2 className="text-3xl font-bold mb-4">Pronto para o seu projeto?</h2>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Estes são apenas alguns exemplos do nosso trabalho. Cada projeto é único e desenvolvido especialmente para atender às necessidades do cliente.
+              Cada projeto é desenvolvido com dedicação, utilizando as melhores tecnologias e práticas do mercado.
+              Do design à inteligência artificial, criamos soluções que geram resultados reais.
             </p>
-            <Button asChild className="btn-gradient">
-              <Link to="/sara-ai">Conversar com IA</Link>
-            </Button>
+            <div className="flex gap-4 justify-center flex-wrap">
+              <Button asChild className="btn-gradient">
+                <Link to="/sara-ai">Conversar com Sara</Link>
+              </Button>
+              <Button asChild variant="outline">
+                <Link to="/contact">Solicitar Orçamento</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
