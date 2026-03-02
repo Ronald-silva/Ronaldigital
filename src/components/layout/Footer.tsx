@@ -1,5 +1,14 @@
 import { Link } from "react-router-dom";
-import { Instagram, Linkedin, Mail, Phone, MapPin, ShieldCheck, FileText } from "lucide-react";
+import { Instagram, Mail, Phone, MapPin, ShieldCheck, FileText } from "lucide-react";
+
+// Ícone TikTok customizado (não disponível no lucide)
+function TikTokIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.74a4.85 4.85 0 01-1.01-.05z"/>
+    </svg>
+  );
+}
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -27,30 +36,29 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-              Especialistas em transformar negócios através de design estratégico e tecnologia de ponta. 
-              Sua presença digital, elevada ao próximo nível.
+              Agentes de IA que vendem por você 24h. Sites e Landing Pages de alta conversão para negócios em Fortaleza.
             </p>
             <div className="flex space-x-4">
-              <a 
-                href="https://instagram.com/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://instagram.com/ronal.digital"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-2.5 rounded-lg bg-white/5 hover:bg-primary hover:text-white transition-all duration-300"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a 
-                href="https://linkedin.com/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://tiktok.com/@ronal_digital"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-2.5 rounded-lg bg-white/5 hover:bg-primary hover:text-white transition-all duration-300"
-                aria-label="LinkedIn"
+                aria-label="TikTok"
               >
-                <Linkedin className="h-5 w-5" />
+                <TikTokIcon className="h-5 w-5" />
               </a>
-              <a 
-                href="mailto:contato@ronaldigital.tech" 
+              <a
+                href="mailto:contato@ronaldigital.tech"
                 className="p-2.5 rounded-lg bg-white/5 hover:bg-primary hover:text-white transition-all duration-300"
                 aria-label="Email"
               >

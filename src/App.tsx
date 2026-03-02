@@ -33,7 +33,8 @@ const App = () => (
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contato" element={<Contact />} />
             
-            {/* Redirects for removed pages */}
+            {/* Redirects */}
+            <Route path="/contact" element={<Navigate to="/contato" replace />} />
             <Route path="/orcamento" element={<Navigate to="/sara-ai" replace />} />
             <Route path="/analise-seo" element={<Navigate to="/sara-ai" replace />} />
             

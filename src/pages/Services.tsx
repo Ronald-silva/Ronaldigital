@@ -1,4 +1,4 @@
-import { Monitor, Palette, TrendingUp, Globe, Check, ArrowRight, Bot } from "lucide-react";
+import { Monitor, Palette, TrendingUp, Check, ArrowRight, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -75,24 +75,6 @@ const services = [
       "Maximize seu ROI em marketing"
     ]
   },
-  {
-    icon: Globe,
-    title: "Blogs Personalizados",
-    description: "Blogs funcionais e atraentes que engajam sua audiência, melhoram seu SEO e posicionam você como autoridade.",
-    features: [
-      "Sistema de gerenciamento de conteúdo (CMS) intuitivo",
-      "Otimização SEO em cada artigo",
-      "Design atrativo e profissional",
-      "Sistema de comentários integrado",
-      "Compartilhamento social automático",
-      "Newsletter integrada"
-    ],
-    benefits: [
-      "Construa autoridade no seu nicho",
-      "Melhore seu posicionamento SEO",
-      "Engaje e eduque sua audiência"
-    ]
-  }
 ];
 
 export default function Services() {
@@ -105,7 +87,7 @@ export default function Services() {
             Nossos <span className="text-gradient">Serviços</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Soluções digitais completas e personalizadas para elevar sua presença online e impulsionar seus resultados
+            Agentes de IA que vendem 24h, Landing Pages de alta conversão e Sites profissionais para negócios em Fortaleza
           </p>
         </div>
 
