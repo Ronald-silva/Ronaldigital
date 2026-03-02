@@ -180,21 +180,6 @@ Desenvolvi projetos de IA que atendem 24h, qualificam leads e agendam automatica
 Pra qual tipo de negócio você precisa?`;
   }
 
-  // 🎯 E-COMMERCE / LOJA
-  if ((lowerMsg.includes('quero') || lowerMsg.includes('preciso')) && (lowerMsg.includes('loja') || lowerMsg.includes('roupas') || lowerMsg.includes('vender online'))) {
-    return `Perfeito! Loja online é minha especialidade! 👗
-
-Para e-commerce, incluo:
-• Catálogo organizado
-• Carrinho de compras
-• Integração com pagamentos
-
-💰 **Investimento:** R$ 1.200-2.500
-📅 **Prazo:** 10-15 dias
-
-Qual seu orçamento disponível?`;
-  }
-
   // 🍕 RESTAURANTE / CARDÁPIO
   if (lowerMsg.includes('restaurante') || lowerMsg.includes('delivery')) {
     return `Que ótimo! Restaurante é um segmento que vende muito online! 🍕
@@ -224,9 +209,9 @@ Como posso te ajudar hoje?`;
 
 Depende do tipo de projeto:
 • Landing page: R$ 500-1.000
-• Site completo: R$ 800-2.000
-• E-commerce: R$ 1.200-2.500
-• IA/Chatbot: R$ 1.000-2.500 + mensalidade
+• Portfólio: R$ 400-800
+• Site institucional: R$ 800-2.000
+• Agente de IA: sob consulta
 
 É pra qual tipo de negócio? Assim dou um valor mais certinho.`;
   }

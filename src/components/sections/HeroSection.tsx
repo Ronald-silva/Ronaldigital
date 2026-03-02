@@ -22,14 +22,14 @@ const HeroSection: React.FC = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
         <div className="animate-fade-up">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Transformando Ideias em
+            Agentes de IA que
             <span className="block text-holo-blue hero-text-glow">
-              Experiências Digitais
+              trabalham por você 24h por dia
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Criação de sites, portfólios, blogs e landing pages profissionais que convertem visitantes em clientes
+            Crio agentes inteligentes e sites de alta conversão para negócios em Fortaleza
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -52,7 +52,7 @@ const HeroSection: React.FC = () => {
         <div className="mt-20 pb-16 animate-scale-in" style={{ animationDelay: '0.5s' }}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">50+</div>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">7+</div>
               <div className="text-gray-300">Projetos</div>
             </div>
             <div className="text-center">

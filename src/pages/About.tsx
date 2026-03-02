@@ -13,7 +13,7 @@ export default function About() {
             Sobre Ronal<span className="text-gradient">Digital</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Estudante apaixonado por programação e desenvolvimento web, especializado em criar experiências digitais únicas
+            Desenvolvedor especializado em Agentes de IA e SaaS para negócios locais
           </p>
         </div>
 
@@ -30,10 +30,7 @@ export default function About() {
           <div className="lg:w-3/5">
             <h2 className="text-3xl font-bold mb-6">Minha História</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            Sou Ronald, desenvolvedor web especializado na criação de sites profissionais e páginas de vendas com foco total em conversão. Trabalho com tecnologias modernas e as mais avançadas do mercado, como React, Tailwind e IA, para entregar projetos rápidos, estratégicos e visualmente impressionantes.
-            </p>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Meu objetivo é simples: transformar sua presença digital em uma ferramenta real de crescimento e vendas. Cada projeto que entrego é construído com cuidado, estratégia e foco absoluto em resultados.
+              Sou Ronald, desenvolvedor de Fortaleza especializado em agentes de IA e sistemas SaaS. Crio soluções que automatizam vendas e qualificação de leads — já em produção em negócios locais. Trabalho com React, TypeScript, Supabase e IA generativa.
             </p>
             <Button asChild className="btn-gradient">
               <Link to="/contato">Vamos Conversar</Link>
@@ -46,7 +43,7 @@ export default function About() {
           <div className="card-elegant p-6 rounded-xl text-center">
             <Code className="h-12 w-12 text-primary mx-auto mb-4" />
             <h3 className="font-semibold mb-2">Tecnologias Modernas</h3>
-            <p className="text-sm text-muted-foreground">HTML5, CSS3, JavaScript, React</p>
+            <p className="text-sm text-muted-foreground">React, TypeScript, Supabase, Claude AI, Gemini AI</p>
           </div>
           <div className="card-elegant p-6 rounded-xl text-center">
             <Lightbulb className="h-12 w-12 text-primary mx-auto mb-4" />
