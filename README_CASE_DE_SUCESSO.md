@@ -128,7 +128,7 @@ ronald-digital/
 
 ### Demonstração Rápida (5 minutos)
 
-1. **Abre seu site:** `https://ronald-digital.vercel.app`
+1. **Abre seu site:** `https://www.ronaldigital.tech`
 
 2. **Mostra conversação ao vivo:**
    - Cliente pergunta: "Quanto custa um site?"

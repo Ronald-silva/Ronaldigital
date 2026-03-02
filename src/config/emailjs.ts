@@ -8,7 +8,7 @@ export const EMAILJS_CONFIG = {
   PUBLIC_KEY: "sv-MDlteolEbEu00p", // ⚠️ SUBSTITUA pela sua Public Key
 
   // Seu email para receber os orçamentos
-  TO_EMAIL: "ronald.digital27@gmail.com",
+  TO_EMAIL: "contato@ronaldigital.tech",
 
   // Seu número do WhatsApp (com código do país, sem + ou espaços)
   WHATSAPP_NUMBER: "5585991575525", // ✅ Número atualizado

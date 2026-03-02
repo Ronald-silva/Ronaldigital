@@ -59,7 +59,7 @@ Hoje às [horário] ou amanhã às [horário]?
 
 ### PASSO 1: Mostre o Site (30 segundos)
 
-1. Abre: `https://ronald-digital.vercel.app`
+1. Abre: `https://www.ronaldigital.tech`
 2. **Diz:** "Este é meu site. Parece normal, né? Mas tem um segredo..."
 3. Clica no chat
 4. **Diz:** "Conhece a Sara. Minha IA de vendas."

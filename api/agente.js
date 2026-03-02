@@ -126,51 +126,94 @@ export default async function handler(req, res) {
 }
 
 // 🧠 FALLBACK INTELIGENTE DA API
-// Usa o Catálogo Oficial para manter consistência
+// Processa contexto específico antes de respostas genéricas
 function getIntelligentFallback(message, userInfo) {
   const lowerMsg = message.toLowerCase().trim();
-  const nome = userInfo.nome || 'Cliente';
-  
+  const nome = userInfo.nome || '';
+  const saudacao = nome ? `${nome}, ` : '';
+
   console.log(`🔄 FALLBACK API ativo para: "${message}"`);
-  
-  // 🎯 E-COMMERCE / LOJA
-  if ((lowerMsg.includes('quero') || lowerMsg.includes('preciso')) && (lowerMsg.includes('loja') || lowerMsg.includes('roupas') || lowerMsg.includes('vender online'))) {
-    const p = SERVICE_CATALOG.ecommerce;
-    return `Perfeito, ${nome}! ${p.emotional_hook} 👗✨
 
-Para sua loja, o ideal é o nosso **${p.name}**:
-${p.description}
+  // 🔥 BARBEARIA + IA (COMBINAÇÃO ESPECÍFICA - ALTA PRIORIDADE)
+  if ((lowerMsg.includes('barbearia') || lowerMsg.includes('barbeiro') || lowerMsg.includes('salão') || lowerMsg.includes('salao')) &&
+      (lowerMsg.includes('ia') || lowerMsg.includes('inteligencia artificial') || lowerMsg.includes('agente') || lowerMsg.includes('atendimento') || lowerMsg.includes('chatbot'))) {
+    return `Perfeito, ${saudacao}barbearia com IA é exatamente minha especialidade! 💈🤖
 
-🛍️ **Vantagens para você:**
-${p.benefits.map(b => `• ${b}`).join('\n')}
+Desenvolvi um sistema completo de agendamento com IA integrada. Você pode ver no meu portfólio (BarberFlow).
 
-💰 **Investimento:** ${p.price_range}
-⏰ **Prazo:** ${p.avg_delivery}
+**O que inclui:**
+• Site profissional pra barbearia
+• Sistema de agendamento online 24h
+• IA que atende e agenda automaticamente
 
-Qual seu orçamento disponível hoje para começarmos?`;
+💰 **Investimento:** R$ 1.800-2.500 (site + IA)
+📅 **Prazo:** 10-14 dias
+
+Você já tem identidade visual (logo, cores) ou precisa criar também?`;
   }
 
-  // 🍕 RESTAURANTE / CARDÁPIO (Pode usar lógica de E-commerce ou criar um novo no catálogo depois)
+  // 💈 BARBEARIA (sem mencionar IA)
+  if (lowerMsg.includes('barbearia') || lowerMsg.includes('barbeiro')) {
+    return `Show! Barbearia é um segmento que domino! 💈
+
+Posso criar um site profissional com sistema de agendamento online. Cliente agenda sozinho 24h, você só atende!
+
+💰 **Investimento:** R$ 800-1.500 (site com agenda)
+📅 **Prazo:** 7-10 dias
+
+Você também se interessaria por uma IA para atender clientes automaticamente?`;
+  }
+
+  // 🤖 INTERESSE EM IA/AGENTE
+  if (lowerMsg.includes('ia') || lowerMsg.includes('inteligencia artificial') || lowerMsg.includes('agente de ia') || lowerMsg.includes('chatbot')) {
+    return `Legal! IA para atendimento é poderosa! 🤖
+
+Desenvolvi projetos de IA que atendem 24h, qualificam leads e agendam automaticamente.
+
+**Como funciona:**
+• IA responde instantaneamente
+• Qualifica o cliente automaticamente
+• Agenda ou transfere pra você quando necessário
+
+💰 **Investimento:** R$ 1.000-2.500 (setup) + R$ 150-300/mês
+
+Pra qual tipo de negócio você precisa?`;
+  }
+
+  // 🎯 E-COMMERCE / LOJA
+  if ((lowerMsg.includes('quero') || lowerMsg.includes('preciso')) && (lowerMsg.includes('loja') || lowerMsg.includes('roupas') || lowerMsg.includes('vender online'))) {
+    return `Perfeito! Loja online é minha especialidade! 👗
+
+Para e-commerce, incluo:
+• Catálogo organizado
+• Carrinho de compras
+• Integração com pagamentos
+
+💰 **Investimento:** R$ 1.200-2.500
+📅 **Prazo:** 10-15 dias
+
+Qual seu orçamento disponível?`;
+  }
+
+  // 🍕 RESTAURANTE / CARDÁPIO
   if (lowerMsg.includes('restaurante') || lowerMsg.includes('delivery')) {
-    const p = SERVICE_CATALOG.ecommerce; // Reusa ecommerce por enquanto ou adapta
-    return `Que ótimo, ${nome}! Restaurante é um segmento que vende muito online! 🍕
+    return `Que ótimo! Restaurante é um segmento que vende muito online! 🍕
 
-Recomendo nosso sistema de **${p.name}** adaptado para Delivery:
 • Cardápio digital interativo
+• Sistema de pedidos online
 • Integração com WhatsApp
-• Sem taxas por pedido (você lucra mais!)
 
-💰 **Investimento:** ${p.price_range}
-⏰ **Prazo:** ${p.avg_delivery}
+💰 **Investimento:** R$ 800-1.800
+📅 **Prazo:** 7-12 dias
 
-Isso faz sentido para o seu momento atual?`;
+Isso faz sentido pra você?`;
   }
 
   // 👋 QUEM É VOCÊ?
   if (lowerMsg.includes('qual seu nome') || lowerMsg.includes('quem é você')) {
-    return `Oi ${nome}! Eu sou a Sara! 😊
+    return `Oi! Eu sou a Sara! 😊
 
-Sou a especialista em inteligência de vendas da Ronald Digital. Minha missão é entender seu negócio e te mostrar exatamente como a tecnologia pode colocar mais dinheiro no seu bolso.
+Sou especialista em marketing digital da Ronald Digital. Minha missão é te ajudar a crescer na internet com sites que realmente funcionam.
 
 Como posso te ajudar hoje?`;
   }
@@ -179,33 +222,35 @@ Como posso te ajudar hoje?`;
   if (lowerMsg.includes('preço') || lowerMsg.includes('valor') || lowerMsg.includes('custa')) {
     return `Oi! Fico feliz em te ajudar! 😊
 
-Depende bastante do tipo de site. Por exemplo, uma landing page simples sai por uns R$ 500-1.000. Agora se for uma loja online completa, aí já vai pra casa dos R$ 1.200-2.500.
+Depende do tipo de projeto:
+• Landing page: R$ 500-1.000
+• Site completo: R$ 800-2.000
+• E-commerce: R$ 1.200-2.500
+• IA/Chatbot: R$ 1.000-2.500 + mensalidade
 
-Me conta: é para qual tipo de negócio? Assim consigo te dar um valor mais certinho.`;
+É pra qual tipo de negócio? Assim dou um valor mais certinho.`;
   }
 
-  // 🎯 INTERESSE GERAL
-  if (lowerMsg.includes('quero') || lowerMsg.includes('preciso') || lowerMsg.includes('site')) {
-    return `Legal! Posso te ajudar com isso sim! 🚀
+  // 🎯 INTERESSE EM SITE (genérico)
+  if (lowerMsg.includes('site') && (lowerMsg.includes('quero') || lowerMsg.includes('preciso'))) {
+    return `Show! Pra te dar o melhor orçamento:
 
-Me conta um pouquinho: que tipo de negócio você tem? É pra vender produtos, captar leads ou mais pra mostrar seu trabalho?
-
-Com isso consigo te indicar a melhor opção e um orçamento bacana!`;
+Qual tipo de negócio você tem? E precisa de alguma funcionalidade específica (agendamento, loja online, chat)?`;
   }
 
   // 👋 SAUDAÇÕES
   if (lowerMsg.includes('oi') || lowerMsg.includes('olá') || lowerMsg.includes('ola') || lowerMsg.includes('boa tarde') || lowerMsg.includes('bom dia')) {
     return `Oi! Que bom te ver por aqui! 😊
 
-Sou a Sara, ajudo pessoas a transformarem seus negócios na internet.
+Sou a Sara, especialista em criar sites que vendem!
 
 Como posso te ajudar hoje?`;
   }
 
-  // 🔄 RESPOSTA PADRÃO
+  // 🔄 RESPOSTA PADRÃO - mais contextual
   return `Oi! 😊
 
-Me conta: o que você precisa? Tô aqui pra te ajudar!`;
+Me conta mais sobre o que você precisa - qual seu negócio e o que quer alcançar?`;
 }
 
 // 📊 CALCULA LEAD SCORE NO FALLBACK

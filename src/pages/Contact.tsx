@@ -31,7 +31,7 @@ export default function Contact() {
                   <Mail className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="font-semibold mb-2">Email</h3>
-                <p className="text-muted-foreground mb-2">ronald.digital27@gmail.com</p>
+                <p className="text-muted-foreground mb-2">contato@ronaldigital.tech</p>
                 <p className="text-sm text-muted-foreground">Resposta em até 24h</p>
               </div>
 

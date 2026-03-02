@@ -68,7 +68,7 @@ VITE_GEMINI_API_KEY=sua_chave_google
 OPENAI_API_KEY=sk-sua_chave_openai
 
 # ⚙️ Configurações do Negócio
-BUSINESS_EMAIL=ronald.digital27@gmail.com
+BUSINESS_EMAIL=contato@ronaldigital.tech
 BUSINESS_PHONE=5585991575525
 BUSINESS_NAME=Ronald Digital
 
@@ -603,7 +603,7 @@ Antes de fazer deploy, verifique:
 
 Dúvidas ou problemas?
 
-- **Email**: ronald.digital27@gmail.com
+- **Email**: contato@ronaldigital.tech
 - **WhatsApp**: +55 85 99157-5525
 
 ---

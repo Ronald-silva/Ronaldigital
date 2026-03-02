@@ -11,7 +11,7 @@
 1. No dashboard, clique em "Email Services"
 2. Clique em "Add New Service"
 3. Escolha seu provedor (Gmail recomendado)
-4. Configure com seu email: `ronald.digital27@gmail.com`
+4. Configure com seu email: `contato@ronaldigital.tech`
 5. **Anote o Service ID** (ex: `service_abc123`)
 
 ### 3. Criar Template de Email
@@ -65,7 +65,7 @@ export const EMAILJS_CONFIG = {
   SERVICE_ID: 'service_smnjyth', // Seu Service ID
   TEMPLATE_ID: 'template_ugsfr4a', // Seu Template ID
   PUBLIC_KEY: 'sv-MDlteolEbEu00p', // Sua Public Key
-  TO_EMAIL: 'ronald.digital27@gmail.com',
+  TO_EMAIL: 'contato@ronaldigital.tech',
   WHATSAPP_NUMBER: '5585991575525', // SEU NÚMERO AQUI
 };
 ```

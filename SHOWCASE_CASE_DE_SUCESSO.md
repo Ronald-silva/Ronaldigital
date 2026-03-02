@@ -72,7 +72,7 @@ console.log(metricas);
 
 ### Demonstração ao Vivo (2 minutos)
 
-1. **Abre o site: ronald-digital.vercel.app**
+1. **Abre o site: www.ronaldigital.tech**
 2. **Clica no chat da Sara**
 3. **Demonstra conversação:**
 

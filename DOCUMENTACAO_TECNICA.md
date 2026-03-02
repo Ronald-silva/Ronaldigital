@@ -535,7 +535,7 @@ OPENAI_API_KEY=your_openai_api_key_here
 GEMINI_API_KEY=your_gemini_api_key_here
 
 # Configurações do Negócio
-BUSINESS_EMAIL=ronald.digital27@gmail.com
+BUSINESS_EMAIL=contato@ronaldigital.tech
 BUSINESS_PHONE=5585991575525
 BUSINESS_NAME=RonalDigital
 
@@ -906,9 +906,9 @@ const logger = {
 ## 📞 Suporte e Contato
 
 ### Informações de Contato
-- **Email**: ronald.digital27@gmail.com
+- **Email**: contato@ronaldigital.tech
 - **WhatsApp**: +55 85 99157-5525
-- **Website**: https://ronaldigital.vercel.app
+- **Website**: https://www.ronaldigital.tech
 
 ### Documentação Adicional
 - [README.md](./README.md) - Guia de instalação

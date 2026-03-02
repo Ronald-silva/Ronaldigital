@@ -26,7 +26,7 @@ VITE_GROK_API_KEY=sua_chave_grok_aqui
 VITE_OPENAI_API_KEY=sua_chave_openai_aqui
 
 # Configurações do negócio
-VITE_BUSINESS_EMAIL=ronald.digital27@gmail.com
+VITE_BUSINESS_EMAIL=contato@ronaldigital.tech
 VITE_BUSINESS_PHONE=5585991575525
 ```
 

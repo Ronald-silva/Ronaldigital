@@ -266,9 +266,9 @@ console.log({
 
 ## 📞 Suporte
 
-- **Email**: ronald.digital27@gmail.com
+- **Email**: contato@ronaldigital.tech
 - **WhatsApp**: +55 85 99157-5525
-- **Website**: https://ronald-digital.vercel.app
+- **Website**: https://www.ronaldigital.tech
 
 ---
 

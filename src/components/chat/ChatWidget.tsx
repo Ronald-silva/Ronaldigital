@@ -630,134 +630,91 @@ export function ChatWidget({ embedded = false }: { embedded?: boolean }) {
     return "Como posso te ajudar mais?";
   };
 
-  // 🧠 FALLBACK ULTRA INTELIGENTE - SARA OFFLINE MAS ESPERTA
+  // 🧠 FALLBACK SARA 3.0 - CURTO E CONTEXTUAL
   const getIntelligentFallback = (message: string, ctx: ConversationContext): string => {
     const lowerMsg = message.toLowerCase().trim();
-    
-    console.log(`🔄 FALLBACK ATIVO para: "${message}"`);
-    
-    // 🚨 PRIORIDADE MÁXIMA: Perguntas diretas sobre negócio
-    if (lowerMsg.includes('vocês fazem') || lowerMsg.includes('vocês vendem') || lowerMsg.includes('que tipo de') || lowerMsg.includes('vocês trabalham')) {
-      if (lowerMsg.includes('computador') || lowerMsg.includes('hardware') || lowerMsg.includes('notebook')) {
-        return "Olá! Não, nós da RonalDigital não vendemos computadores. 💻\n\nSomos uma agência especializada em:\n• Sites profissionais\n• Landing pages que convertem\n• Portfólios incríveis\n\nQual projeto digital posso te ajudar a criar? 🚀";
-      }
-      if (lowerMsg.includes('app') || lowerMsg.includes('aplicativo')) {
-        return "Nosso foco é em sites e páginas web! 🌐\n\nCriamos:\n• Sites responsivos (funcionam como app)\n• Landing pages otimizadas\n• Portfólios profissionais\n\nQue tal um site que funciona perfeitamente no celular? 📱";
-      }
-      return "Nós da RonalDigital somos especialistas em projetos digitais! ✨\n\n🎯 Nossos serviços:\n• Landing Pages (R$ 500-1.000)\n• Portfólios (R$ 400-800)\n• Sites Completos (R$ 800-2.000)\n\nQual tipo de projeto você tem em mente?";
-    }
-    
-    // ⚡ PRIORIDADE ALTA: Expressões de dúvida ou interesse
-    if (lowerMsg.includes('dúvida') || lowerMsg.includes('pergunta') || lowerMsg.includes('me ajuda') || lowerMsg.includes('queria saber')) {
-      return "Claro! Adoro ajudar com projetos digitais! 😊\n\nSou especialista em criar sites que realmente vendem. Qual sua principal dúvida?\n\n💡 Posso te ajudar com:\n• Estratégia digital\n• Preços e prazos\n• Exemplos de trabalhos";
-    }
-    
-    // 💰 PERGUNTAS SOBRE PREÇOS (ALTA PRIORIDADE)
-    if (lowerMsg.includes('preço') || lowerMsg.includes('valor') || lowerMsg.includes('custa') || lowerMsg.includes('orçamento')) {
-      return "Ótima pergunta! 💰 Nossos preços são super justos:\n\n🎯 **Landing Pages:** R$ 500-1.000\n(Perfeitas para vender produtos/serviços)\n\n🎨 **Portfólios:** R$ 400-800\n(Ideais para mostrar seu trabalho)\n\n🌐 **Sites Completos:** R$ 800-2.000\n(Presença digital completa)\n\n✨ **Parcelamos em até 3x sem juros!**\n\nQue tipo de projeto você precisa?";
-    }
-    
-    // 🎯 ESPECIFICAÇÃO DETALHADA DE PROJETO
-    if ((lowerMsg.includes('preciso de um site') || lowerMsg.includes('quero um site')) && (lowerMsg.includes('loja') || lowerMsg.includes('empresa') || lowerMsg.includes('negócio'))) {
-      
-      // Detecta tipo específico de negócio
-      if (lowerMsg.includes('loja de roupas') || lowerMsg.includes('roupas')) {
-        return "Perfeito! Loja de roupas é um segmento incrível! 👗✨\n\nPara lojas de moda, recomendo um e-commerce completo com:\n• Catálogo organizado por categoria/marca\n• Sistema de filtros (tamanho, cor, preço)\n• Carrinho de compras otimizado\n• Integração com redes sociais\n\n💰 **Investimento:** R$ 1.200-2.500\n⏰ **Prazo:** 10-15 dias\n\nQual seu orçamento para esse projeto?";
-      }
-      
-      if (lowerMsg.includes('restaurante')) {
-        return "Que ótimo! Restaurante é um segmento que vende muito online! 🍕\n\nPara restaurantes, recomendo:\n• Cardápio digital interativo\n• Sistema de pedidos online\n• Integração com delivery\n• Área de reservas\n\n💰 **Investimento:** R$ 800-1.800\n⏰ **Prazo:** 7-12 dias\n\nQual seu orçamento disponível?";
-      }
-      
-      // Resposta genérica para outros tipos
-      return "Excelente! Vou criar algo perfeito para seu negócio! 🚀\n\nPara dar o orçamento exato, preciso saber:\n• Qual seu orçamento disponível?\n• Para quando você precisa?\n• Tem preferência de funcionalidades?\n\nCom essas informações, posso criar uma proposta sob medida!";
+
+    console.log(`🔄 FALLBACK 3.0 para: "${message}"`);
+
+    // 🔥 BARBEARIA + IA (COMBINAÇÃO ESPECÍFICA - ALTA PRIORIDADE)
+    if ((lowerMsg.includes('barbearia') || lowerMsg.includes('barbeiro') || lowerMsg.includes('salão') || lowerMsg.includes('salao')) &&
+        (lowerMsg.includes('ia') || lowerMsg.includes('inteligencia artificial') || lowerMsg.includes('agente') || lowerMsg.includes('chatbot'))) {
+      return "Barbearia com IA é minha especialidade! 💈 Site + agendamento + IA que atende 24h. Fica entre R$ 1.800-2.500. Você já tem logo?";
     }
 
-    // 🎯 INTERESSE DE COMPRA GERAL - Refinado para não ser redundante
-    if (lowerMsg.includes('quero') || lowerMsg.includes('preciso') || lowerMsg.includes('gostaria') || lowerMsg.includes('interessado')) {
-      return "Que ótimo! Fico muito feliz em saber do seu interesse! 🚀\n\nEstou analisando os detalhes que você enviou para criar uma estratégia única. \n\nVocê teria algum prazo específico em mente para colocar esse projeto no ar? ⏰";
-    }
-    
-    // 👋 PERGUNTAS PESSOAIS SOBRE A SARA
-    if (lowerMsg.includes('qual seu nome') || lowerMsg.includes('como você se chama') || lowerMsg.includes('quem é você') || lowerMsg.includes('seu nome')) {
-      const personalResponses = [
-        "Oi! Eu sou a Sara! 😊\n\nSou especialista em marketing digital da RonalDigital. Meu trabalho é te ajudar a criar sites incríveis que realmente vendem!\n\nE você, qual seu nome?",
-        "Prazer! Sou a Sara, sua consultora digital! ✨\n\nTrabalho na RonalDigital ajudando pessoas como você a crescerem online.\n\nComo posso te chamar?",
-        "Oi! Me chamo Sara e sou apaixonada por criar sites que transformam visitantes em clientes! 🚀\n\nQual seu nome?"
-      ];
-      
-      return personalResponses[Math.floor(Math.random() * personalResponses.length)];
+    // 💈 BARBEARIA (sem IA)
+    if (lowerMsg.includes('barbearia') || lowerMsg.includes('barbeiro')) {
+      return "Show! Faço site pra barbearia com agendamento online. Cliente marca sozinho 24h! Fica R$ 800-1.500. Quer com IA também?";
     }
 
-    // 🤖 PERGUNTAS SOBRE SER IA/ROBÔ
-    if (lowerMsg.includes('você é robô') || lowerMsg.includes('é inteligência artificial') || lowerMsg.includes('é ia') || lowerMsg.includes('é bot')) {
-      return "Olha, sou uma IA sim, mas uma IA bem especial! 😊\n\nFui criada para ser sua parceira digital, não apenas um robô que responde perguntas. Tenho personalidade própria e genuíno interesse em te ajudar!\n\nPode conversar comigo naturalmente - entendo contexto e sempre busco a melhor solução para você.\n\nEntão, como posso te ajudar a decolar na internet? 🚀";
+    // 🤖 IA/AGENTE
+    if (lowerMsg.includes('ia') || lowerMsg.includes('inteligencia artificial') || lowerMsg.includes('agente') || lowerMsg.includes('chatbot')) {
+      return "IA é poderosa! 🤖 Atende 24h, qualifica leads e agenda. Setup: R$ 1.000-2.500 + R$ 150-300/mês. Pra qual negócio você precisa?";
     }
 
-    // 👋 SAUDAÇÕES INTELIGENTES
-    if (lowerMsg.includes('oi') || lowerMsg.includes('olá') || lowerMsg.includes('ola')) {
-      const hour = new Date().getHours();
-      let greeting = "Oi";
-      if (hour >= 6 && hour < 12) greeting = "Bom dia";
-      else if (hour >= 12 && hour < 18) greeting = "Boa tarde";
-      else if (hour >= 18 || hour < 6) greeting = "Boa noite";
-      
-      return `${greeting}! Que bom te ver por aqui! 😊\n\nSou a Sara, especialista em criar sites que realmente vendem! 🚀\n\nComo posso te ajudar hoje? Precisa de:\n• Site profissional?\n• Landing page?\n• Portfólio incrível?`;
+    // 👗 LOJA DE ROUPAS / E-COMMERCE
+    if (lowerMsg.includes('loja') || lowerMsg.includes('roupas') || lowerMsg.includes('vender online') || lowerMsg.includes('e-commerce')) {
+      return "E-commerce é minha praia! 👗 Catálogo, carrinho, pagamentos integrados. R$ 1.200-2.500. Qual seu orçamento?";
     }
-    
-    if (lowerMsg.includes('bom dia') || lowerMsg.includes('boa tarde') || lowerMsg.includes('boa noite')) {
-      return "Oi! Que educação! 😊 Prazer em te conhecer!\n\nSou a Sara da RonalDigital, especialista em transformar ideias em sites incríveis! ✨\n\nMe conta: que tipo de projeto digital você tem em mente?";
+
+    // 🍕 RESTAURANTE
+    if (lowerMsg.includes('restaurante') || lowerMsg.includes('delivery') || lowerMsg.includes('cardápio')) {
+      return "Restaurante vende muito online! 🍕 Cardápio digital + pedidos + WhatsApp. R$ 800-1.800. Qual seu orçamento?";
     }
-    
-    // 🎨 PERGUNTAS SOBRE SERVIÇOS ESPECÍFICOS
-    if (lowerMsg.includes('portfólio') || lowerMsg.includes('portfolio')) {
-      return "Excelente escolha! 🎨 Portfólios são essenciais para:\n\n✅ Mostrar seu trabalho\n✅ Conquistar credibilidade\n✅ Atrair clientes ideais\n\n💰 **Preço:** R$ 400-800\n⏰ **Prazo:** 5-7 dias\n\nQue tipo de portfólio você precisa? (fotógrafo, designer, arquiteto...)";
+
+    // 💰 PREÇO/VALOR
+    if (lowerMsg.includes('preço') || lowerMsg.includes('valor') || lowerMsg.includes('custa') || lowerMsg.includes('quanto')) {
+      return "Depende do projeto! Landing page R$ 500-1.000, site completo R$ 800-2.000, e-commerce R$ 1.200-2.500. Parcelo em 3x. Qual você precisa?";
     }
-    
-    if (lowerMsg.includes('landing page') || lowerMsg.includes('página de vendas')) {
-      return "Perfeito! 🎯 Landing pages são máquinas de vendas!\n\n🚀 **Benefícios:**\n• Conversão até 400% maior\n• Foco total no produto\n• Otimizada para Google\n\n💰 **Preço:** R$ 500-1.000\n⏰ **Prazo:** 3-5 dias\n\nQual produto/serviço você quer promover?";
+
+    // ⏰ PRAZO
+    if (lowerMsg.includes('prazo') || lowerMsg.includes('tempo') || lowerMsg.includes('demora') || lowerMsg.includes('quando fica')) {
+      return "Sou rápida! Landing page 3-5 dias, site completo 7-15 dias. Se for urgente, priorizo. Que tipo de projeto é?";
     }
-    
-    if (lowerMsg.includes('site') && !lowerMsg.includes('landing')) {
-      return "Ótima ideia! 🌐 Um site profissional é fundamental hoje!\n\n✨ **Incluímos:**\n• Design responsivo\n• Otimização SEO\n• Integração redes sociais\n• Formulários de contato\n\n💰 **Preço:** R$ 800-2.000\n⏰ **Prazo:** 7-15 dias\n\nPara que tipo de negócio?";
+
+    // 🎯 SITE GENÉRICO
+    if (lowerMsg.includes('site') || lowerMsg.includes('página') || lowerMsg.includes('landing')) {
+      return "Show! Pra te passar um valor certinho: é pra qual tipo de negócio? E precisa de algo específico (agendamento, loja, formulário)?";
     }
-    
-    // 🤔 OBJEÇÕES COMUNS
-    if (lowerMsg.includes('caro') || lowerMsg.includes('muito')) {
-      return "Entendo sua preocupação! 💭\n\nMas pensa assim: se seu site trouxer apenas 2 clientes novos por mês, já pagou o investimento! 📈\n\n✨ **Facilidades:**\n• Parcelamos em 3x sem juros\n• Garantia de 30 dias\n• Suporte incluso\n\nQue tal uma consultoria gratuita para ver o que é melhor para você?";
+
+    // 👋 SAUDAÇÕES
+    if (lowerMsg.includes('oi') || lowerMsg.includes('olá') || lowerMsg.includes('ola') ||
+        lowerMsg.includes('bom dia') || lowerMsg.includes('boa tarde') || lowerMsg.includes('boa noite')) {
+      return "Oi! Sou a Sara da Ronald Digital 😊 Crio sites, landing pages e agentes de IA. Como posso te ajudar?";
     }
-    
-    if (lowerMsg.includes('pensar') || lowerMsg.includes('decidir')) {
-      return "Claro! Pensar é importante! 🤔\n\nMas enquanto você pensa, que tal eu te enviar alguns exemplos dos nossos trabalhos?\n\n📱 **WhatsApp:** (85) 99157-5525\n\n💡 **Dica:** Tenho apenas 3 vagas este mês. Que tal garantir a sua com uma consultoria gratuita?";
+
+    // ❓ QUEM É VOCÊ
+    if (lowerMsg.includes('quem é você') || lowerMsg.includes('seu nome') || lowerMsg.includes('como se chama')) {
+      return "Sou a Sara! 😊 Especialista em marketing digital da Ronald Digital. Crio sites que vendem de verdade. E você, qual seu nome?";
     }
-    
-    // ⏰ PERGUNTAS SOBRE PRAZO
-    if (lowerMsg.includes('prazo') || lowerMsg.includes('tempo') || lowerMsg.includes('demora') || lowerMsg.includes('quando')) {
-      return "Nossos prazos são bem rápidos! ⚡\n\n⏰ **Prazos típicos:**\n• Landing Page: 3-5 dias\n• Portfólio: 5-7 dias  \n• Site Completo: 7-15 dias\n\n🚨 **Urgente?** Posso priorizar seu projeto!\n\nQue tipo de projeto você precisa?";
+
+    // 🤖 É ROBÔ?
+    if (lowerMsg.includes('robô') || lowerMsg.includes('é ia') || lowerMsg.includes('é bot')) {
+      return "Sou IA sim, mas converso como gente! 😊 Entendo contexto e realmente quero te ajudar. Me conta o que você precisa?";
     }
-    
+
     // 📞 CONTATO
-    if (lowerMsg.includes('contato') || lowerMsg.includes('telefone') || lowerMsg.includes('whatsapp') || lowerMsg.includes('falar')) {
-      return "Claro! Aqui estão nossos contatos: 📞\n\n📱 **WhatsApp:** (85) 99157-5525\n📧 **Email:** contato@ronalddigital.com\n🌐 **Site:** ronalddigital.com\n\nMas fica aqui comigo também! Posso te ajudar com tudo: orçamentos, dúvidas, exemplos...\n\nQue tipo de projeto você tem em mente? 😊";
-    }
-    
-    // 📚 EXEMPLOS/PORTFÓLIO
-    if (lowerMsg.includes('exemplo') || lowerMsg.includes('trabalho') || lowerMsg.includes('ver') || lowerMsg.includes('mostrar')) {
-      return "Adoro mostrar nossos trabalhos! 🎨\n\n🌐 **Veja nosso portfólio:** ronalddigital.com/portfolio\n\nOu me chama no WhatsApp **(85) 99157-5525** que envio exemplos específicos!\n\nMe conta: que tipo de empresa você tem? Assim posso mostrar casos similares:\n• Restaurante que aumentou pedidos em 200%\n• Loja que dobrou vendas online\n• Profissional que triplicou clientes 🎯";
+    if (lowerMsg.includes('contato') || lowerMsg.includes('whatsapp') || lowerMsg.includes('telefone')) {
+      return "WhatsApp: (85) 99157-5525. Mas pode falar comigo aqui também! Que tipo de projeto você precisa?";
     }
 
-    // ❓ COMO FUNCIONA / PROCESSO
-    if (lowerMsg.includes('como funciona') || lowerMsg.includes('processo') || lowerMsg.includes('etapas')) {
-      return "Nosso processo é bem simples e transparente! ⚙️\n\n📋 **1. Briefing** - Entendemos sua necessidade\n🎨 **2. Design** - Criamos o layout\n💻 **3. Desenvolvimento** - Construímos o site\n🧪 **4. Testes** - Garantimos qualidade\n🚀 **5. Entrega** - Site no ar!\n\n⏰ **Prazos:**\n• Landing Page: 3-5 dias\n• Portfólio: 5-7 dias\n• Site Completo: 7-15 dias\n\nQue tipo de projeto você precisa?";
+    // 🤔 DÚVIDA
+    if (lowerMsg.includes('dúvida') || lowerMsg.includes('pergunta') || lowerMsg.includes('ajuda')) {
+      return "Claro! Pode perguntar 😊 Qual sua dúvida?";
     }
 
-    // 🤔 DÚVIDAS GERAIS
-    if (lowerMsg.includes('dúvida') || lowerMsg.includes('pergunta') || lowerMsg.includes('não entendi')) {
-      return "Sem problemas! Estou aqui para esclarecer tudo! 😊\n\n💡 **Posso te ajudar com:**\n• Tipos de sites e preços\n• Prazos de entrega\n• Processo de criação\n• Exemplos de trabalhos\n• Dúvidas técnicas\n\nQual sua principal dúvida? Pode perguntar à vontade! 🤝";
+    // 💭 PENSAR/DECIDIR
+    if (lowerMsg.includes('pensar') || lowerMsg.includes('decidir') || lowerMsg.includes('vou ver')) {
+      return "Tranquilo! Se quiser, manda no WhatsApp (85) 99157-5525 quando decidir. Fico aqui se surgir alguma dúvida!";
     }
-    
-    // 🔄 RESPOSTA PADRÃO INTELIGENTE
-    return "Entendi! 😊 Para te ajudar da melhor forma, me conta:\n\n🎯 **Que tipo de projeto você precisa?**\n• Site profissional\n• Landing page para vendas\n• Portfólio incrível\n\n💡 **Ou tem alguma dúvida específica?**\n\nEstou aqui para te ajudar a crescer online! 🚀";
+
+    // 💸 CARO
+    if (lowerMsg.includes('caro') || lowerMsg.includes('muito dinheiro')) {
+      return "Entendo! Parcelo em 3x sem juros. E pensa: se o site trouxer 2 clientes, já se pagou. Quer que eu faça uma proposta?";
+    }
+
+    // 🔄 RESPOSTA PADRÃO - CURTA
+    return "Me conta mais sobre o que você precisa - qual seu negócio e o que quer alcançar? 😊";
   };
 
   const sendMessage = async () => {

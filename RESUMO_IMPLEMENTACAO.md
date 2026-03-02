@@ -37,7 +37,7 @@ export const EMAILJS_CONFIG = {
   SERVICE_ID: "SEU_SERVICE_ID_AQUI", // ⚠️ OBRIGATÓRIO
   TEMPLATE_ID: "SEU_TEMPLATE_ID_AQUI", // ⚠️ OBRIGATÓRIO
   PUBLIC_KEY: "SUA_PUBLIC_KEY_AQUI", // ⚠️ OBRIGATÓRIO
-  TO_EMAIL: "ronald.digital27@gmail.com",
+  TO_EMAIL: "contato@ronaldigital.tech",
   WHATSAPP_NUMBER: "SEU_NUMERO_AQUI", // Ex: 5511999999999
 };
 ```
