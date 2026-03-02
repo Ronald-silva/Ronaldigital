@@ -1,11 +1,17 @@
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Send, Brain, MessageSquare } from "lucide-react";
+import { Mail, MapPin, Brain, MessageSquare } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Contact() {
 
   return (
     <div className="pt-32 pb-20">
+      <SEO
+        title="Contato"
+        description="Entre em contato com a RonalDigital. WhatsApp (85) 99157-5525 ou e-mail contato@ronaldigital.tech. Atendimento remoto para todo o Brasil."
+        canonical="/contato"
+      />
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-16">

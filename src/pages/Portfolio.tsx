@@ -1,5 +1,6 @@
+import { SEO } from "@/components/SEO";
 import { useState } from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github as GithubIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -94,6 +95,11 @@ export default function Portfolio() {
 
   return (
     <div className="pt-32 pb-20">
+      <SEO
+        title="Portfólio"
+        description="Veja os projetos desenvolvidos pela RonalDigital: SaaS, Landing Pages, Sites Institucionais e Agentes de IA para negócios em Fortaleza."
+        canonical="/portfolio"
+      />
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -144,7 +150,7 @@ export default function Portfolio() {
                       {item.githubUrl !== "#" && (
                         <Button size="sm" variant="secondary" asChild>
                           <a href={item.githubUrl} target="_blank" rel="noopener noreferrer">
-                            <Github className="h-4 w-4" />
+                            <GithubIcon className="h-4 w-4" />
                           </a>
                         </Button>
                       )}

@@ -1,3 +1,4 @@
+import { SEO } from "@/components/SEO";
 import { Monitor, Palette, TrendingUp, Check, ArrowRight, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -80,6 +81,11 @@ const services = [
 export default function Services() {
   return (
     <div className="pt-32 pb-20">
+      <SEO
+        title="Serviços"
+        description="Agentes de IA que vendem 24h, Landing Pages de alta conversão e Sites profissionais para negócios em Fortaleza. Veja nossos serviços e preços."
+        canonical="/servicos"
+      />
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-16">

@@ -1,3 +1,4 @@
+import { SEO } from "@/components/SEO";
 import { CheckCircle, Code, Lightbulb, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -6,6 +7,11 @@ import ronaldPhoto from "@/assets/ronald-photo.png";
 export default function About() {
   return (
     <div className="pt-32 pb-20">
+      <SEO
+        title="Sobre"
+        description="Sou Ronald, desenvolvedor de Fortaleza especializado em agentes de IA e sistemas SaaS. Crio soluções que automatizam vendas e qualificação de leads."
+        canonical="/sobre"
+      />
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-16">

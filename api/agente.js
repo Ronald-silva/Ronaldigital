@@ -139,14 +139,12 @@ function getIntelligentFallback(message, userInfo) {
       (lowerMsg.includes('ia') || lowerMsg.includes('inteligencia artificial') || lowerMsg.includes('agente') || lowerMsg.includes('atendimento') || lowerMsg.includes('chatbot'))) {
     return `Perfeito, ${saudacao}barbearia com IA é exatamente minha especialidade! 💈🤖
 
-Desenvolvi um sistema completo de agendamento com IA integrada. Você pode ver no meu portfólio (BarberFlow).
-
 **O que inclui:**
 • Site profissional pra barbearia
 • Sistema de agendamento online 24h
 • IA que atende e agenda automaticamente
 
-💰 **Investimento:** R$ 1.800-2.500 (site + IA)
+💰 **Investimento:** sob consulta (depende do escopo)
 📅 **Prazo:** 10-14 dias
 
 Você já tem identidade visual (logo, cores) ou precisa criar também?`;
@@ -175,7 +173,7 @@ Desenvolvi projetos de IA que atendem 24h, qualificam leads e agendam automatica
 • Qualifica o cliente automaticamente
 • Agenda ou transfere pra você quando necessário
 
-💰 **Investimento:** R$ 1.000-2.500 (setup) + R$ 150-300/mês
+💰 **Investimento:** sob consulta (depende do escopo e integrações)
 
 Pra qual tipo de negócio você precisa?`;
   }

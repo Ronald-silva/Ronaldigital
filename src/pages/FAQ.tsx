@@ -1,3 +1,4 @@
+import { SEO } from "@/components/SEO";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -33,6 +34,11 @@ const faqItems = [
 export default function FAQ() {
   return (
     <div className="min-h-screen bg-gray-50 pt-24 pb-16">
+      <SEO
+        title="Perguntas Frequentes"
+        description="Tire suas dúvidas sobre sites, landing pages e agentes de IA da RonalDigital. Prazos, preços, tecnologias e processo de desenvolvimento."
+        canonical="/faq"
+      />
       <div className="max-w-3xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl mb-6">
