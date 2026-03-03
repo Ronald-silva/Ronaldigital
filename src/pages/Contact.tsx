@@ -26,7 +26,7 @@ export default function Contact() {
         {/* Contact Information Section */}
         <div className="max-w-4xl mx-auto">
           <div className="card-elegant p-8 rounded-xl mb-8">
-            <h2 className="text-2xl font-bold mb-6 text-center">Como Entrar em Contato</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center">Como Entrar em Contato</h2>
             <p className="text-muted-foreground text-center mb-8">
               Estou pronto para transformar suas ideias em realidade digital. Entre em contato através dos canais abaixo.
             </p>

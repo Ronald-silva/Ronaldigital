@@ -72,14 +72,14 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="card-elegant p-8 rounded-xl">
             <h3 className="text-2xl font-bold mb-4">Minha Missão</h3>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground leading-relaxed">
               Criar soluções digitais que resolvam problemas reais — não apenas entregar projetos. Acredito que tecnologia só tem valor quando gera resultado concreto para quem a usa. Por isso, sou honesto antes de fechar qualquer negócio: se minha solução não for a certa para você, vou te dizer. Prefiro construir uma relação de confiança duradoura a fazer uma venda que não vai agregar. Cada projeto que assumo, assumo com compromisso total — porque minha palavra vale mais que qualquer contrato.
             </p>
           </div>
           
           <div className="card-elegant p-8 rounded-xl">
             <h3 className="text-2xl font-bold mb-4">Minha Visão</h3>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground leading-relaxed">
               Ser reconhecido não pelo volume de projetos entregues, mas pelo impacto real que cada um gerou. Quero construir uma empresa onde clientes voltam não porque foram convencidos, mas porque foram bem servidos.
             </p>
           </div>

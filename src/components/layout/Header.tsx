@@ -27,8 +27,7 @@ export function Header() {
           to="/"
           className="transition-opacity hover:opacity-80 no-underline"
         >
-          <Logo size="md" variant="horizontal" className="sm:hidden" />
-          <Logo size="lg" variant="horizontal" className="hidden sm:flex" />
+          <Logo size="lg" variant="horizontal" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -61,12 +60,14 @@ export function Header() {
           <Button
             variant="ghost"
             size="icon"
+            className="h-11 w-11"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
           >
             {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X className="h-7 w-7" />
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu className="h-7 w-7" />
             )}
           </Button>
         </div>

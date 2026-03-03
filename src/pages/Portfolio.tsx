@@ -106,7 +106,7 @@ export default function Portfolio() {
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Projetos <span className="text-gradient">Reais</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Cada projeto entregue com excelência, combinando design moderno, inteligência artificial e resultados mensuráveis
           </p>
         </div>

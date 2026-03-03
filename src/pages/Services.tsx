@@ -171,8 +171,8 @@ export default function Services() {
         {/* CTA Section */}
         <div className="card-elegant p-8 rounded-xl text-center">
           <h2 className="text-3xl font-bold mb-4">Pronto para Começar seu Projeto?</h2>
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Cada projeto é único e desenvolvido sob medida para suas necessidades. 
+          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto leading-relaxed">
+            Cada projeto é único e desenvolvido sob medida para suas necessidades.
             Solicite um orçamento personalizado e vamos transformar sua visão em realidade digital.
           </p>
           <Button asChild className="btn-gradient">
