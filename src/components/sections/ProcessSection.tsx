@@ -5,22 +5,22 @@ const steps = [
   {
     icon: Search,
     title: "1. Imersão & Análise",
-    description: "Mergulhamos no seu negócio para entender seu público, concorrentes e objetivos. Não damos um passo sem dados."
+    description: "Mergulho no seu negócio para entender seu público, concorrentes e objetivos. Não dou um passo sem dados."
   },
   {
     icon: PenTool,
     title: "2. Estratégia Visual",
-    description: "Criamos o protótipo do design focado na experiência do usuário e na conversão. Você aprova cada detalhe antes do código."
+    description: "Crio o protótipo do design focado na experiência do usuário e na conversão. Você aprova cada detalhe antes do código."
   },
   {
     icon: Code2,
     title: "3. Desenvolvimento High-End",
-    description: "Nossos engenheiros transformam o design em um site ultra-rápido, seguro e otimizado para todos os dispositivos."
+    description: "Transformo o design em um site ultra-rápido, seguro e otimizado para todos os dispositivos."
   },
   {
     icon: Rocket,
     title: "4. Lançamento & Otimização",
-    description: "Colocamos seu projeto no ar, configuramos analytics e garantimos que tudo esteja perfeito para receber tráfego."
+    description: "Coloco seu projeto no ar, configuro analytics e garanto que tudo esteja perfeito para receber tráfego."
   }
 ];
 
@@ -33,7 +33,7 @@ const ProcessSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
           <h2 className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">
-            Nossa Metodologia
+            Minha Metodologia
           </h2>
           <h3 className="text-3xl md:text-5xl font-bold text-foreground max-w-3xl mx-auto leading-tight">
             Do Conceito à Realidade Digital em <span className="text-gradient">4 Passos</span>

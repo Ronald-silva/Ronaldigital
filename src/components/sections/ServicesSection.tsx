@@ -1,4 +1,4 @@
-import { Monitor, Palette, TrendingUp, Globe, Bot, Zap } from "lucide-react";
+import { Monitor, Palette, TrendingUp, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -22,10 +22,10 @@ const services = [
     features: ["Design Premium", "SEO Otimizado", "Painel Administrativo"]
   },
   {
-    icon: Globe,
-    title: "Blogs & SEO",
-    description: "Atraia tráfego orgânico qualificado e torne-se a autoridade número 1 do seu nicho.",
-    features: ["Estratégia de SEO", "Gestão de Conteúdo", "Ranqueamento Google"]
+    icon: Palette,
+    title: "Portfólios Profissionais",
+    description: "Mostre seu trabalho com impacto e conquiste os clientes certos.",
+    features: ["Design Exclusivo", "Galeria Interativa", "Otimizado para Mobile"]
   }
 ];
 

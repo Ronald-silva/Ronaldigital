@@ -167,6 +167,11 @@ export default function Portfolio() {
                       SaaS
                     </span>
                   )}
+                  {item.category === "site" && (
+                    <span className="px-2 py-1 bg-gradient-to-r from-violet-500 to-indigo-500 text-white text-xs rounded-full">
+                      Site
+                    </span>
+                  )}
                 </div>
                 <p className="text-muted-foreground mb-4">{item.description}</p>
 
@@ -196,8 +201,8 @@ export default function Portfolio() {
             <div className="text-muted-foreground">SaaS em Produção</div>
           </div>
           <div className="card-elegant p-6 text-center rounded-xl">
-            <div className="text-4xl font-bold text-gradient mb-2">100%</div>
-            <div className="text-muted-foreground">Clientes Satisfeitos</div>
+            <div className="text-4xl font-bold text-gradient mb-2">CE</div>
+            <div className="text-muted-foreground">Fortaleza — Base de operação</div>
           </div>
         </div>
 
@@ -207,7 +212,7 @@ export default function Portfolio() {
             <h2 className="text-3xl font-bold mb-4">Pronto para o seu projeto?</h2>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Cada projeto é desenvolvido com dedicação, utilizando as melhores tecnologias e práticas do mercado.
-              Do design à inteligência artificial, criamos soluções que geram resultados reais.
+              Do design à inteligência artificial, crio soluções que geram resultados reais.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <Button asChild className="btn-gradient">

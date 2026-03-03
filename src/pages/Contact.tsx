@@ -19,7 +19,7 @@ export default function Contact() {
             Entre em <span className="text-gradient">Contato</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Transforme sua visão em realidade digital. Entre em contato e vamos discutir como podemos impulsionar seu negócio
+            Transforme sua visão em realidade digital. Entre em contato e vamos discutir como posso impulsionar seu negócio
           </p>
         </div>
 
@@ -28,7 +28,7 @@ export default function Contact() {
           <div className="card-elegant p-8 rounded-xl mb-8">
             <h2 className="text-2xl font-bold mb-6 text-center">Como Entrar em Contato</h2>
             <p className="text-muted-foreground text-center mb-8">
-              Estamos prontos para transformar suas ideias em realidade digital. Entre em contato através dos canais abaixo.
+              Estou pronto para transformar suas ideias em realidade digital. Entre em contato através dos canais abaixo.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -71,7 +71,7 @@ export default function Contact() {
             <div className="card-elegant p-8 rounded-xl">
               <h3 className="text-xl font-bold mb-4">Atendimento 24/7</h3>
               <p className="text-muted-foreground mb-6">
-                Com nossa tecnologia de IA, o atendimento nunca para. Estamos disponíveis para você a qualquer momento.
+                Com minha tecnologia de IA, o atendimento nunca para. Estou disponível para você a qualquer momento.
               </p>
               
               <div className="space-y-4">
@@ -98,7 +98,7 @@ export default function Contact() {
                 Conversar com Sara
               </h3>
               <p className="text-muted-foreground mb-6">
-                Tenha um atendimento imediato e personalizado com nossa especialista em vendas e soluções digitais.
+                Tenha um atendimento imediato e personalizado com minha especialista em vendas e soluções digitais.
               </p>
               
               <Button asChild className="w-full btn-gradient mb-4">

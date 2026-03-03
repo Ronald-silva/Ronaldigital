@@ -53,18 +53,18 @@ export default function About() {
           </div>
           <div className="card-elegant p-6 rounded-xl text-center">
             <Lightbulb className="h-12 w-12 text-primary mx-auto mb-4" />
-            <h3 className="font-semibold mb-2">Soluções Criativas</h3>
-            <p className="text-sm text-muted-foreground">Design único e funcional</p>
+            <h3 className="font-semibold mb-2">Honestidade Primeiro</h3>
+            <p className="text-sm text-muted-foreground">Só recomendo o que vai gerar resultado real para o seu negócio</p>
           </div>
           <div className="card-elegant p-6 rounded-xl text-center">
             <Users className="h-12 w-12 text-primary mx-auto mb-4" />
-            <h3 className="font-semibold mb-2">Foco no Cliente</h3>
-            <p className="text-sm text-muted-foreground">Atendimento personalizado</p>
+            <h3 className="font-semibold mb-2">Compromisso Total</h3>
+            <p className="text-sm text-muted-foreground">Cada projeto é tratado como se fosse o meu próprio negócio</p>
           </div>
           <div className="card-elegant p-6 rounded-xl text-center">
             <CheckCircle className="h-12 w-12 text-primary mx-auto mb-4" />
-            <h3 className="font-semibold mb-2">Qualidade Garantida</h3>
-            <p className="text-sm text-muted-foreground">Projetos de alta qualidade</p>
+            <h3 className="font-semibold mb-2">Solucionador de Problemas</h3>
+            <p className="text-sm text-muted-foreground">Não vendo tecnologia — resolvo problemas reais com ela</p>
           </div>
         </div>
 
@@ -73,16 +73,14 @@ export default function About() {
           <div className="card-elegant p-8 rounded-xl">
             <h3 className="text-2xl font-bold mb-4">Minha Missão</h3>
             <p className="text-muted-foreground">
-              Criar soluções digitais personalizadas que ajudem empresas e profissionais a se destacarem online, 
-              transformando ideias em experiências digitais memoráveis e eficazes.
+              Criar soluções digitais que resolvam problemas reais — não apenas entregar projetos. Acredito que tecnologia só tem valor quando gera resultado concreto para quem a usa. Por isso, sou honesto antes de fechar qualquer negócio: se minha solução não for a certa para você, vou te dizer. Prefiro construir uma relação de confiança duradoura a fazer uma venda que não vai agregar. Cada projeto que assumo, assumo com compromisso total — porque minha palavra vale mais que qualquer contrato.
             </p>
           </div>
           
           <div className="card-elegant p-8 rounded-xl">
             <h3 className="text-2xl font-bold mb-4">Minha Visão</h3>
             <p className="text-muted-foreground">
-              Ser reconhecido como uma referência em desenvolvimento web, oferecendo soluções inovadoras que 
-              combinem design excepcional com funcionalidade impecável.
+              Ser reconhecido não pelo volume de projetos entregues, mas pelo impacto real que cada um gerou. Quero construir uma empresa onde clientes voltam não porque foram convencidos, mas porque foram bem servidos.
             </p>
           </div>
         </div>

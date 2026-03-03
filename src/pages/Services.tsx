@@ -5,6 +5,40 @@ import { Link } from "react-router-dom";
 
 const services = [
   {
+    icon: Bot,
+    title: "Agentes de IA & Chatbots",
+    description: "Funcionários digitais inteligentes que trabalham 24h por dia no seu WhatsApp e Site, qualificando leads e vendendo no automático.",
+    features: [
+      "Atendimento instantâneo (0 delay)",
+      "Qualificação automática de leads",
+      "Integração oficial com WhatsApp Business",
+      "Treinado com o manual da sua empresa",
+      "Agendamento automático de reuniões"
+    ],
+    benefits: [
+      "Reduza custos com equipe de suporte",
+      "Nunca mais perca vendas na madrugada",
+      "Libere seu time para tarefas estratégicas"
+    ]
+  },
+  {
+    icon: TrendingUp,
+    title: "Landing Pages",
+    description: "Páginas de alta conversão estrategicamente desenvolvidas para gerar leads qualificados e aumentar suas vendas.",
+    features: [
+      "Design focado em conversão",
+      "Integração com ferramentas de analytics",
+      "Formulários otimizados para leads",
+      "Call-to-actions estratégicos",
+      "Carregamento ultra-rápido"
+    ],
+    benefits: [
+      "Aumente sua taxa de conversão",
+      "Gere mais leads qualificados",
+      "Maximize seu ROI em marketing"
+    ]
+  },
+  {
     icon: Monitor,
     title: "Sites Institucionais",
     description: "Sites corporativos modernos, responsivos e otimizados para SEO que fortalecem sua marca no mercado digital.",
@@ -20,24 +54,6 @@ const services = [
       "Aumente sua credibilidade online",
       "Melhore o posicionamento no Google",
       "Conquiste mais clientes"
-    ]
-  },
-  {
-    icon: Bot,
-    title: "Agentes de IA & Chatbots",
-    description: "Funcionários digitais inteligentes que trabalham 24h por dia no seu WhatsApp e Site, qualificando leads e vendendo no automático.",
-    features: [
-      "Atendimento instantâneo (0 delay)",
-      "Qualificação automática de leads",
-      "Integração oficial com WhatsApp Business",
-      "Treinado com o manual da sua empresa",
-      "Agendamento automático de reuniões",
-      "Dashboard de conversas em tempo real"
-    ],
-    benefits: [
-      "Reduza custos com equipe de suporte",
-      "Nunca mais perca vendas na madrugada",
-      "Libere seu time para tarefas estratégicas"
     ]
   },
   {
@@ -58,24 +74,6 @@ const services = [
       "Mostre seu profissionalismo"
     ]
   },
-  {
-    icon: TrendingUp,
-    title: "Landing Pages",
-    description: "Páginas de alta conversão estrategicamente desenvolvidas para gerar leads qualificados e aumentar suas vendas.",
-    features: [
-      "Design focado em conversão",
-      "Testes A/B para otimização",
-      "Integração com ferramentas de analytics",
-      "Formulários otimizados para leads",
-      "Call-to-actions estratégicos",
-      "Carregamento ultra-rápido"
-    ],
-    benefits: [
-      "Aumente sua taxa de conversão",
-      "Gere mais leads qualificados",
-      "Maximize seu ROI em marketing"
-    ]
-  },
 ];
 
 export default function Services() {
@@ -90,7 +88,7 @@ export default function Services() {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Nossos <span className="text-gradient">Serviços</span>
+            Meus <span className="text-gradient">Serviços</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Agentes de IA que vendem 24h, Landing Pages de alta conversão e Sites profissionais para negócios em Fortaleza
@@ -148,7 +146,7 @@ export default function Services() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Como Trabalhamos</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Nosso processo é transparente e colaborativo, garantindo que cada projeto seja executado com excelência
+              Meu processo é transparente e direto, garantindo que cada projeto seja executado com excelência
             </p>
           </div>
 
