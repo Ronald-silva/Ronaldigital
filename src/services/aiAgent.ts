@@ -2,6 +2,9 @@
 // ⚠️ CRÍTICO: API keys NUNCA devem estar no frontend!
 // Todas as chamadas DEVEM passar pelo backend (/api/agente)
 
+// URL do backend — Railway em produção, relativo em dev/fallback
+const API_BASE = import.meta.env.VITE_API_URL || '';
+
 export interface AgentRequest {
   nome: string;
   email: string;
@@ -39,7 +42,7 @@ export const processarComAgente = async (data: AgentRequest): Promise<AgentRespo
 
   try {
     // SEMPRE chama o backend - onde as API keys estão protegidas
-    const response = await fetch('/api/agente', {
+    const response = await fetch(`${API_BASE}/api/agente`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -115,7 +118,7 @@ const getClassificacao = (score: number): 'QUENTE' | 'MORNO' | 'FRIO' => {
  */
 export const isAgentConfigured = async (): Promise<boolean> => {
   try {
-    const response = await fetch('/api/agente', {
+    const response = await fetch(`${API_BASE}/api/agente`, {
       method: 'HEAD'
     });
     return response.ok || response.status === 405; // 405 = método não permitido, mas rota existe

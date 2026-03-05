@@ -10,7 +10,7 @@ const USE_SARA_V2 = process.env.SARA_V2 === 'true' || process.env.SARA_V2 === '1
 
 // Configuração CORS
 const corsOptions = {
-  origin: process.env.VERCEL_URL || "*",
+  origin: process.env.ALLOWED_ORIGIN || "*",
   methods: ["POST", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
 };
@@ -164,18 +164,9 @@ Você também se interessaria por uma IA para atender clientes automaticamente?`
 
   // 🤖 INTERESSE EM IA/AGENTE
   if (lowerMsg.includes('ia') || lowerMsg.includes('inteligencia artificial') || lowerMsg.includes('agente de ia') || lowerMsg.includes('chatbot')) {
-    return `Legal! IA para atendimento é poderosa! 🤖
+    return `IA para atendimento pode transformar um negócio 🤖
 
-Desenvolvi projetos de IA que atendem 24h, qualificam leads e agendam automaticamente.
-
-**Como funciona:**
-• IA responde instantaneamente
-• Qualifica o cliente automaticamente
-• Agenda ou transfere pra você quando necessário
-
-💰 **Investimento:** sob consulta (depende do escopo e integrações)
-
-Pra qual tipo de negócio você precisa?`;
+Mas antes de te passar qualquer valor, preciso entender o seu contexto. Me conta: qual é o seu negócio e qual o maior problema que você enfrenta hoje no atendimento?`;
   }
 
   // 🍕 RESTAURANTE / CARDÁPIO
@@ -196,22 +187,16 @@ Isso faz sentido pra você?`;
   if (lowerMsg.includes('qual seu nome') || lowerMsg.includes('quem é você')) {
     return `Oi! Eu sou a Sara! 😊
 
-Sou especialista em marketing digital da Ronald Digital. Minha missão é te ajudar a crescer na internet com sites que realmente funcionam.
+Sou consultora de soluções digitais da RonalDigital. Minha missão é entender o seu negócio e recomendar o que realmente vai funcionar pra você.
 
-Como posso te ajudar hoje?`;
+Qual o seu negócio?`;
   }
 
   // 💰 PREÇO / VALOR
   if (lowerMsg.includes('preço') || lowerMsg.includes('valor') || lowerMsg.includes('custa')) {
-    return `Oi! Fico feliz em te ajudar! 😊
+    return `Depende muito do que você precisa 😊
 
-Depende do tipo de projeto:
-• Landing page: R$ 500-1.000
-• Portfólio: R$ 400-800
-• Site institucional: R$ 800-2.000
-• Agente de IA: sob consulta
-
-É pra qual tipo de negócio? Assim dou um valor mais certinho.`;
+Me conta: qual é o seu negócio e o que você quer resolver? Assim consigo te indicar o que realmente faz sentido, sem exagerar no investimento.`;
   }
 
   // 🎯 INTERESSE EM SITE (genérico)
@@ -230,10 +215,10 @@ Sou a Sara, especialista em criar sites que vendem!
 Como posso te ajudar hoje?`;
   }
 
-  // 🔄 RESPOSTA PADRÃO - mais contextual
+  // 🔄 RESPOSTA PADRÃO - consultiva
   return `Oi! 😊
 
-Me conta mais sobre o que você precisa - qual seu negócio e o que quer alcançar?`;
+Me conta um pouco sobre o seu negócio e qual o maior desafio que você enfrenta hoje. Assim consigo te ajudar de verdade.`;
 }
 
 // 📊 CALCULA LEAD SCORE NO FALLBACK
