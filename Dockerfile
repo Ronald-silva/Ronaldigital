@@ -8,6 +8,7 @@ RUN npm install --legacy-peer-deps
 COPY server.js ./
 COPY api/ ./api/
 COPY lib/ ./lib/
+COPY data/ ./data/
 
 EXPOSE 3001
 
